@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV Data Quality Inspector | Ragu Ram P</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/cosmic.css">
+    <link rel="stylesheet" href="../assets/project.css">
+</head>
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="grid"></div>
+    <div class="blob blob-one"></div>
+    <div class="blob blob-two"></div>
+    <div class="blob blob-three"></div>
+    <div class="noise"></div>
+    <div id="particles"></div>
+
+    <!-- TOP NAVIGATION -->
+    <nav class="proj-nav">
+        <a class="pill-btn pill-btn--back" href="../analytics.html" data-nav="../analytics.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"></path><path d="m11 18-6-6 6-6"></path></svg>
+            <span>Back to Data &amp; BI Analytics</span>
+        </a>
+
+        <div class="nav-status">
+            <span class="status-dot-cyan"></span>
+            <span>RAGU RAM P &bull; PROJECT 13 OF 18</span>
+        </div>
+
+        <div class="nav-actions-right">
+            <a class="pill-btn" href="../2.html" data-nav="../2.html">Domains</a>
+            <a class="pill-btn" href="../github-vault.html" data-nav="../github-vault.html">Repositories</a>
+            <a class="pill-btn" href="https://github.com/raguramrrp/90-days-90-projects-day-02-csv-data-quality-inspector" target="_blank" rel="noopener noreferrer">GitHub Repo &nearr;</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- HERO SPLIT -->
+        <section class="hero">
+            <div class="hero-grid">
+                <div>
+                    <div class="hero-badge">
+                        <span class="status-dot-green"></span>
+                        <span>PROJECT 13 &bull; DAY 2 OF 90 &bull; DATA GOVERNANCE</span>
+                    </div>
+                    <h1 class="hero-title">CSV DATA QUALITY<br>INSPECTOR.</h1>
+                    <p class="hero-text">An automated exploratory profiling and data governance platform computing deterministic 0–100 composite quality scores across 5 weighted pillars — paired with encoding/delimiter sniffing, Tukey IQR + Z-score outlier scans, Python cleanup snippets, and audit exports.</p>
+                    <div class="hero-actions">
+                        <a class="btn-primary-glow" href="https://github.com/raguramrrp/90-days-90-projects-day-02-csv-data-quality-inspector" target="_blank" rel="noopener noreferrer">
+                            <span>View Repository on GitHub &nearr;</span>
+                        </a>
+                        <a class="pill-btn" href="#architecture">Architecture &darr;</a>
+                        <a class="pill-btn" href="#showcase">Screenshots &darr;</a>
+                    </div>
+                    <div class="hero-tags"><span class="tag">Python 3.12</span><span class="tag">Pandas 3.0+</span><span class="tag">Streamlit 1.40+</span><span class="tag">5 Quality Pillars</span><span class="tag">IQR &amp; Z-Score</span><span class="tag">25/25 Pytest</span></div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="image-frame">
+                        <img src="../images/projects/day-02/02_streamlit_overview.png" alt="CSV Data Quality Inspector Preview" data-zoomable data-caption="CSV Data Quality Inspector — Live Profiling Overview &amp; 5-Pillar Score">
+                    </div>
+                    <div class="floating-stat stat1">
+                        <div class="stat-small">SCORING MODEL</div>
+                        <div class="stat-big green">5 Pillars • 0–100 (A–F)</div>
+                    </div>
+                    <div class="floating-stat stat2">
+                        <div class="stat-small">PYTEST SUITE</div>
+                        <div class="stat-big cyan">25 / 25 Passed</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUICK METRICS BAR -->
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="stat-number">5 Pillars</div>
+                <div class="stat-label">Explainable Weighted Score</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">4 Delimiters</div>
+                <div class="stat-label">Comma • Semi • Tab • Pipe</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">4 Exports</div>
+                <div class="stat-label">HTML • JSON • MD • Clean CSV</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">25 / 25</div>
+                <div class="stat-label">Pytest Tests Passed</div>
+            </div>
+        </div>
+
+        <!-- 01 OVERVIEW -->
+        <section class="section" id="overview">
+            <div class="label">01 / Overview</div>
+            <h2 class="section-title">ELIMINATING THE 80% MANUAL DATA CLEANING BOTTLENECK.</h2>
+            <p class="section-description">Silent duplicates, trailing whitespace, numeric strings, and corrupted delimiters break downstream ML models. The inspector diagnoses every flaw automatically with copyable code fixes.</p>
+
+            <div class="feature-grid">
+                <div class="feature">
+                    <div class="feature-number">01</div>
+                    <h3>Encoding &amp; Delimiter Sniffer</h3>
+                    <p>Detects UTF-8, Latin-1, and CP1252 encodings plus comma, semicolon, tab, and pipe separators automatically.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">02</div>
+                    <h3>5-Pillar 0–100 Score (A–F)</h3>
+                    <p>Weights Completeness (25%), Uniqueness (20%), Validity (20%), Outlier Health (15%), and Structural Integrity (20%).</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">03</div>
+                    <h3>Dual Outlier Detection</h3>
+                    <p>Runs Tukey's Interquartile Range (IQR) bounds alongside standardized |z| > 3.0 anomaly checks per numeric feature.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">04</div>
+                    <h3>Semantic Hygiene Audit</h3>
+                    <p>Detects untrimmed whitespace, numbers stored as strings, negative values, all-null rows, and constant columns.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">05</div>
+                    <h3>Python Remediation Snippets</h3>
+                    <p>Emits actionable, copy-pasteable Pandas cleaning code tailored to each detected anomaly or missing column.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">06</div>
+                    <h3>Multi-Format Audit Deliverables</h3>
+                    <p>Exports standalone interactive HTML reports, CI/CD JSON schemas, Markdown summaries, and one-click auto-cleaned CSVs.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 02 ARCHITECTURE -->
+        <section class="section" id="architecture">
+            <div class="label">02 / Architecture</div>
+            <h2 class="section-title">HOW IT WORKS.</h2>
+            <p class="section-description">Uploaded CSVs pass through sniffing, schema validation, profiling stats, weighted 5-pillar scoring, and multi-format exporters.</p>
+
+            <div class="pipeline">
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 01</div>
+                    <h3>Sniffer</h3>
+                    <p>UTF-8/Latin-1/CP1252 & delimiter check.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 02</div>
+                    <h3>Validator</h3>
+                    <p>Headers, constant & null rows check.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 03</div>
+                    <h3>Profiler</h3>
+                    <p>Types, cardinality, IQR & |z|>3.0.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 04</div>
+                    <h3>5-Pillar Math</h3>
+                    <p>0.25+0.20+0.20+0.15+0.20 weighted score.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 05</div>
+                    <h3>Deliverables</h3>
+                    <p>HTML, JSON, MD & auto-cleaned CSV.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 03 SCREENSHOTS -->
+        <section class="section" id="showcase">
+            <div class="label">03 / Screenshots</div>
+            <h2 class="section-title">APPLICATION SCREENSHOTS.</h2>
+            <p class="section-description">
+                Live screens captured from the running application. Click any image to view full size, or follow setup instructions in the GitHub repository.
+            </p>
+
+            <div class="gallery-wrapper">
+                <div class="dashboard-showcase">
+                    <img id="galleryMainImg" src="../images/projects/day-02/02_streamlit_overview.png" alt="Live Streamlit Overview — 5-Pillar Quality Gauge &amp; Column Health Explorer" data-zoomable data-caption="Live Streamlit Overview — 5-Pillar Quality Gauge &amp; Column Health Explorer">
+                </div>
+                <div class="gallery-bar">
+                    <span class="gallery-caption" id="galleryCaption">Live Streamlit Overview — 5-Pillar Quality Gauge &amp; Column Health Explorer</span>
+                    <span class="gallery-hint">Click image to enlarge</span>
+                </div>
+                <div class="gallery-thumbs">
+                    <button type="button" class="gallery-thumb active" data-src="../images/projects/day-02/02_streamlit_overview.png" data-caption="Live Streamlit Overview — 5-Pillar Quality Gauge &amp; Column Health Explorer"><img src="../images/projects/day-02/02_streamlit_overview.png" alt="Streamlit Overview Thumbnail"><span>Streamlit Overview</span></button>
+                    <button type="button" class="gallery-thumb" data-src="../images/projects/day-02/01_html_quality_report.png" data-caption="Standalone HTML Quality Report — Self-Contained Shareable Audit Artifact"><img src="../images/projects/day-02/01_html_quality_report.png" alt="HTML Audit Report Thumbnail"><span>HTML Audit Report</span></button>
+                    <button type="button" class="gallery-thumb" data-src="../images/projects/day-02/03_streamlit_light_mode.png" data-caption="Clean Light Workspace Mode — Column Distributions &amp; Outlier Inspector"><img src="../images/projects/day-02/03_streamlit_light_mode.png" alt="Light Mode View Thumbnail"><span>Light Mode View</span></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 04 TECHNICAL SPECS -->
+        <section class="section" id="specs">
+            <div class="label">04 / Technical Details</div>
+            <h2 class="section-title">5 PILLARS OF DETERMINISTIC DATA QUALITY.</h2>
+            <p class="section-description">
+                Key modules, rules, safety checks, and automated test results documented in the repository.
+            </p>
+
+            <div class="performance-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Quality Pillar</th>
+                            <th>Weight</th>
+                            <th>Penalization Criteria</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Completeness</strong></td>
+                            <td>25%</td>
+                            <td class="metric-highlight">Overall missing cell %, all-null rows, 100% empty columns</td>
+                        </tr>                        <tr>
+                            <td><strong>Uniqueness</strong></td>
+                            <td>20%</td>
+                            <td class="metric-highlight">Exact duplicate rows & candidate primary-key collisions</td>
+                        </tr>                        <tr>
+                            <td><strong>Validity & Consistency</strong></td>
+                            <td>20%</td>
+                            <td class="metric-highlight">Untrimmed whitespace, stringified numbers, negative anomalies</td>
+                        </tr>                        <tr>
+                            <td><strong>Structural Integrity + Outliers</strong></td>
+                            <td>20% + 15% = 35%</td>
+                            <td class="metric-highlight">Schema shifts, constant cols, Tukey IQR & |z| > 3.0 counts</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 05 TECHNOLOGY STACK -->
+        <section class="section" id="stack">
+            <div class="label">05 / Tech Stack</div>
+            <h2 class="section-title">CORE TECHNOLOGIES.</h2>
+            <p class="section-description">Frameworks, databases, visualization tools, and testing libraries used in CSV Data Quality Inspector.</p>
+
+            <div class="tech-grid">
+                <div class="tech">
+                    <div class="tech-type">PROFILING ENGINE</div>
+                    <div class="tech-name">Pandas 3.0+ &bull; Python 3.12</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">DASHBOARD UI</div>
+                    <div class="tech-name">Streamlit 1.40+</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">OUTLIER MATH</div>
+                    <div class="tech-name">Tukey IQR &bull; Z-Score (|z|&gt;3)</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">HTML REPORTS</div>
+                    <div class="tech-name">Standalone Jinja / CSS Bundle</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">CI/CD SCHEMAS</div>
+                    <div class="tech-name">JSON &bull; Markdown &bull; Clean CSV</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">VERIFICATION</div>
+                    <div class="tech-name">Pytest (25/25 Passed)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 06 ROADMAP -->
+        <section class="section" id="roadmap">
+            <div class="label">06 / Next Steps</div>
+            <h2 class="section-title">FUTURE ENHANCEMENTS.</h2>
+            <p class="section-description">Upcoming improvements planned for CSV Data Quality Inspector.</p>
+
+            <div class="future-grid">
+                <div class="future">Polars streaming execution backend for multi-gigabyte 10GB+ CSV datasets.</div>                <div class="future">Headless CLI Quality Gate command for Git pre-commit and Airflow DAGs.</div>                <div class="future">Scikit-Learn IterativeImputer &amp; KNN imputation integration.</div>                <div class="future">Multivariate Isolation Forest &amp; Local Outlier Factor anomaly panel.</div>                <div class="future">Parquet and Excel (.xlsx) multi-sheet profiling inputs.</div>                <div class="future">Cross-dataset drift comparison between Baseline vs Production drops.</div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="final">
+            <div class="final-small">OPEN-SOURCE PROJECT &bull; GITHUB.COM/RAGURAMRRP</div>
+            <h2>EXPLORE SOURCE &amp; DOCS.</h2>
+            <p>
+                View the complete codebase, sample datasets, quick-launch scripts, and automated test suites on GitHub.
+            </p>
+            <div class="final-buttons">
+                <a class="cta" href="../analytics.html" data-nav="../analytics.html">&larr; Back to Data &amp; BI Analytics</a>
+                <a class="cta" href="../2.html" data-nav="../2.html">All Domains</a>
+                <a class="cta" href="../assets/Ragu_Ram_P_Resume.pdf" download="Ragu_Ram_P_Resume.pdf">Download Resume (PDF)</a>
+                <a class="cta" href="https://github.com/raguramrrp/90-days-90-projects-day-02-csv-data-quality-inspector" target="_blank" rel="noopener noreferrer">View Source on GitHub &nearr;</a>
+            </div>
+        </section>
+    </main>
+
+    <div class="page-transition" id="pageTransition"></div>
+    <script src="../assets/cosmic.js"></script>
+</body>
+</html>

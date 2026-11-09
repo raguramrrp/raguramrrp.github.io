@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FileGuard | Ragu Ram P</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/cosmic.css">
+    <link rel="stylesheet" href="../assets/project.css">
+</head>
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="grid"></div>
+    <div class="blob blob-one"></div>
+    <div class="blob blob-two"></div>
+    <div class="blob blob-three"></div>
+    <div class="noise"></div>
+    <div id="particles"></div>
+
+    <!-- TOP NAVIGATION -->
+    <nav class="proj-nav">
+        <a class="pill-btn pill-btn--back" href="../automation.html" data-nav="../automation.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"></path><path d="m11 18-6-6 6-6"></path></svg>
+            <span>Back to Automation &amp; Dev Tools</span>
+        </a>
+
+        <div class="nav-status">
+            <span class="status-dot-cyan"></span>
+            <span>RAGU RAM P &bull; PROJECT 17 OF 18</span>
+        </div>
+
+        <div class="nav-actions-right">
+            <a class="pill-btn" href="../2.html" data-nav="../2.html">Domains</a>
+            <a class="pill-btn" href="../github-vault.html" data-nav="../github-vault.html">Repositories</a>
+            <a class="pill-btn" href="https://github.com/raguramrrp/90-days-90-projects-day-09-fileguard-storage-manager" target="_blank" rel="noopener noreferrer">GitHub Repo &nearr;</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- HERO SPLIT -->
+        <section class="hero">
+            <div class="hero-grid">
+                <div>
+                    <div class="hero-badge">
+                        <span class="status-dot-green"></span>
+                        <span>PROJECT 17 &bull; DAY 9 OF 90 &bull; STORAGE SAFETY ENGINE</span>
+                    </div>
+                    <h1 class="hero-title">FILEGUARD<br>STORAGE MANAGER.</h1>
+                    <p class="hero-text">A disaster-recovery-grade Windows duplicate detector and storage analyzer pairing 3-stage cryptographic SHA-256 pruning with 64-bit dHash perceptual image comparison, an explainable Retained-Copy Selection Advisor, and 100% reversible UUID quarantine with Ctrl+Z undo.</p>
+                    <div class="hero-actions">
+                        <a class="btn-primary-glow" href="https://github.com/raguramrrp/90-days-90-projects-day-09-fileguard-storage-manager" target="_blank" rel="noopener noreferrer">
+                            <span>View Repository on GitHub &nearr;</span>
+                        </a>
+                        <a class="pill-btn" href="#architecture">Architecture &darr;</a>
+                        <a class="pill-btn" href="#showcase">Screenshots &darr;</a>
+                    </div>
+                    <div class="hero-tags"><span class="tag">Python 3.10+</span><span class="tag">Tkinter / ttk</span><span class="tag">64-Bit dHash</span><span class="tag">3-Stage SHA-256</span><span class="tag">UUID Quarantine</span><span class="tag">38/38 Pytest</span></div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="image-frame">
+                        <img src="../images/projects/day-09/01_overview.png" alt="FileGuard Preview" data-zoomable data-caption="FileGuard Storage Manager — Desktop Overview, 8 Indexed Files &amp; 2 Duplicate Clusters">
+                    </div>
+                    <div class="floating-stat stat1">
+                        <div class="stat-small">PRUNING FUNNEL</div>
+                        <div class="stat-big green">3-Stage + dHash</div>
+                    </div>
+                    <div class="floating-stat stat2">
+                        <div class="stat-small">RECOVERY & QA</div>
+                        <div class="stat-big cyan">Ctrl+Z • 38/38 Tests</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUICK METRICS BAR -->
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="stat-number">3 Stages</div>
+                <div class="stat-label">Size -> 4KB -> 64KB SHA-256</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">64-Bit dHash</div>
+                <div class="stat-label">Hamming Visual Photo Match</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">Ctrl+Z Undo</div>
+                <div class="stat-label">UUID Reversible Quarantine</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">38 / 38</div>
+                <div class="stat-label">Pytest Tests Passed</div>
+            </div>
+        </div>
+
+        <!-- 01 OVERVIEW -->
+        <section class="section" id="overview">
+            <div class="label">01 / Overview</div>
+            <h2 class="section-title">RECLAIM DISK SPACE WITHOUT DESTRUCTIVE BLACK-BOX DELETION.</h2>
+            <p class="section-description">Naive cleaners freeze RAM on multi-GB files or permanently erase last surviving copies. FileGuard streams chunked hashes, guards protected system folders, and keeps at least one master copy locked.</p>
+
+            <div class="feature-grid">
+                <div class="feature">
+                    <div class="feature-number">01</div>
+                    <h3>3-Stage Pruning Funnel</h3>
+                    <p>Stage 1 exact size clustering -> Stage 2 4KB fast pre-hash -> Stage 3 streaming 64KB SHA-256 content digests.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">02</div>
+                    <h3>64-Bit dHash Photo Similarity</h3>
+                    <p>Detects resized, re-saved, or cropped near-duplicate photos via grayscale difference hashes and Hamming distance.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">03</div>
+                    <h3>Retained-Copy Safety Block</h3>
+                    <p>Explainable Selection Advisor marks oldest/shallowest/cleanest master copy and physically blocks deleting 100% of a cluster.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">04</div>
+                    <h3>Reversible UUID Quarantine</h3>
+                    <p>Moves redundant copies into an isolated UUID vault with manifest metadata; press Ctrl+Z for 1-click conflict-safe restoration.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">05</div>
+                    <h3>Protected OS Path Guards</h3>
+                    <p>Blocks destructive scans or quarantines inside C:\Windows, Program Files, and core system hierarchies.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">06</div>
+                    <h3>Non-Double-Counting Analyzer</h3>
+                    <p>Accurate directory tree size attribution avoiding nested child-folder double-counting while logging storage trends in SQLite WAL.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 02 ARCHITECTURE -->
+        <section class="section" id="architecture">
+            <div class="label">02 / Architecture</div>
+            <h2 class="section-title">HOW IT WORKS.</h2>
+            <p class="section-description">Worker threads stream 3-stage hashes and dHash signatures into WAL SQLite while enforcing Retained-Copy & OS guard invariants.</p>
+
+            <div class="pipeline">
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 01</div>
+                    <h3>Protected Guard</h3>
+                    <p>Block OS paths & index folder sizes.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 02</div>
+                    <h3>Stage 1 &amp; 2</h3>
+                    <p>Exact size cluster -> 4KB quick pre-hash.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 03</div>
+                    <h3>Stage 3 / dHash</h3>
+                    <p>64KB SHA-256 + 64-bit Hamming match.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 04</div>
+                    <h3>Advisor Lock</h3>
+                    <p>Pin master Retained Copy per cluster.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 05</div>
+                    <h3>UUID Vault</h3>
+                    <p>Reversible quarantine + Ctrl+Z restore.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 03 SCREENSHOTS -->
+        <section class="section" id="showcase">
+            <div class="label">03 / Screenshots</div>
+            <h2 class="section-title">APPLICATION SCREENSHOTS.</h2>
+            <p class="section-description">
+                Live screens captured from the running application. Click any image to view full size, or follow setup instructions in the GitHub repository.
+            </p>
+
+            <div class="gallery-wrapper">
+                <div class="dashboard-showcase">
+                    <img id="galleryMainImg" src="../images/projects/day-09/01_overview.png" alt="FileGuard Storage Overview — 8 Indexed Files, 2 Duplicate Clusters &amp; 12.28 MB Recoverable" data-zoomable data-caption="FileGuard Storage Overview — 8 Indexed Files, 2 Duplicate Clusters &amp; 12.28 MB Recoverable">
+                </div>
+                <div class="gallery-bar">
+                    <span class="gallery-caption" id="galleryCaption">FileGuard Storage Overview — 8 Indexed Files, 2 Duplicate Clusters &amp; 12.28 MB Recoverable</span>
+                    <span class="gallery-hint">Click image to enlarge</span>
+                </div>
+                <div class="gallery-thumbs">
+                    <button type="button" class="gallery-thumb active" data-src="../images/projects/day-09/01_overview.png" data-caption="FileGuard Storage Overview — 8 Indexed Files, 2 Duplicate Clusters &amp; 12.28 MB Recoverable"><img src="../images/projects/day-09/01_overview.png" alt="Storage Overview Thumbnail"><span>Storage Overview</span></button>
+                    <button type="button" class="gallery-thumb" data-src="../images/projects/day-09/02_duplicates.png" data-caption="Duplicate Finder — 3-Stage SHA-256 Clusters with Retained-Copy Master Lock"><img src="../images/projects/day-09/02_duplicates.png" alt="Duplicate Clusters Thumbnail"><span>Duplicate Clusters</span></button>
+                    <button type="button" class="gallery-thumb" data-src="../images/projects/day-09/03_storage.png" data-caption="Storage Intelligence &amp; Analysis — Category Breakdown Without Child-Folder Double Counting"><img src="../images/projects/day-09/03_storage.png" alt="Storage Analysis Thumbnail"><span>Storage Analysis</span></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 04 TECHNICAL SPECS -->
+        <section class="section" id="specs">
+            <div class="label">04 / Technical Details</div>
+            <h2 class="section-title">SAFETY INVARIANTS &amp; HASHING PERFORMANCE.</h2>
+            <p class="section-description">
+                Key modules, rules, safety checks, and automated test results documented in the repository.
+            </p>
+
+            <div class="performance-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Safety / Hashing Control</th>
+                            <th>Implementation</th>
+                            <th>Guarantee</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>3-Stage Pruning</strong></td>
+                            <td>Byte Size -> 4 KB Pre-Hash -> 64 KB SHA-256</td>
+                            <td class="metric-highlight">Zero whole-file RAM spikes</td>
+                        </tr>                        <tr>
+                            <td><strong>Perceptual Photos</strong></td>
+                            <td>64-bit grayscale dHash + Hamming cutoff</td>
+                            <td class="metric-highlight">Catches resized/recompressed clones</td>
+                        </tr>                        <tr>
+                            <td><strong>Retained-Copy Rule</strong></td>
+                            <td>Hard UI + backend check per cluster</td>
+                            <td class="metric-highlight">Cannot erase every copy accidentally</td>
+                        </tr>                        <tr>
+                            <td><strong>Recovery & Pytest</strong></td>
+                            <td>UUID quarantine manifest + Ctrl+Z + SQLite</td>
+                            <td class="metric-highlight">38 / 38 Passed (100%)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 05 TECHNOLOGY STACK -->
+        <section class="section" id="stack">
+            <div class="label">05 / Tech Stack</div>
+            <h2 class="section-title">CORE TECHNOLOGIES.</h2>
+            <p class="section-description">Frameworks, databases, visualization tools, and testing libraries used in FileGuard.</p>
+
+            <div class="tech-grid">
+                <div class="tech">
+                    <div class="tech-type">DESKTOP UI</div>
+                    <div class="tech-name">Tkinter / ttk &bull; Multi-Threaded</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">EXACT HASHING</div>
+                    <div class="tech-name">3-Stage 64KB Chunked SHA-256</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">VISUAL MATCHING</div>
+                    <div class="tech-name">64-Bit dHash + Hamming Distance</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">DISASTER RECOVERY</div>
+                    <div class="tech-name">UUID Quarantine + Ctrl+Z Undo</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">DATABASE & EXE</div>
+                    <div class="tech-name">SQLite WAL &bull; PyInstaller .exe</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">VERIFICATION</div>
+                    <div class="tech-name">Pytest (38/38 Passed)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 06 ROADMAP -->
+        <section class="section" id="roadmap">
+            <div class="label">06 / Next Steps</div>
+            <h2 class="section-title">FUTURE ENHANCEMENTS.</h2>
+            <p class="section-description">Upcoming improvements planned for FileGuard.</p>
+
+            <div class="future-grid">
+                <div class="future">USN Journal incremental change monitoring for instantaneous NTFS rescans.</div>                <div class="future">Audio fingerprinting comparison for lossless FLAC vs MP3 duplicates.</div>                <div class="future">Scheduled auto-purge policy for aged (&gt;30 days) quarantined bundles.</div>                <div class="future">Network SMB/NAS share dedup throttling slider.</div>                <div class="future">Interactive treemap sunburst storage explorer widget.</div>                <div class="future">Signed CSV/PDF IT storage reclaim audit certificates.</div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="final">
+            <div class="final-small">OPEN-SOURCE PROJECT &bull; GITHUB.COM/RAGURAMRRP</div>
+            <h2>EXPLORE SOURCE &amp; DOCS.</h2>
+            <p>
+                View the complete codebase, sample datasets, quick-launch scripts, and automated test suites on GitHub.
+            </p>
+            <div class="final-buttons">
+                <a class="cta" href="../automation.html" data-nav="../automation.html">&larr; Back to Automation &amp; Dev Tools</a>
+                <a class="cta" href="../2.html" data-nav="../2.html">All Domains</a>
+                <a class="cta" href="../assets/Ragu_Ram_P_Resume.pdf" download="Ragu_Ram_P_Resume.pdf">Download Resume (PDF)</a>
+                <a class="cta" href="https://github.com/raguramrrp/90-days-90-projects-day-09-fileguard-storage-manager" target="_blank" rel="noopener noreferrer">View Source on GitHub &nearr;</a>
+            </div>
+        </section>
+    </main>
+
+    <div class="page-transition" id="pageTransition"></div>
+    <script src="../assets/cosmic.js"></script>
+</body>
+</html>

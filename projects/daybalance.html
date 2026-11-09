@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DayBalance | Ragu Ram P</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/cosmic.css">
+    <link rel="stylesheet" href="../assets/project.css">
+</head>
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="grid"></div>
+    <div class="blob blob-one"></div>
+    <div class="blob blob-two"></div>
+    <div class="blob blob-three"></div>
+    <div class="noise"></div>
+    <div id="particles"></div>
+
+    <!-- TOP NAVIGATION -->
+    <nav class="proj-nav">
+        <a class="pill-btn pill-btn--back" href="../ai-ml.html" data-nav="../ai-ml.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"></path><path d="m11 18-6-6 6-6"></path></svg>
+            <span>Back to AI, ML &amp; Computer Vision</span>
+        </a>
+
+        <div class="nav-status">
+            <span class="status-dot-cyan"></span>
+            <span>RAGU RAM P &bull; PROJECT 03 OF 18</span>
+        </div>
+
+        <div class="nav-actions-right">
+            <a class="pill-btn" href="../2.html" data-nav="../2.html">Domains</a>
+            <a class="pill-btn" href="../github-vault.html" data-nav="../github-vault.html">Repositories</a>
+            <a class="pill-btn" href="https://github.com/raguramrrp/90-days-90-projects-day-11-daybalance" target="_blank" rel="noopener noreferrer">GitHub Repo &nearr;</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- HERO SPLIT -->
+        <section class="hero">
+            <div class="hero-grid">
+                <div>
+                    <div class="hero-badge">
+                        <span class="status-dot-green"></span>
+                        <span>PROJECT 03 &bull; DAY 11 OF 90 &bull; BEHAVIORAL ANALYTICS</span>
+                    </div>
+                    <h1 class="hero-title">DAYBALANCE<br>HABIT SCIENCE.</h1>
+                    <p class="hero-text">A privacy-first personal behavioral analytics workspace transforming habit check-ins into empirical self-experiments — pairing schedule-aware streaks with Pearson and Spearman rank correlations across sleep, study, mood, and energy.</p>
+                    <div class="hero-actions">
+                        <a class="btn-primary-glow" href="https://github.com/raguramrrp/90-days-90-projects-day-11-daybalance" target="_blank" rel="noopener noreferrer">
+                            <span>View Repository on GitHub &nearr;</span>
+                        </a>
+                        <a class="pill-btn" href="#architecture">Architecture &darr;</a>
+                        <a class="pill-btn" href="#showcase">Screenshots &darr;</a>
+                    </div>
+                    <div class="hero-tags"><span class="tag">Python 3.12</span><span class="tag">Streamlit 1.66</span><span class="tag">Pandas &amp; NumPy</span><span class="tag">Plotly 7.1</span><span class="tag">SQLite WAL</span><span class="tag">33/33 Pytest</span></div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="image-frame">
+                        <img src="../images/projects/day-11/01_dashboard.png" alt="DayBalance Preview" data-zoomable data-caption="DayBalance Executive Dashboard — Consistency Trendline &amp; Lifestyle Rhythm">
+                    </div>
+                    <div class="floating-stat stat1">
+                        <div class="stat-small">CORRELATION MATH</div>
+                        <div class="stat-big green">Pearson r & Spearman ρ</div>
+                    </div>
+                    <div class="floating-stat stat2">
+                        <div class="stat-small">PYTEST VERIFIED</div>
+                        <div class="stat-big cyan">33 / 33 Passed</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUICK METRICS BAR -->
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="stat-number">9 Views</div>
+                <div class="stat-label">Multipage Analytics Hub</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">n >= 7 Guard</div>
+                <div class="stat-label">Anti-Hallucination Stat Gate</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">A/B Engine</div>
+                <div class="stat-label">Hypothesis Experiments</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">33 / 33</div>
+                <div class="stat-label">Pytest Suite Passed</div>
+            </div>
+        </div>
+
+        <!-- 01 OVERVIEW -->
+        <section class="section" id="overview">
+            <div class="label">01 / Overview</div>
+            <h2 class="section-title">EMPIRICAL PERSONAL ANALYTICS WITHOUT CLOUD TRACKERS.</h2>
+            <p class="section-description">Generic habit apps break streaks on scheduled rest days and hallucinate generic pep talks. DayBalance respects non-daily schedules and validates lifestyle correlations mathematically.</p>
+
+            <div class="feature-grid">
+                <div class="feature">
+                    <div class="feature-number">01</div>
+                    <h3>Schedule-Aware Streaks</h3>
+                    <p>Supports daily, weekday, weekend, and custom frequencies plus protected rest days without breaking earned streaks.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">02</div>
+                    <h3>Pearson &amp; Spearman Engine</h3>
+                    <p>Computes bivariate Pearson r and Spearman rho rank correlations across sleep, study minutes, mood, and energy.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">03</div>
+                    <h3>Sample-Size Guard (n &gt;= 7)</h3>
+                    <p>Blocks spurious trend claims when sample size is insufficient and displays honest non-causal caveats.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">04</div>
+                    <h3>A/B Habit Experiments</h3>
+                    <p>Run structured baseline vs intervention trials (e.g., morning walk impact on afternoon deep-work focus).</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">05</div>
+                    <h3>Built-in Focus Timer</h3>
+                    <p>Integrated Pomodoro deep-work timer that automatically logs completed focus sessions directly to daily lifestyle metrics.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">06</div>
+                    <h3>Multi-Profile SQLite WAL</h3>
+                    <p>Composite uniqueness constraints, idempotent migrations, Light/Dark themes, and zero external API calls.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 02 ARCHITECTURE -->
+        <section class="section" id="architecture">
+            <div class="label">02 / Architecture</div>
+            <h2 class="section-title">HOW IT WORKS.</h2>
+            <p class="section-description">Modular separation across Streamlit presentation views, pure-Python statistical services, and SQLite WAL persistence.</p>
+
+            <div class="pipeline">
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 01</div>
+                    <h3>Daily Check-In</h3>
+                    <p>Sub-2-min habit & lifestyle capture.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 02</div>
+                    <h3>Streak Engine</h3>
+                    <p>Schedule & rest-day aware evaluation.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 03</div>
+                    <h3>Stat Engine</h3>
+                    <p>Pearson r, Spearman ρ & OLS fit.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 04</div>
+                    <h3>A/B Evaluator</h3>
+                    <p>Baseline vs experiment comparison.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 05</div>
+                    <h3>Plotly UI</h3>
+                    <p>9 views across Dark & Light themes.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 03 SCREENSHOTS -->
+        <section class="section" id="showcase">
+            <div class="label">03 / Screenshots</div>
+            <h2 class="section-title">APPLICATION SCREENSHOTS.</h2>
+            <p class="section-description">
+                Live screens captured from the running application. Click any image to view full size, or follow setup instructions in the GitHub repository.
+            </p>
+
+            <div class="gallery-wrapper">
+                <div class="dashboard-showcase">
+                    <img id="galleryMainImg" src="../images/projects/day-11/01_dashboard.png" alt="DayBalance Overview — 30-Day Consistency Trendline, KPIs &amp; Activity Heatmap" data-zoomable data-caption="DayBalance Overview — 30-Day Consistency Trendline, KPIs &amp; Activity Heatmap">
+                </div>
+                <div class="gallery-bar">
+                    <span class="gallery-caption" id="galleryCaption">DayBalance Overview — 30-Day Consistency Trendline, KPIs &amp; Activity Heatmap</span>
+                    <span class="gallery-hint">Click image to enlarge</span>
+                </div>
+                <div class="gallery-thumbs">
+                    <button type="button" class="gallery-thumb active" data-src="../images/projects/day-11/01_dashboard.png" data-caption="DayBalance Overview — 30-Day Consistency Trendline, KPIs &amp; Activity Heatmap"><img src="../images/projects/day-11/01_dashboard.png" alt="Dark Overview Thumbnail"><span>Dark Overview</span></button>
+                    <button type="button" class="gallery-thumb" data-src="../images/projects/day-11/10_theme_light.png" data-caption="DayBalance Light Theme — Clean Sage Editorial Workspace Mode"><img src="../images/projects/day-11/10_theme_light.png" alt="Light Theme Thumbnail"><span>Light Theme</span></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 04 TECHNICAL SPECS -->
+        <section class="section" id="specs">
+            <div class="label">04 / Technical Details</div>
+            <h2 class="section-title">STATISTICAL &amp; BEHAVIORAL VERIFICATION.</h2>
+            <p class="section-description">
+                Key modules, rules, safety checks, and automated test results documented in the repository.
+            </p>
+
+            <div class="performance-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Engine Module</th>
+                            <th>Methodology</th>
+                            <th>Verified Output</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Correlation Explorer</strong></td>
+                            <td>Pearson r + Spearman ρ + OLS trendline</td>
+                            <td class="metric-highlight">Blocked unless n >= 7 valid pairs</td>
+                        </tr>                        <tr>
+                            <td><strong>Streak Calculator</strong></td>
+                            <td>Frequency masks + rest-day grace logic</td>
+                            <td class="metric-highlight">Zero false streak resets</td>
+                        </tr>                        <tr>
+                            <td><strong>Measurement Types</strong></td>
+                            <td>Boolean, duration, count & numeric targets</td>
+                            <td class="metric-highlight">Flexible Morning/Evening routines</td>
+                        </tr>                        <tr>
+                            <td><strong>Automated Testing</strong></td>
+                            <td>Unit & integration suite via pytest</td>
+                            <td class="metric-highlight">33 / 33 Passed (100%)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 05 TECHNOLOGY STACK -->
+        <section class="section" id="stack">
+            <div class="label">05 / Tech Stack</div>
+            <h2 class="section-title">CORE TECHNOLOGIES.</h2>
+            <p class="section-description">Frameworks, databases, visualization tools, and testing libraries used in DayBalance.</p>
+
+            <div class="tech-grid">
+                <div class="tech">
+                    <div class="tech-type">WEB FRAMEWORK</div>
+                    <div class="tech-name">Streamlit 1.66</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">ANALYTICS MATH</div>
+                    <div class="tech-name">Pandas &bull; NumPy</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">CHARTING ENGINE</div>
+                    <div class="tech-name">Plotly 7.1</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">DATABASE</div>
+                    <div class="tech-name">SQLite 3 (WAL Mode)</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">TESTING</div>
+                    <div class="tech-name">Pytest (33/33 Passed)</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">ARCHITECTURE</div>
+                    <div class="tech-name">Service-Repository Pattern</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 06 ROADMAP -->
+        <section class="section" id="roadmap">
+            <div class="label">06 / Next Steps</div>
+            <h2 class="section-title">FUTURE ENHANCEMENTS.</h2>
+            <p class="section-description">Upcoming improvements planned for DayBalance.</p>
+
+            <div class="future-grid">
+                <div class="future">Unsupervised K-Means clustering of lifestyle days after 90+ logged entries.</div>                <div class="future">Standard .ics calendar feed export for scheduled habit routines.</div>                <div class="future">Native Windows toast notifications for habit check-in windows.</div>                <div class="future">Wearable CSV step and heart-rate sleep stage importers.</div>                <div class="future">Weekly automated Markdown personal retrospective generator.</div>                <div class="future">Encrypted ZIP backup &amp; restore across workstation migrations.</div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="final">
+            <div class="final-small">OPEN-SOURCE PROJECT &bull; GITHUB.COM/RAGURAMRRP</div>
+            <h2>EXPLORE SOURCE &amp; DOCS.</h2>
+            <p>
+                View the complete codebase, sample datasets, quick-launch scripts, and automated test suites on GitHub.
+            </p>
+            <div class="final-buttons">
+                <a class="cta" href="../ai-ml.html" data-nav="../ai-ml.html">&larr; Back to AI, ML &amp; Computer Vision</a>
+                <a class="cta" href="../2.html" data-nav="../2.html">All Domains</a>
+                <a class="cta" href="../assets/Ragu_Ram_P_Resume.pdf" download="Ragu_Ram_P_Resume.pdf">Download Resume (PDF)</a>
+                <a class="cta" href="https://github.com/raguramrrp/90-days-90-projects-day-11-daybalance" target="_blank" rel="noopener noreferrer">View Source on GitHub &nearr;</a>
+            </div>
+        </section>
+    </main>
+
+    <div class="page-transition" id="pageTransition"></div>
+    <script src="../assets/cosmic.js"></script>
+</body>
+</html>

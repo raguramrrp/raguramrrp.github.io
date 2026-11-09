@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartCart Intelligence | Ragu Ram P</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/cosmic.css">
+    <link rel="stylesheet" href="../assets/project.css">
+</head>
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="grid"></div>
+    <div class="blob blob-one"></div>
+    <div class="blob blob-two"></div>
+    <div class="blob blob-three"></div>
+    <div class="noise"></div>
+    <div id="particles"></div>
+
+    <!-- TOP NAVIGATION -->
+    <nav class="proj-nav">
+        <a class="pill-btn pill-btn--back" href="../webapps.html" data-nav="../webapps.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"></path><path d="m11 18-6-6 6-6"></path></svg>
+            <span>Back to Full-Stack Web Apps</span>
+        </a>
+
+        <div class="nav-status">
+            <span class="status-dot-cyan"></span>
+            <span>RAGU RAM P &bull; PROJECT 10 OF 18</span>
+        </div>
+
+        <div class="nav-actions-right">
+            <a class="pill-btn" href="../2.html" data-nav="../2.html">Domains</a>
+            <a class="pill-btn" href="../github-vault.html" data-nav="../github-vault.html">Repositories</a>
+            <a class="pill-btn" href="https://github.com/raguramrrp/90-days-90-projects-day-08-smartcart-intelligence" target="_blank" rel="noopener noreferrer">GitHub Repo &nearr;</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- HERO SPLIT -->
+        <section class="hero">
+            <div class="hero-grid">
+                <div>
+                    <div class="hero-badge">
+                        <span class="status-dot-green"></span>
+                        <span>PROJECT 10 &bull; DAY 8 OF 90 &bull; REACT 19 + FASTAPI</span>
+                    </div>
+                    <h1 class="hero-title">SMARTCART<br>INTELLIGENCE.</h1>
+                    <p class="hero-text">An India-first multi-retailer price monitoring and shopping intelligence platform spanning React 19, TypeScript 5.8, Tailwind v4, and FastAPI — complete with an explainable 5-factor 0–100 Deal Scorer, 95% confidence OLS price forecasting, and explicit feed provenance.</p>
+                    <div class="hero-actions">
+                        <a class="btn-primary-glow" href="https://github.com/raguramrrp/90-days-90-projects-day-08-smartcart-intelligence" target="_blank" rel="noopener noreferrer">
+                            <span>View Repository on GitHub &nearr;</span>
+                        </a>
+                        <a class="pill-btn" href="#architecture">Architecture &darr;</a>
+                        <a class="pill-btn" href="#showcase">Screenshots &darr;</a>
+                    </div>
+                    <div class="hero-tags"><span class="tag">React 19</span><span class="tag">TypeScript 5.8</span><span class="tag">Tailwind v4</span><span class="tag">FastAPI 0.115</span><span class="tag">SQLAlchemy 2.0</span><span class="tag">APScheduler</span></div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="image-frame">
+                        <img src="../images/projects/day-08/04_price_history.png" alt="SmartCart Intelligence Preview" data-zoomable data-caption="SmartCart Price History — 90-Day Observed Timeline &amp; OLS Statistical Forecast Projection">
+                    </div>
+                    <div class="floating-stat stat1">
+                        <div class="stat-small">DEAL SCORING</div>
+                        <div class="stat-big green">5 Factors • 0–100</div>
+                    </div>
+                    <div class="floating-stat stat2">
+                        <div class="stat-small">BUILD & TESTS</div>
+                        <div class="stat-big cyan">19/19 Pytest + tsc</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUICK METRICS BAR -->
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="stat-number">11 Views</div>
+                <div class="stat-label">Full-Stack React 19 UI</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">5 Retailers</div>
+                <div class="stat-label">Amazon IN to Tata CLiQ</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">95% CI</div>
+                <div class="stat-label">OLS 7/14/30d Price Forecast</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">19 / 19</div>
+                <div class="stat-label">Pytest + Clean TypeScript Build</div>
+            </div>
+        </div>
+
+        <!-- 01 OVERVIEW -->
+        <section class="section" id="overview">
+            <div class="label">01 / Overview</div>
+            <h2 class="section-title">OBJECTIVE BUYING INTELLIGENCE FOR INDIAN RETAILERS.</h2>
+            <p class="section-description">Retailers inflate MRPs to advertise fake discounts. SmartCart compares historical lows, delivery-inclusive checkout prices, and statistical forecasts across 5 Indian stores.</p>
+
+            <div class="feature-grid">
+                <div class="feature">
+                    <div class="feature-number">01</div>
+                    <h3>5-Retailer Comparison Matrix</h3>
+                    <p>Tracks Amazon India, Flipkart, Croma, Reliance Digital, and Tata CLiQ comparing base price, shipping fees, and stock status.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">02</div>
+                    <h3>Explainable 0–100 Deal Scorer</h3>
+                    <p>Scores deals using Avg Proximity (35 pts), All-Time Low (25 pts), Store Spread (20 pts), MRP Depth (10 pts), and Freshness (10 pts).</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">03</div>
+                    <h3>OLS Price Forecast + 95% CI</h3>
+                    <p>Models 7-, 14-, and 30-day forward trajectories using linear regression with honest 95% confidence intervals.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">04</div>
+                    <h3>APScheduler &amp; Alert Rules</h3>
+                    <p>Runs background 30-minute checks evaluating TARGET_MET, PRICE_DROP, PERCENTAGE_DROP, and BACK_IN_STOCK triggers.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">05</div>
+                    <h3>Strict Data Provenance</h3>
+                    <p>Explicitly stamps every quote LIVE, CACHED, HISTORICAL, SAMPLE, or UNAVAILABLE — never masquerading mocks as live scrapes.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">06</div>
+                    <h3>Consumables &amp; Budgets</h3>
+                    <p>Tracks monthly category spend caps plus restock countdown intervals alongside a PBKDF2-HMAC-SHA256 JWT auth layer.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 02 ARCHITECTURE -->
+        <section class="section" id="architecture">
+            <div class="label">02 / Architecture</div>
+            <h2 class="section-title">HOW IT WORKS.</h2>
+            <p class="section-description">Vite/React 19 SPA talks over Axios/JWT to FastAPI routers backed by APScheduler, Provider Adapters, Deal Scorer, and Alembic SQLAlchemy.</p>
+
+            <div class="pipeline">
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 01</div>
+                    <h3>Store Adapters</h3>
+                    <p>5 India-first providers + provenance tags.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 02</div>
+                    <h3>APScheduler</h3>
+                    <p>30-min background price polling worker.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 03</div>
+                    <h3>Deal Scorer</h3>
+                    <p>Weighted 5-factor 0–100 buying verdict.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 04</div>
+                    <h3>OLS Forecast</h3>
+                    <p>7/14/30-day trend + 95% CI band.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 05</div>
+                    <h3>React 19 SPA</h3>
+                    <p>11 Tailwind v4 views & Recharts plots.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 03 SCREENSHOTS -->
+        <section class="section" id="showcase">
+            <div class="label">03 / Screenshots</div>
+            <h2 class="section-title">APPLICATION SCREENSHOTS.</h2>
+            <p class="section-description">
+                Live screens captured from the running application. Click any image to view full size, or follow setup instructions in the GitHub repository.
+            </p>
+
+            <div class="gallery-wrapper">
+                <div class="dashboard-showcase">
+                    <img id="galleryMainImg" src="../images/projects/day-08/04_price_history.png" alt="Price History &amp; ML Forecast — 90-Day Observed Trajectory &amp; OLS Linear Projection" data-zoomable data-caption="Price History &amp; ML Forecast — 90-Day Observed Trajectory &amp; OLS Linear Projection">
+                </div>
+                <div class="gallery-bar">
+                    <span class="gallery-caption" id="galleryCaption">Price History &amp; ML Forecast — 90-Day Observed Trajectory &amp; OLS Linear Projection</span>
+                    <span class="gallery-hint">Click image to enlarge</span>
+                </div>
+                <div class="gallery-thumbs">
+                    <button type="button" class="gallery-thumb active" data-src="../images/projects/day-08/04_price_history.png" data-caption="Price History &amp; ML Forecast — 90-Day Observed Trajectory &amp; OLS Linear Projection"><img src="../images/projects/day-08/04_price_history.png" alt="Price History Thumbnail"><span>Price History</span></button>
+                    <button type="button" class="gallery-thumb" data-src="../images/projects/day-08/03_deal_intelligence.png" data-caption="Deal Intelligence Scorer — Transparent 5-Factor Scoring &amp; Buying Guidance"><img src="../images/projects/day-08/03_deal_intelligence.png" alt="Deal Scorer Thumbnail"><span>Deal Scorer</span></button>
+                    <button type="button" class="gallery-thumb" data-src="../images/projects/day-08/02_compare_prices.png" data-caption="Cross-Retailer Comparison — Verified Total Cost Across Flipkart, Amazon India, Reliance &amp; Croma"><img src="../images/projects/day-08/02_compare_prices.png" alt="Compare Stores Thumbnail"><span>Compare Stores</span></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 04 TECHNICAL SPECS -->
+        <section class="section" id="specs">
+            <div class="label">04 / Technical Details</div>
+            <h2 class="section-title">5-FACTOR DEAL SCORER WEIGHTS &amp; SECURITY.</h2>
+            <p class="section-description">
+                Key modules, rules, safety checks, and automated test results documented in the repository.
+            </p>
+
+            <div class="performance-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Scoring Factor / Control</th>
+                            <th>Allocation / Algorithm</th>
+                            <th>Decision Impact</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Historical Avg Proximity</strong></td>
+                            <td>35 Points Max</td>
+                            <td class="metric-highlight">Rewards genuine drops below 90-day mean</td>
+                        </tr>                        <tr>
+                            <td><strong>All-Time Low Proximity</strong></td>
+                            <td>25 Points Max</td>
+                            <td class="metric-highlight">Identifies record-low price windows</td>
+                        </tr>                        <tr>
+                            <td><strong>Competitor Spread + MRP + Fresh</strong></td>
+                            <td>20 + 10 + 10 = 40 Points</td>
+                            <td class="metric-highlight">Rewards cheapest cross-store verified quote</td>
+                        </tr>                        <tr>
+                            <td><strong>Auth & QA Verification</strong></td>
+                            <td>PBKDF2-SHA256 (100k) + PyJWT</td>
+                            <td class="metric-highlight">19 / 19 Pytest + tsc -b clean pass</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 05 TECHNOLOGY STACK -->
+        <section class="section" id="stack">
+            <div class="label">05 / Tech Stack</div>
+            <h2 class="section-title">CORE TECHNOLOGIES.</h2>
+            <p class="section-description">Frameworks, databases, visualization tools, and testing libraries used in SmartCart Intelligence.</p>
+
+            <div class="tech-grid">
+                <div class="tech">
+                    <div class="tech-type">FRONTEND STACK</div>
+                    <div class="tech-name">React 19 &bull; TypeScript 5.8 &bull; Vite 8</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">STYLING & CHARTS</div>
+                    <div class="tech-name">Tailwind CSS v4 &bull; Recharts</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">BACKEND API</div>
+                    <div class="tech-name">FastAPI 0.115 &bull; Pydantic v2</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">ORM & SCHEDULER</div>
+                    <div class="tech-name">SQLAlchemy 2.0 &bull; Alembic &bull; APScheduler</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">SECURITY</div>
+                    <div class="tech-name">PBKDF2-HMAC-SHA256 &bull; PyJWT</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">VERIFICATION</div>
+                    <div class="tech-name">19/19 Pytest + tsc Build</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 06 ROADMAP -->
+        <section class="section" id="roadmap">
+            <div class="label">06 / Next Steps</div>
+            <h2 class="section-title">FUTURE ENHANCEMENTS.</h2>
+            <p class="section-description">Upcoming improvements planned for SmartCart Intelligence.</p>
+
+            <div class="future-grid">
+                <div class="future">Official Amazon PA-API 5.0 and Flipkart Affiliate credential vault.</div>                <div class="future">Browser extension price-drop overlay when browsing product pages.</div>                <div class="future">Festive sale (Big Billion Days / Great Indian Festival) seasonal baseline adjuster.</div>                <div class="future">Credit-card bank offer net-checkout discount calculator.</div>                <div class="future">Webhook Pushover / Telegram instant deal-met alerts.</div>                <div class="future">Automated Playwright fallback worker for JS-rendered regional retailers.</div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="final">
+            <div class="final-small">OPEN-SOURCE PROJECT &bull; GITHUB.COM/RAGURAMRRP</div>
+            <h2>EXPLORE SOURCE &amp; DOCS.</h2>
+            <p>
+                View the complete codebase, sample datasets, quick-launch scripts, and automated test suites on GitHub.
+            </p>
+            <div class="final-buttons">
+                <a class="cta" href="../webapps.html" data-nav="../webapps.html">&larr; Back to Full-Stack Web Apps</a>
+                <a class="cta" href="../2.html" data-nav="../2.html">All Domains</a>
+                <a class="cta" href="../assets/Ragu_Ram_P_Resume.pdf" download="Ragu_Ram_P_Resume.pdf">Download Resume (PDF)</a>
+                <a class="cta" href="https://github.com/raguramrrp/90-days-90-projects-day-08-smartcart-intelligence" target="_blank" rel="noopener noreferrer">View Source on GitHub &nearr;</a>
+            </div>
+        </section>
+    </main>
+
+    <div class="page-transition" id="pageTransition"></div>
+    <script src="../assets/cosmic.js"></script>
+</body>
+</html>

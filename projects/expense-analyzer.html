@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExpenseIQ | Ragu Ram P</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/cosmic.css">
+    <link rel="stylesheet" href="../assets/project.css">
+</head>
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="grid"></div>
+    <div class="blob blob-one"></div>
+    <div class="blob blob-two"></div>
+    <div class="blob blob-three"></div>
+    <div class="noise"></div>
+    <div id="particles"></div>
+
+    <!-- TOP NAVIGATION -->
+    <nav class="proj-nav">
+        <a class="pill-btn pill-btn--back" href="../analytics.html" data-nav="../analytics.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"></path><path d="m11 18-6-6 6-6"></path></svg>
+            <span>Back to Data &amp; BI Analytics</span>
+        </a>
+
+        <div class="nav-status">
+            <span class="status-dot-cyan"></span>
+            <span>RAGU RAM P &bull; PROJECT 12 OF 18</span>
+        </div>
+
+        <div class="nav-actions-right">
+            <a class="pill-btn" href="../2.html" data-nav="../2.html">Domains</a>
+            <a class="pill-btn" href="../github-vault.html" data-nav="../github-vault.html">Repositories</a>
+            <a class="pill-btn" href="https://github.com/raguramrrp/90-days-90-projects-day-01-expense-analyzer" target="_blank" rel="noopener noreferrer">GitHub Repo &nearr;</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- HERO SPLIT -->
+        <section class="hero">
+            <div class="hero-grid">
+                <div>
+                    <div class="hero-badge">
+                        <span class="status-dot-green"></span>
+                        <span>PROJECT 12 &bull; DAY 1 OF 90 &bull; FINANCIAL ANALYTICS</span>
+                    </div>
+                    <h1 class="hero-title">EXPENSEIQ<br>SPEND ENGINE.</h1>
+                    <p class="hero-text">An offline, privacy-first personal finance engine turning cryptic bank statement logs into clean categories, trend analytics, budget variance alerts, and dual-layer statistical + Isolation Forest spending anomaly detections.</p>
+                    <div class="hero-actions">
+                        <a class="btn-primary-glow" href="https://github.com/raguramrrp/90-days-90-projects-day-01-expense-analyzer" target="_blank" rel="noopener noreferrer">
+                            <span>View Repository on GitHub &nearr;</span>
+                        </a>
+                        <a class="pill-btn" href="#architecture">Architecture &darr;</a>
+                        <a class="pill-btn" href="#showcase">Screenshots &darr;</a>
+                    </div>
+                    <div class="hero-tags"><span class="tag">Python 3.12</span><span class="tag">Streamlit 1.35+</span><span class="tag">TF-IDF + LogReg</span><span class="tag">Isolation Forest</span><span class="tag">SQLite3</span><span class="tag">Plotly</span></div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="image-frame">
+                        <img src="../images/projects/day-01/01_dashboard.png" alt="ExpenseIQ Preview" data-zoomable data-caption="ExpenseIQ Financial Intelligence Dashboard — Monthly Burn Rate, 9 AI Anomalies &amp; Category Split">
+                    </div>
+                    <div class="floating-stat stat1">
+                        <div class="stat-small">CATEGORIZER</div>
+                        <div class="stat-big green">3-Layer Hybrid NLP</div>
+                    </div>
+                    <div class="floating-stat stat2">
+                        <div class="stat-small">ANOMALY ENGINE</div>
+                        <div class="stat-big cyan">Z-Score + IsolForest</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUICK METRICS BAR -->
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="stat-number">3 Layers</div>
+                <div class="stat-label">ML + 100+ Stems + Fallback</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">12 Categories</div>
+                <div class="stat-label">Clean Merchant Mapping</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">Dual Detector</div>
+                <div class="stat-label">Z-Score/IQR + IsolForest</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">5 / 5 Suites</div>
+                <div class="stat-label">Automated Pytest Passed</div>
+            </div>
+        </div>
+
+        <!-- 01 OVERVIEW -->
+        <section class="section" id="overview">
+            <div class="label">01 / Overview</div>
+            <h2 class="section-title">PRIVACY-FIRST SPEND INTELLIGENCE WITH ZERO BANK CREDENTIALS.</h2>
+            <p class="section-description">Cryptic card statement lines hide stealth subscriptions and spending outliers. ExpenseIQ normalizes CSV statements locally on SQLite without touching cloud APIs.</p>
+
+            <div class="feature-grid">
+                <div class="feature">
+                    <div class="feature-number">01</div>
+                    <h3>Heuristic CSV Ingestion</h3>
+                    <p>Auto-detects date, description, amount, and category columns from heterogeneous bank & card exports (140+ sample rows included).</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">02</div>
+                    <h3>3-Layer Hybrid Classifier</h3>
+                    <p>Combines Joblib-serialized TfidfVectorizer + LogisticRegression (P >= 0.35 gate), 100+ merchant regex stems across 12 categories, and safe fallback.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">03</div>
+                    <h3>Dual-Layer Anomalies</h3>
+                    <p>Flags extreme single spends via per-category Z-Score/IQR and catches multivariate timing/amount patterns via Isolation Forest.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">04</div>
+                    <h3>Dynamic Budget Variance</h3>
+                    <p>Monitors monthly outlays against caps with clear Within Budget (&lt;85%), Near Limit (85–100%), and Over Budget (&gt;100%) badges.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">05</div>
+                    <h3>Executive Spend Plots</h3>
+                    <p>Interactive Plotly daily burn rate charts, 7-day rolling averages, monthly trend bars, and category donuts.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">06</div>
+                    <h3>100% Local Persistence</h3>
+                    <p>Zero-config SQLite3 storage paired with filtered CSV and JSON export deliverables.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 02 ARCHITECTURE -->
+        <section class="section" id="architecture">
+            <div class="label">02 / Architecture</div>
+            <h2 class="section-title">HOW IT WORKS.</h2>
+            <p class="section-description">Raw CSV statements pass through column normalization, hybrid ML/regex classification, SQLite persistence, and parallel analytics/anomaly engines.</p>
+
+            <div class="pipeline">
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 01</div>
+                    <h3>CSV Sniffer</h3>
+                    <p>Heuristic date & amount normalization.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 02</div>
+                    <h3>Hybrid NLP</h3>
+                    <p>TF-IDF LogReg (P>=0.35) -> 100+ regex.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 03</div>
+                    <h3>SQLite Store</h3>
+                    <p>expenses.db persistence & budget caps.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 04</div>
+                    <h3>Anomaly AI</h3>
+                    <p>Category Z-Score/IQR + IsolationForest.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 05</div>
+                    <h3>Plotly Dash</h3>
+                    <p>KPIs, 7-day rolling & CSV/JSON export.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 03 SCREENSHOTS -->
+        <section class="section" id="showcase">
+            <div class="label">03 / Screenshots</div>
+            <h2 class="section-title">APPLICATION SCREENSHOTS.</h2>
+            <p class="section-description">
+                Live screens captured from the running application. Click any image to view full size, or follow setup instructions in the GitHub repository.
+            </p>
+
+            <div class="gallery-wrapper">
+                <div class="dashboard-showcase">
+                    <img id="galleryMainImg" src="../images/projects/day-01/01_dashboard.png" alt="ExpenseIQ Financial Dashboard — $17,208.99 Total Spend, Monthly Burn &amp; Category Split" data-zoomable data-caption="ExpenseIQ Financial Dashboard — $17,208.99 Total Spend, Monthly Burn &amp; Category Split">
+                </div>
+                <div class="gallery-bar">
+                    <span class="gallery-caption" id="galleryCaption">ExpenseIQ Financial Dashboard — $17,208.99 Total Spend, Monthly Burn &amp; Category Split</span>
+                    <span class="gallery-hint">Click image to enlarge</span>
+                </div>
+                <div class="gallery-thumbs">
+                    <button type="button" class="gallery-thumb active" data-src="../images/projects/day-01/01_dashboard.png" data-caption="ExpenseIQ Financial Dashboard — $17,208.99 Total Spend, Monthly Burn &amp; Category Split"><img src="../images/projects/day-01/01_dashboard.png" alt="Overview Thumbnail"><span>Overview</span></button>
+                    <button type="button" class="gallery-thumb" data-src="../images/projects/day-01/02_reports_budgets.png" data-caption="Reports &amp; Budget Variance — Actual Spend vs Target Cap Grouping Across 12 Categories"><img src="../images/projects/day-01/02_reports_budgets.png" alt="Budget Variance Thumbnail"><span>Budget Variance</span></button>
+                    <button type="button" class="gallery-thumb" data-src="../images/projects/day-01/03_transactions.png" data-caption="Searchable Transaction Ledger — 140+ Normalized Entries with AI Outlier Diagnostic Notes"><img src="../images/projects/day-01/03_transactions.png" alt="Transactions Thumbnail"><span>Transactions</span></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 04 TECHNICAL SPECS -->
+        <section class="section" id="specs">
+            <div class="label">04 / Technical Details</div>
+            <h2 class="section-title">CLASSIFICATION &amp; BUDGET THRESHOLD ARCHITECTURE.</h2>
+            <p class="section-description">
+                Key modules, rules, safety checks, and automated test results documented in the repository.
+            </p>
+
+            <div class="performance-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Engine Stage</th>
+                            <th>Algorithm / Threshold</th>
+                            <th>Operational Role</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Layer 1 Text ML</strong></td>
+                            <td>TfidfVectorizer + LogisticRegression (P >= 0.35)</td>
+                            <td class="metric-highlight">High-confidence merchant prediction</td>
+                        </tr>                        <tr>
+                            <td><strong>Layer 2 Rule Bank</strong></td>
+                            <td>100+ domain regex stems over 12 categories</td>
+                            <td class="metric-highlight">Deterministic override & low-conf catch</td>
+                        </tr>                        <tr>
+                            <td><strong>Anomaly Detection</strong></td>
+                            <td>Category Z-Score/IQR + IsolationForest</td>
+                            <td class="metric-highlight">Univariate + multivariate outlier flags</td>
+                        </tr>                        <tr>
+                            <td><strong>Budget Variance</strong></td>
+                            <td>Within (&lt;85%) | Near (85–100%) | Over (&gt;100%)</td>
+                            <td class="metric-highlight">Proactive monthly spend control</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 05 TECHNOLOGY STACK -->
+        <section class="section" id="stack">
+            <div class="label">05 / Tech Stack</div>
+            <h2 class="section-title">CORE TECHNOLOGIES.</h2>
+            <p class="section-description">Frameworks, databases, visualization tools, and testing libraries used in ExpenseIQ.</p>
+
+            <div class="tech-grid">
+                <div class="tech">
+                    <div class="tech-type">DASHBOARD</div>
+                    <div class="tech-name">Streamlit 1.35+ &bull; Plotly</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">TEXT ML & ANOMALY</div>
+                    <div class="tech-name">Scikit-Learn &bull; Joblib</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">DATA ENGINE</div>
+                    <div class="tech-name">Pandas &bull; NumPy</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">STORAGE</div>
+                    <div class="tech-name">SQLite 3 (expenses.db)</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">TESTING</div>
+                    <div class="tech-name">5 / 5 Pytest Suites</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">ENVIRONMENT</div>
+                    <div class="tech-name">Python 3.12 &bull; Offline First</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 06 ROADMAP -->
+        <section class="section" id="roadmap">
+            <div class="label">06 / Next Steps</div>
+            <h2 class="section-title">FUTURE ENHANCEMENTS.</h2>
+            <p class="section-description">Upcoming improvements planned for ExpenseIQ.</p>
+
+            <div class="future-grid">
+                <div class="future">Multi-currency FX normalization for international card statements.</div>                <div class="future">Local Tesseract receipt image scanning into itemized entries.</div>                <div class="future">Recurring subscription &amp; upcoming bill cycle calendar predictor.</div>                <div class="future">Optional SQLCipher encrypted SQLite backup archives.</div>                <div class="future">Custom user-taught correction feedback loop retraining Joblib weights.</div>                <div class="future">Year-over-year category inflation &amp; savings rate benchmarking.</div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="final">
+            <div class="final-small">OPEN-SOURCE PROJECT &bull; GITHUB.COM/RAGURAMRRP</div>
+            <h2>EXPLORE SOURCE &amp; DOCS.</h2>
+            <p>
+                View the complete codebase, sample datasets, quick-launch scripts, and automated test suites on GitHub.
+            </p>
+            <div class="final-buttons">
+                <a class="cta" href="../analytics.html" data-nav="../analytics.html">&larr; Back to Data &amp; BI Analytics</a>
+                <a class="cta" href="../2.html" data-nav="../2.html">All Domains</a>
+                <a class="cta" href="../assets/Ragu_Ram_P_Resume.pdf" download="Ragu_Ram_P_Resume.pdf">Download Resume (PDF)</a>
+                <a class="cta" href="https://github.com/raguramrrp/90-days-90-projects-day-01-expense-analyzer" target="_blank" rel="noopener noreferrer">View Source on GitHub &nearr;</a>
+            </div>
+        </section>
+    </main>
+
+    <div class="page-transition" id="pageTransition"></div>
+    <script src="../assets/cosmic.js"></script>
+</body>
+</html>

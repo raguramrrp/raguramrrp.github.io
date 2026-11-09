@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance Intelligence | Ragu Ram P</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/cosmic.css">
+    <link rel="stylesheet" href="../assets/project.css">
+</head>
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="grid"></div>
+    <div class="blob blob-one"></div>
+    <div class="blob blob-two"></div>
+    <div class="blob blob-three"></div>
+    <div class="noise"></div>
+    <div id="particles"></div>
+
+    <!-- TOP NAVIGATION -->
+    <nav class="proj-nav">
+        <a class="pill-btn pill-btn--back" href="../webapps.html" data-nav="../webapps.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"></path><path d="m11 18-6-6 6-6"></path></svg>
+            <span>Back to Full-Stack Web Apps</span>
+        </a>
+
+        <div class="nav-status">
+            <span class="status-dot-cyan"></span>
+            <span>RAGU RAM P &bull; PROJECT 11 OF 18</span>
+        </div>
+
+        <div class="nav-actions-right">
+            <a class="pill-btn" href="../2.html" data-nav="../2.html">Domains</a>
+            <a class="pill-btn" href="../github-vault.html" data-nav="../github-vault.html">Repositories</a>
+            <a class="pill-btn" href="https://github.com/raguramrrp/90-days-90-projects-day-05-student-attendance-intelligence" target="_blank" rel="noopener noreferrer">GitHub Repo &nearr;</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- HERO SPLIT -->
+        <section class="hero">
+            <div class="hero-grid">
+                <div>
+                    <div class="hero-badge">
+                        <span class="status-dot-green"></span>
+                        <span>PROJECT 11 &bull; DAY 5 OF 90 &bull; EDTECH EARLY WARNING</span>
+                    </div>
+                    <h1 class="hero-title">ATTENDANCE<br>INTELLIGENCE.</h1>
+                    <p class="hero-text">A 4-portal Django 5.1.15 period-wise attendance intelligence and early-warning system built over 22 normalized models — delivering closed-form recovery projections, What-If simulators, idempotent parent absence alerts, OD workflows, and ML risk explainability.</p>
+                    <div class="hero-actions">
+                        <a class="btn-primary-glow" href="https://github.com/raguramrrp/90-days-90-projects-day-05-student-attendance-intelligence" target="_blank" rel="noopener noreferrer">
+                            <span>View Repository on GitHub &nearr;</span>
+                        </a>
+                        <a class="pill-btn" href="#architecture">Architecture &darr;</a>
+                        <a class="pill-btn" href="#showcase">Screenshots &darr;</a>
+                    </div>
+                    <div class="hero-tags"><span class="tag">Python 3.12</span><span class="tag">Django 5.1.15</span><span class="tag">22 ORM Models</span><span class="tag">Chart.js 4.4</span><span class="tag">Scikit-Learn</span><span class="tag">25/25 Tests</span></div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="image-frame">
+                        <img src="../images/projects/day-05/01_admin_dashboard.png" alt="Student Attendance Intelligence Preview" data-zoomable data-caption="Attendance Intelligence Admin Portal — 14-Day Trajectory &amp; Institutional Early Warning KPIs">
+                    </div>
+                    <div class="floating-stat stat1">
+                        <div class="stat-small">PORTALS & SCHEMA</div>
+                        <div class="stat-big green">4 Portals • 22 Models</div>
+                    </div>
+                    <div class="floating-stat stat2">
+                        <div class="stat-small">TEST SUITE</div>
+                        <div class="stat-big cyan">25 / 25 Passed</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUICK METRICS BAR -->
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="stat-number">4 Portals</div>
+                <div class="stat-label">Admin • Faculty • Student • Parent</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">22 Models</div>
+                <div class="stat-label">Period-Level Relational DB</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">S = ceil(...)</div>
+                <div class="stat-label">Exact Recovery Formula</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">25 / 25</div>
+                <div class="stat-label">Automated Tests Passed</div>
+            </div>
+        </div>
+
+        <!-- 01 OVERVIEW -->
+        <section class="section" id="overview">
+            <div class="label">01 / Overview</div>
+            <h2 class="section-title">INTERVENING BEFORE DEBARMENT BECOMES MATHEMATICALLY IMPOSSIBLE.</h2>
+            <p class="section-description">Whole-day attendance masks period skips until exam week. This system logs period-by-period sessions, notifies parents immediately, and tells students the exact consecutive classes needed to recover.</p>
+
+            <div class="feature-grid">
+                <div class="feature">
+                    <div class="feature-number">01</div>
+                    <h3>4 Role-Scoped Portals</h3>
+                    <p>Dedicated experiences for Admin (analytics & policy), Faculty (timetable rollup & approvals), Student, and Parent.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">02</div>
+                    <h3>Exact Recovery Formula</h3>
+                    <p>Computes exact consecutive classes S = max(0, ceil((T*N - P)/(1-T))) required to hit target threshold T, handling edge cases safely.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">03</div>
+                    <h3>What-If Recovery Simulator</h3>
+                    <p>Lets students model upcoming attend/miss scenarios interactively per subject alongside Safe (>=80%)/Warning/Critical tiers.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">04</div>
+                    <h3>Idempotent Parent Alerts</h3>
+                    <p>Dispatches deduplicated absence notifications and collects structured parental absence explanations.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">05</div>
+                    <h3>OD, Leave &amp; Dispute Audits</h3>
+                    <p>Tracks symposium/hackathon On-Duty applications and roll-call edits with mandatory faculty edit reason trails.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">06</div>
+                    <h3>Decision Tree &amp; Excel Sync</h3>
+                    <p>Pairs explainable rule-based velocity flags with a Scikit-Learn Decision Tree risk service and formula-safe OpenPyXL exports.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 02 ARCHITECTURE -->
+        <section class="section" id="architecture">
+            <div class="label">02 / Architecture</div>
+            <h2 class="section-title">HOW IT WORKS.</h2>
+            <p class="section-description">Centralized calculation, risk, notification, ML, and OpenPyXL services power all 4 Django role views over 22 ORM tables.</p>
+
+            <div class="pipeline">
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 01</div>
+                    <h3>Period Roll</h3>
+                    <p>Faculty marks period attendance & OD.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 02</div>
+                    <h3>Recovery Math</h3>
+                    <p>Compute period % & consecutive target S.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 03</div>
+                    <h3>Risk Engine</h3>
+                    <p>Velocity rules + Decision Tree score.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 04</div>
+                    <h3>Parent Alerts</h3>
+                    <p>Idempotent absence notifications sent.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 05</div>
+                    <h3>4 Portals</h3>
+                    <p>Admin BI, Student What-If & Excel export.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 03 SCREENSHOTS -->
+        <section class="section" id="showcase">
+            <div class="label">03 / Screenshots</div>
+            <h2 class="section-title">APPLICATION SCREENSHOTS.</h2>
+            <p class="section-description">
+                Live screens captured from the running application. Click any image to view full size, or follow setup instructions in the GitHub repository.
+            </p>
+
+            <div class="gallery-wrapper">
+                <div class="dashboard-showcase">
+                    <img id="galleryMainImg" src="../images/projects/day-05/01_admin_dashboard.png" alt="Institutional Admin Portal — 86.1% Cohort Attendance, 14-Day Trajectory &amp; Eligibility Mix" data-zoomable data-caption="Institutional Admin Portal — 86.1% Cohort Attendance, 14-Day Trajectory &amp; Eligibility Mix">
+                </div>
+                <div class="gallery-bar">
+                    <span class="gallery-caption" id="galleryCaption">Institutional Admin Portal — 86.1% Cohort Attendance, 14-Day Trajectory &amp; Eligibility Mix</span>
+                    <span class="gallery-hint">Click image to enlarge</span>
+                </div>
+                <div class="gallery-thumbs">
+                    <button type="button" class="gallery-thumb active" data-src="../images/projects/day-05/01_admin_dashboard.png" data-caption="Institutional Admin Portal — 86.1% Cohort Attendance, 14-Day Trajectory &amp; Eligibility Mix"><img src="../images/projects/day-05/01_admin_dashboard.png" alt="Admin Portal Thumbnail"><span>Admin Portal</span></button>
+                    <button type="button" class="gallery-thumb" data-src="../images/projects/day-05/02_student_dashboard.png" data-caption="Student Early-Warning Portal — Exact Recovery Formula (&#x27;12 Consecutive Classes Needed&#x27;)"><img src="../images/projects/day-05/02_student_dashboard.png" alt="Student Portal Thumbnail"><span>Student Portal</span></button>
+                    <button type="button" class="gallery-thumb" data-src="../images/projects/day-05/03_what_if_simulator.png" data-caption="Interactive Attendance Recovery Simulator — Non-Destructive What-If Scenario Modeler"><img src="../images/projects/day-05/03_what_if_simulator.png" alt="What-If Simulator Thumbnail"><span>What-If Simulator</span></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 04 TECHNICAL SPECS -->
+        <section class="section" id="specs">
+            <div class="label">04 / Technical Details</div>
+            <h2 class="section-title">RECOVERY MATHEMATICS &amp; GOVERNANCE CONTROLS.</h2>
+            <p class="section-description">
+                Key modules, rules, safety checks, and automated test results documented in the repository.
+            </p>
+
+            <div class="performance-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Engine Component</th>
+                            <th>Mathematical / Policy Rule</th>
+                            <th>Verified Behavior</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Calculation Engine</strong></td>
+                            <td>S = max(0, ceil((T * N - P) / (1 - T)))</td>
+                            <td class="metric-highlight">Handles 0-session & 100%-target guards</td>
+                        </tr>                        <tr>
+                            <td><strong>Risk Classification</strong></td>
+                            <td>Safe >= 80% | Warning | Critical tiers</td>
+                            <td class="metric-highlight">Early absence velocity alerts</td>
+                        </tr>                        <tr>
+                            <td><strong>Audit & Disputes</strong></td>
+                            <td>Mandatory reason log on faculty edits</td>
+                            <td class="metric-highlight">Prevents silent roll-call tampering</td>
+                        </tr>                        <tr>
+                            <td><strong>Test Suite</strong></td>
+                            <td>tests/ covering formulas, portals & Excel</td>
+                            <td class="metric-highlight">25 / 25 Passed (100%)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 05 TECHNOLOGY STACK -->
+        <section class="section" id="stack">
+            <div class="label">05 / Tech Stack</div>
+            <h2 class="section-title">CORE TECHNOLOGIES.</h2>
+            <p class="section-description">Frameworks, databases, visualization tools, and testing libraries used in Student Attendance Intelligence.</p>
+
+            <div class="tech-grid">
+                <div class="tech">
+                    <div class="tech-type">BACKEND FRAMEWORK</div>
+                    <div class="tech-name">Django 5.1.15 &bull; Python 3.12</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">RELATIONAL DATA</div>
+                    <div class="tech-name">22 Normalized ORM Models</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">ML & ANALYTICS</div>
+                    <div class="tech-name">Scikit-Learn &bull; Chart.js 4.4</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">IMPORTS & EXPORTS</div>
+                    <div class="tech-name">OpenPyXL (Formula-Safe)</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">DESIGN SYSTEM</div>
+                    <div class="tech-name">Warm Ivory &amp; Forest Green</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">VERIFICATION</div>
+                    <div class="tech-name">25 / 25 Tests Passed</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 06 ROADMAP -->
+        <section class="section" id="roadmap">
+            <div class="label">06 / Next Steps</div>
+            <h2 class="section-title">FUTURE ENHANCEMENTS.</h2>
+            <p class="section-description">Upcoming improvements planned for Student Attendance Intelligence.</p>
+
+            <div class="future-grid">
+                <div class="future">SMS/WhatsApp gateway webhook adapter for offline parent alerts.</div>                <div class="future">Academic timetable clash &amp; holiday calendar sync importer.</div>                <div class="future">Departmental semester-end accreditation PDF compliance bundle.</div>                <div class="future">Student burnout correlation view across early-morning labs.</div>                <div class="future">QR/NFC rotating classroom check-in token verification plugin.</div>                <div class="future">REST API endpoints for campus mobile companion apps.</div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="final">
+            <div class="final-small">OPEN-SOURCE PROJECT &bull; GITHUB.COM/RAGURAMRRP</div>
+            <h2>EXPLORE SOURCE &amp; DOCS.</h2>
+            <p>
+                View the complete codebase, sample datasets, quick-launch scripts, and automated test suites on GitHub.
+            </p>
+            <div class="final-buttons">
+                <a class="cta" href="../webapps.html" data-nav="../webapps.html">&larr; Back to Full-Stack Web Apps</a>
+                <a class="cta" href="../2.html" data-nav="../2.html">All Domains</a>
+                <a class="cta" href="../assets/Ragu_Ram_P_Resume.pdf" download="Ragu_Ram_P_Resume.pdf">Download Resume (PDF)</a>
+                <a class="cta" href="https://github.com/raguramrrp/90-days-90-projects-day-05-student-attendance-intelligence" target="_blank" rel="noopener noreferrer">View Source on GitHub &nearr;</a>
+            </div>
+        </section>
+    </main>
+
+    <div class="page-transition" id="pageTransition"></div>
+    <script src="../assets/cosmic.js"></script>
+</body>
+</html>

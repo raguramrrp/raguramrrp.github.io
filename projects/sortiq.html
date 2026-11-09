@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SortIQ | Ragu Ram P</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/cosmic.css">
+    <link rel="stylesheet" href="../assets/project.css">
+</head>
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="grid"></div>
+    <div class="blob blob-one"></div>
+    <div class="blob blob-two"></div>
+    <div class="blob blob-three"></div>
+    <div class="noise"></div>
+    <div id="particles"></div>
+
+    <!-- TOP NAVIGATION -->
+    <nav class="proj-nav">
+        <a class="pill-btn pill-btn--back" href="../automation.html" data-nav="../automation.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"></path><path d="m11 18-6-6 6-6"></path></svg>
+            <span>Back to Automation &amp; Dev Tools</span>
+        </a>
+
+        <div class="nav-status">
+            <span class="status-dot-cyan"></span>
+            <span>RAGU RAM P &bull; PROJECT 16 OF 18</span>
+        </div>
+
+        <div class="nav-actions-right">
+            <a class="pill-btn" href="../2.html" data-nav="../2.html">Domains</a>
+            <a class="pill-btn" href="../github-vault.html" data-nav="../github-vault.html">Repositories</a>
+            <a class="pill-btn" href="https://github.com/raguramrrp/90-days-90-projects-day-03-intelligent-file-organizer" target="_blank" rel="noopener noreferrer">GitHub Repo &nearr;</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- HERO SPLIT -->
+        <section class="hero">
+            <div class="hero-grid">
+                <div>
+                    <div class="hero-badge">
+                        <span class="status-dot-green"></span>
+                        <span>PROJECT 16 &bull; DAY 3 OF 90 &bull; DESKTOP AUTOMATION</span>
+                    </div>
+                    <h1 class="hero-title">SORTIQ<br>SMART ORGANIZER.</h1>
+                    <p class="hero-text">An Obsidian &amp; Electric Violet Windows file organization utility combining priority-ordered wildcard and regex rules, O(N) size + 64KB chunked SHA-256 duplicate detection, dry-run simulation tables, and transactional 1-click SQLite batch rollback.</p>
+                    <div class="hero-actions">
+                        <a class="btn-primary-glow" href="https://github.com/raguramrrp/90-days-90-projects-day-03-intelligent-file-organizer" target="_blank" rel="noopener noreferrer">
+                            <span>View Repository on GitHub &nearr;</span>
+                        </a>
+                        <a class="pill-btn" href="#architecture">Architecture &darr;</a>
+                        <a class="pill-btn" href="#showcase">Screenshots &darr;</a>
+                    </div>
+                    <div class="hero-tags"><span class="tag">Python 3.10+</span><span class="tag">Tkinter GUI</span><span class="tag">Headless CLI</span><span class="tag">64KB SHA-256</span><span class="tag">SQLite WAL</span><span class="tag">PyInstaller .exe</span></div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="image-frame">
+                        <img src="../images/projects/day-03/sortiq_design_concept.jpg" alt="SortIQ Preview" data-zoomable data-caption="SortIQ Design System — Obsidian &amp; Electric Violet Desktop Interface Concept">
+                    </div>
+                    <div class="floating-stat stat1">
+                        <div class="stat-small">DEDUP ENGINE</div>
+                        <div class="stat-big green">O(N) + 64KB SHA-256</div>
+                    </div>
+                    <div class="floating-stat stat2">
+                        <div class="stat-small">SAFETY & QA</div>
+                        <div class="stat-big cyan">1-Click SQLite Undo</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUICK METRICS BAR -->
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="stat-number">10+ Categories</div>
+                <div class="stat-label">Semantic + Temporal Routing</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">O(N) Pruned</div>
+                <div class="stat-label">90%+ Skip Before Hashing</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">3 Collisions</div>
+                <div class="stat-label">Rename • Skip • Overwrite</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">100% Pass</div>
+                <div class="stat-label">Pytest Verified Suite</div>
+            </div>
+        </div>
+
+        <!-- 01 OVERVIEW -->
+        <section class="section" id="overview">
+            <div class="label">01 / Overview</div>
+            <h2 class="section-title">ZERO-DATA-LOSS FILESYSTEM AUTOMATION FOR WINDOWS.</h2>
+            <p class="section-description">Cluttered Downloads folders mix receipts, datasets, installers, and duplicate archives. SortIQ previews every planned file move upfront and logs reversible batches in SQLite WAL.</p>
+
+            <div class="feature-grid">
+                <div class="feature">
+                    <div class="feature-number">01</div>
+                    <h3>Dual GUI + Headless CLI</h3>
+                    <p>Operates as an interactive Obsidian/Electric Violet Tkinter app (PyInstaller .exe ready) or headless CLI for Task Scheduler scripts.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">02</div>
+                    <h3>Priority Wildcard &amp; Regex Rules</h3>
+                    <p>Evaluates custom rules like *invoice* or regex:^Screenshot_\d+ alongside file size and modification age bounds.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">03</div>
+                    <h3>Two-Tier SHA-256 Dedup</h3>
+                    <p>Clusters by exact byte size in O(N) time (skipping 90%+ unique files) before streaming 64KB chunked SHA-256 hashes.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">04</div>
+                    <h3>Dry-Run Plan Simulator</h3>
+                    <p>Displays exact proposed source -> target routes, matched rules, collision tags, and duplicate flags without touching disk.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">05</div>
+                    <h3>Temporal Year-Month Clustering</h3>
+                    <p>Organizes archives chronologically by Year (2026/), Year-Month (2026-10/), or Full Date hierarchies.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">06</div>
+                    <h3>1-Click SQLite Rollback</h3>
+                    <p>Every move is recorded under a transaction Batch ID in WAL SQLite, restoring moved files cleanly in one click or CLI command.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 02 ARCHITECTURE -->
+        <section class="section" id="architecture">
+            <div class="label">02 / Architecture</div>
+            <h2 class="section-title">HOW IT WORKS.</h2>
+            <p class="section-description">GUI and CLI dispatchers drive Scanner, Classifier, RuleEngine, Two-Tier Deduper, and atomic OrganizerEngine backed by SQLite.</p>
+
+            <div class="pipeline">
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 01</div>
+                    <h3>FileScanner</h3>
+                    <p>Pathlib walk + hidden/ext metadata.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 02</div>
+                    <h3>Size + SHA-256</h3>
+                    <p>O(N) cluster then 64KB hash stream.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 03</div>
+                    <h3>Rules &amp; Temporal</h3>
+                    <p>Regex priority -> category/date tree.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 04</div>
+                    <h3>Dry-Run Table</h3>
+                    <p>Simulate collisions & inspect routes.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 05</div>
+                    <h3>Atomic + Undo</h3>
+                    <p>Execute moves & log Batch ID rollback.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 03 SCREENSHOTS -->
+        <section class="section" id="showcase">
+            <div class="label">03 / Screenshots</div>
+            <h2 class="section-title">APPLICATION SCREENSHOTS.</h2>
+            <p class="section-description">
+                Live screens captured from the running application. Click any image to view full size, or follow setup instructions in the GitHub repository.
+            </p>
+
+            <div class="gallery-wrapper">
+                <div class="dashboard-showcase">
+                    <img id="galleryMainImg" src="../images/projects/day-03/sortiq_design_concept.jpg" alt="SortIQ Obsidian &amp; Electric Violet Desktop Concept — Rule Priority, Simulation Plan &amp; Rollback Bar" data-zoomable data-caption="SortIQ Obsidian &amp; Electric Violet Desktop Concept — Rule Priority, Simulation Plan &amp; Rollback Bar">
+                </div>
+                <div class="gallery-bar">
+                    <span class="gallery-caption" id="galleryCaption">SortIQ Obsidian &amp; Electric Violet Desktop Concept — Rule Priority, Simulation Plan &amp; Rollback Bar</span>
+                    <span class="gallery-hint">Click image to enlarge</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 04 TECHNICAL SPECS -->
+        <section class="section" id="specs">
+            <div class="label">04 / Technical Details</div>
+            <h2 class="section-title">AUTOMATION ENGINE &amp; ROLLBACK SAFETY SPECS.</h2>
+            <p class="section-description">
+                Key modules, rules, safety checks, and automated test results documented in the repository.
+            </p>
+
+            <div class="performance-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Engine Layer</th>
+                            <th>Algorithm / Mode</th>
+                            <th>Data-Safety Guarantee</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Duplicate Detector</strong></td>
+                            <td>Exact Byte Size Filter -> 64KB SHA-256</td>
+                            <td class="metric-highlight">Low RAM footprint across large media</td>
+                        </tr>                        <tr>
+                            <td><strong>Rule Evaluation</strong></td>
+                            <td>Priority-ordered wildcards, regex & age</td>
+                            <td class="metric-highlight">Deterministic predictable routing</td>
+                        </tr>                        <tr>
+                            <td><strong>Collision Modes</strong></td>
+                            <td>Rename (suffix) / Skip / Overwrite</td>
+                            <td class="metric-highlight">Zero silent file overwrites by default</td>
+                        </tr>                        <tr>
+                            <td><strong>Batch Rollback & QA</strong></td>
+                            <td>SQLite WAL batch operations + audit CSV</td>
+                            <td class="metric-highlight">30 passing tests (100% pass)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 05 TECHNOLOGY STACK -->
+        <section class="section" id="stack">
+            <div class="label">05 / Tech Stack</div>
+            <h2 class="section-title">CORE TECHNOLOGIES.</h2>
+            <p class="section-description">Frameworks, databases, visualization tools, and testing libraries used in SortIQ.</p>
+
+            <div class="tech-grid">
+                <div class="tech">
+                    <div class="tech-type">DESKTOP UI</div>
+                    <div class="tech-name">Tkinter / ttk (Obsidian Design)</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">PACKAGING</div>
+                    <div class="tech-name">PyInstaller Windows .exe</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">CLI ENGINE</div>
+                    <div class="tech-name">Python Headless Automation</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">CRYPTO HASHING</div>
+                    <div class="tech-name">64KB Chunked SHA-256</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">AUDIT LEDGER</div>
+                    <div class="tech-name">SQLite 3 (WAL Mode)</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">VERIFICATION</div>
+                    <div class="tech-name">Pytest (100% Passing)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 06 ROADMAP -->
+        <section class="section" id="roadmap">
+            <div class="label">06 / Next Steps</div>
+            <h2 class="section-title">FUTURE ENHANCEMENTS.</h2>
+            <p class="section-description">Upcoming improvements planned for SortIQ.</p>
+
+            <div class="future-grid">
+                <div class="future">Watchdog background daemon for instant auto-filing of incoming Downloads.</div>                <div class="future">Lightweight NLP extraction from PDFs and TXT docs for topic clustering.</div>                <div class="future">Cloud folder synchronization adapters for OneDrive and Google Drive.</div>                <div class="future">Scheduled dry-run digest emails before weekly cleanup runs.</div>                <div class="future">Portable winget / MSI installer packaging with context-menu hook.</div>                <div class="future">Visual treemap widget showing reclaimed folder space per category.</div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="final">
+            <div class="final-small">OPEN-SOURCE PROJECT &bull; GITHUB.COM/RAGURAMRRP</div>
+            <h2>EXPLORE SOURCE &amp; DOCS.</h2>
+            <p>
+                View the complete codebase, sample datasets, quick-launch scripts, and automated test suites on GitHub.
+            </p>
+            <div class="final-buttons">
+                <a class="cta" href="../automation.html" data-nav="../automation.html">&larr; Back to Automation &amp; Dev Tools</a>
+                <a class="cta" href="../2.html" data-nav="../2.html">All Domains</a>
+                <a class="cta" href="../assets/Ragu_Ram_P_Resume.pdf" download="Ragu_Ram_P_Resume.pdf">Download Resume (PDF)</a>
+                <a class="cta" href="https://github.com/raguramrrp/90-days-90-projects-day-03-intelligent-file-organizer" target="_blank" rel="noopener noreferrer">View Source on GitHub &nearr;</a>
+            </div>
+        </section>
+    </main>
+
+    <div class="page-transition" id="pageTransition"></div>
+    <script src="../assets/cosmic.js"></script>
+</body>
+</html>

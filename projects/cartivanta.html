@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARTIVANTA | Ragu Ram P</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/cosmic.css">
+    <link rel="stylesheet" href="../assets/project.css">
+</head>
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="grid"></div>
+    <div class="blob blob-one"></div>
+    <div class="blob blob-two"></div>
+    <div class="blob blob-three"></div>
+    <div class="noise"></div>
+    <div id="particles"></div>
+
+    <!-- TOP NAVIGATION -->
+    <nav class="proj-nav">
+        <a class="pill-btn pill-btn--back" href="../webapps.html" data-nav="../webapps.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"></path><path d="m11 18-6-6 6-6"></path></svg>
+            <span>Back to Full-Stack Web Apps</span>
+        </a>
+
+        <div class="nav-status">
+            <span class="status-dot-cyan"></span>
+            <span>RAGU RAM P &bull; PROJECT 07 OF 18</span>
+        </div>
+
+        <div class="nav-actions-right">
+            <a class="pill-btn" href="../2.html" data-nav="../2.html">Domains</a>
+            <a class="pill-btn" href="../github-vault.html" data-nav="../github-vault.html">Repositories</a>
+            <a class="pill-btn" href="https://github.com/raguramrrp/90-days-90-projects-day-16-cartivanta" target="_blank" rel="noopener noreferrer">GitHub Repo &nearr;</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- HERO SPLIT -->
+        <section class="hero">
+            <div class="hero-grid">
+                <div>
+                    <div class="hero-badge">
+                        <span class="status-dot-green"></span>
+                        <span>PROJECT 07 &bull; DAY 16 OF 90 &bull; COMMERCIAL RETAIL OS</span>
+                    </div>
+                    <h1 class="hero-title">CARTIVANTA<br>RETAIL POS &amp; BI.</h1>
+                    <p class="hero-text">A complete retail operating system and business intelligence suite tailored for Indian shops (INR) — combining fast barcode POS billing, GST/weighted-cost stock ledgers, Khata credit books, 1.029M-row historical analytics, 12-week demand forecasts, and K-Means RFM clustering.</p>
+                    <div class="hero-actions">
+                        <a class="btn-primary-glow" href="https://github.com/raguramrrp/90-days-90-projects-day-16-cartivanta" target="_blank" rel="noopener noreferrer">
+                            <span>View Repository on GitHub &nearr;</span>
+                        </a>
+                        <a class="pill-btn" href="#architecture">Architecture &darr;</a>
+                        <a class="pill-btn" href="#showcase">Screenshots &darr;</a>
+                    </div>
+                    <div class="hero-tags"><span class="tag">FastAPI 0.162</span><span class="tag">Python 3.12</span><span class="tag">LightGBM / RFM</span><span class="tag">1.029M Rows</span><span class="tag">SQLite WAL / Postgres</span><span class="tag">100% Pytest</span></div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="image-frame">
+                        <img src="../images/projects/day-16/page_01_executive_overview.png" alt="CARTIVANTA Preview" data-zoomable data-caption="CARTIVANTA Page 01 — Executive Retail Overview in INR">
+                    </div>
+                    <div class="floating-stat stat1">
+                        <div class="stat-small">DATASET SCALE</div>
+                        <div class="stat-big green">1.029M Transactions</div>
+                    </div>
+                    <div class="floating-stat stat2">
+                        <div class="stat-small">DATA QUALITY</div>
+                        <div class="stat-big cyan">80.9 / 100 Verified</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUICK METRICS BAR -->
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="stat-number">9 Modules</div>
+                <div class="stat-label">POS, Khata & BI Hub</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">1.029M Rows</div>
+                <div class="stat-label">Historical Commerce Scale</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">12-Week</div>
+                <div class="stat-label">LightGBM / Holt-Winters</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">20 / 20</div>
+                <div class="stat-label">100% Pytest Suite Passed</div>
+            </div>
+        </div>
+
+        <!-- 01 OVERVIEW -->
+        <section class="section" id="overview">
+            <div class="label">01 / Overview</div>
+            <h2 class="section-title">EVERYDAY SHOPKEEPING MEETS ENTERPRISE DEMAND INTELLIGENCE.</h2>
+            <p class="section-description">Designed so a store owner can operate billing and Khata without training, while exposing 6 dedicated BI analytics pages with plain-language metrics strictly in Indian Rupees (&#8377;).</p>
+
+            <div class="feature-grid">
+                <div class="feature">
+                    <div class="feature-number">01</div>
+                    <h3>Barcode POS &amp; GST Billing</h3>
+                    <p>Rapid checkout screen with barcode lookup, GST computation, weighted-average COGS tracking, and atomic stock deduction.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">02</div>
+                    <h3>Khata (Udhaar) &amp; RBAC</h3>
+                    <p>Tracks customer credit limits, repayments, and supplier payables with strict Owner vs Cashier role-based access control.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">03</div>
+                    <h3>1.029M Transaction Analytics</h3>
+                    <p>Benchmarked over 1.029M historical retail rows delivering net sales, gross margin, and velocity insights.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">04</div>
+                    <h3>12-Week Demand Forecasting</h3>
+                    <p>LightGBM and Holt-Winters time-series forecasts evaluated with WAPE & MAE accuracy metrics.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">05</div>
+                    <h3>K-Means RFM Segmentation</h3>
+                    <p>Clusters customers into actionable loyalty segments paired with a Festive Discount & Margin Uplift Simulator.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">06</div>
+                    <h3>5D Data Quality Action Center</h3>
+                    <p>Scores catalog/transaction completeness and anomalies at 80.9/100 with concrete inventory reorder actions.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 02 ARCHITECTURE -->
+        <section class="section" id="architecture">
+            <div class="label">02 / Architecture</div>
+            <h2 class="section-title">HOW IT WORKS.</h2>
+            <p class="section-description">FastAPI serves operational POS/Khata routes over WAL SQLite/PostgreSQL alongside background ML forecasting and segmentation engines.</p>
+
+            <div class="pipeline">
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 01</div>
+                    <h3>POS / Inward</h3>
+                    <p>Barcode sales, GST & purchase inward.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 02</div>
+                    <h3>WAL Ledger</h3>
+                    <p>Atomic stock, COGS & Khata balances.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 03</div>
+                    <h3>Quality Gate</h3>
+                    <p>5D cleaner handles returns/cancellations.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 04</div>
+                    <h3>ML &amp; RFM</h3>
+                    <p>12-wk forecast & K-Means clustering.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 05</div>
+                    <h3>6 BI Pages</h3>
+                    <p>Executive, Forecast, Festive & Action.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 03 SCREENSHOTS -->
+        <section class="section" id="showcase">
+            <div class="label">03 / Screenshots</div>
+            <h2 class="section-title">APPLICATION SCREENSHOTS.</h2>
+            <p class="section-description">
+                Live screens captured from the running application. Click any image to view full size, or follow setup instructions in the GitHub repository.
+            </p>
+
+            <div class="gallery-wrapper">
+                <div class="dashboard-showcase">
+                    <img id="galleryMainImg" src="../images/projects/day-16/page_01_executive_overview.png" alt="Page 01 — Executive Retail Overview &amp; Net Sales KPIs (INR)" data-zoomable data-caption="Page 01 — Executive Retail Overview &amp; Net Sales KPIs (INR)">
+                </div>
+                <div class="gallery-bar">
+                    <span class="gallery-caption" id="galleryCaption">Page 01 — Executive Retail Overview &amp; Net Sales KPIs (INR)</span>
+                    <span class="gallery-hint">Click image to enlarge</span>
+                </div>
+                <div class="gallery-thumbs">
+                    <button type="button" class="gallery-thumb active" data-src="../images/projects/day-16/page_01_executive_overview.png" data-caption="Page 01 — Executive Retail Overview &amp; Net Sales KPIs (INR)"><img src="../images/projects/day-16/page_01_executive_overview.png" alt="Executive Overview Thumbnail"><span>Executive Overview</span></button>
+                    <button type="button" class="gallery-thumb" data-src="../images/projects/day-16/page_02_product_inventory.png" data-caption="Page 02 — Product Performance &amp; Stock Reorder Health"><img src="../images/projects/day-16/page_02_product_inventory.png" alt="Product Inventory Thumbnail"><span>Product Inventory</span></button>
+                    <button type="button" class="gallery-thumb" data-src="../images/projects/day-16/page_03_demand_forecast.png" data-caption="Page 03 — 12-Week LightGBM &amp; Holt-Winters Demand Forecast"><img src="../images/projects/day-16/page_03_demand_forecast.png" alt="Demand Forecast Thumbnail"><span>Demand Forecast</span></button>
+                    <button type="button" class="gallery-thumb" data-src="../images/projects/day-16/page_04_customer_profitability.png" data-caption="Page 04 — K-Means RFM Customer Profitability Clusters"><img src="../images/projects/day-16/page_04_customer_profitability.png" alt="Customer RFM Thumbnail"><span>Customer RFM</span></button>
+                    <button type="button" class="gallery-thumb" data-src="../images/projects/day-16/page_05_festive_discount_simulator.png" data-caption="Page 05 — Festive Discount Uplift &amp; Margin Impact Simulator"><img src="../images/projects/day-16/page_05_festive_discount_simulator.png" alt="Discount Simulator Thumbnail"><span>Discount Simulator</span></button>
+                    <button type="button" class="gallery-thumb" data-src="../images/projects/day-16/page_06_action_center_data_quality.png" data-caption="Page 06 — Action Center &amp; 5D Data Quality Score (80.9/100)"><img src="../images/projects/day-16/page_06_action_center_data_quality.png" alt="Action &amp; Quality Thumbnail"><span>Action &amp; Quality</span></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 04 TECHNICAL SPECS -->
+        <section class="section" id="specs">
+            <div class="label">04 / Technical Details</div>
+            <h2 class="section-title">RETAIL ACCOUNTING &amp; ML ENGINE VERIFICATION.</h2>
+            <p class="section-description">
+                Key modules, rules, safety checks, and automated test results documented in the repository.
+            </p>
+
+            <div class="performance-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Subsystem</th>
+                            <th>Implementation</th>
+                            <th>Verified Result</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Inventory Costing</strong></td>
+                            <td>Weighted-average COGS + atomic POS deduction</td>
+                            <td class="metric-highlight">Accurate real net shop profit</td>
+                        </tr>                        <tr>
+                            <td><strong>ML Forecasting</strong></td>
+                            <td>LightGBM & Holt-Winters evaluated via WAPE/MAE</td>
+                            <td class="metric-highlight">Handles zero-actual edge cases</td>
+                        </tr>                        <tr>
+                            <td><strong>Festive Simulator</strong></td>
+                            <td>Elasticity uplift vs gross-margin guardrail</td>
+                            <td class="metric-highlight">Flags excessive discount traps</td>
+                        </tr>                        <tr>
+                            <td><strong>Test Suite</strong></td>
+                            <td>tests/test_cartivanta.py full verification</td>
+                            <td class="metric-highlight">20 / 20 Passed (100%)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 05 TECHNOLOGY STACK -->
+        <section class="section" id="stack">
+            <div class="label">05 / Tech Stack</div>
+            <h2 class="section-title">CORE TECHNOLOGIES.</h2>
+            <p class="section-description">Frameworks, databases, visualization tools, and testing libraries used in CARTIVANTA.</p>
+
+            <div class="tech-grid">
+                <div class="tech">
+                    <div class="tech-type">BACKEND API</div>
+                    <div class="tech-name">FastAPI 0.162 &bull; Uvicorn</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">DATABASE</div>
+                    <div class="tech-name">SQLite WAL &bull; PostgreSQL Ready</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">ML & FORECAST</div>
+                    <div class="tech-name">LightGBM &bull; Holt-Winters &bull; K-Means</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">CURRENCY & TAX</div>
+                    <div class="tech-name">INR (&#8377;) &bull; GST Engine</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">ACCESS CONTROL</div>
+                    <div class="tech-name">Owner / Cashier RBAC</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">VERIFICATION</div>
+                    <div class="tech-name">Pytest (100% Passed)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 06 ROADMAP -->
+        <section class="section" id="roadmap">
+            <div class="label">06 / Next Steps</div>
+            <h2 class="section-title">FUTURE ENHANCEMENTS.</h2>
+            <p class="section-description">Upcoming improvements planned for CARTIVANTA.</p>
+
+            <div class="future-grid">
+                <div class="future">Thermal ESC/POS 80mm receipt printer bridge and GST e-invoicing JSON.</div>                <div class="future">WhatsApp automated Khata payment reminder receipts.</div>                <div class="future">Multi-branch store inventory transfer reconciliation.</div>                <div class="future">Supplier purchase-order PDF OCR ingestion.</div>                <div class="future">Offline PWA service worker queueing counter bills during outages.</div>                <div class="future">Expiry-date FEFO lot tracking for supermarket perishables.</div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="final">
+            <div class="final-small">OPEN-SOURCE PROJECT &bull; GITHUB.COM/RAGURAMRRP</div>
+            <h2>EXPLORE SOURCE &amp; DOCS.</h2>
+            <p>
+                View the complete codebase, sample datasets, quick-launch scripts, and automated test suites on GitHub.
+            </p>
+            <div class="final-buttons">
+                <a class="cta" href="../webapps.html" data-nav="../webapps.html">&larr; Back to Full-Stack Web Apps</a>
+                <a class="cta" href="../2.html" data-nav="../2.html">All Domains</a>
+                <a class="cta" href="../assets/Ragu_Ram_P_Resume.pdf" download="Ragu_Ram_P_Resume.pdf">Download Resume (PDF)</a>
+                <a class="cta" href="https://github.com/raguramrrp/90-days-90-projects-day-16-cartivanta" target="_blank" rel="noopener noreferrer">View Source on GitHub &nearr;</a>
+            </div>
+        </section>
+    </main>
+
+    <div class="page-transition" id="pageTransition"></div>
+    <script src="../assets/cosmic.js"></script>
+</body>
+</html>

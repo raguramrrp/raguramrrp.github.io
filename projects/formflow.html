@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormFlow | Ragu Ram P</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/cosmic.css">
+    <link rel="stylesheet" href="../assets/project.css">
+</head>
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="grid"></div>
+    <div class="blob blob-one"></div>
+    <div class="blob blob-two"></div>
+    <div class="blob blob-three"></div>
+    <div class="noise"></div>
+    <div id="particles"></div>
+
+    <!-- TOP NAVIGATION -->
+    <nav class="proj-nav">
+        <a class="pill-btn pill-btn--back" href="../document-ai.html" data-nav="../document-ai.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"></path><path d="m11 18-6-6 6-6"></path></svg>
+            <span>Back to Document AI &amp; NLP</span>
+        </a>
+
+        <div class="nav-status">
+            <span class="status-dot-cyan"></span>
+            <span>RAGU RAM P &bull; PROJECT 05 OF 18</span>
+        </div>
+
+        <div class="nav-actions-right">
+            <a class="pill-btn" href="../2.html" data-nav="../2.html">Domains</a>
+            <a class="pill-btn" href="../github-vault.html" data-nav="../github-vault.html">Repositories</a>
+            <a class="pill-btn" href="https://github.com/raguramrrp/90-days-90-projects-day-12-formflow-pdf-extractor" target="_blank" rel="noopener noreferrer">GitHub Repo &nearr;</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- HERO SPLIT -->
+        <section class="hero">
+            <div class="hero-grid">
+                <div>
+                    <div class="hero-badge">
+                        <span class="status-dot-green"></span>
+                        <span>PROJECT 05 &bull; DAY 12 OF 90 &bull; DOCUMENT WORKSPACE</span>
+                    </div>
+                    <h1 class="hero-title">FORMFLOW<br>PDF WORKSTATION.</h1>
+                    <p class="hero-text">A local-first, zero-cloud Document AI workspace turning native and scanned PDF forms into validated structured records via a Three-Pane Review Workstation — Document Queue, 160+ DPI coordinate viewer, and Editable Field Inspector.</p>
+                    <div class="hero-actions">
+                        <a class="btn-primary-glow" href="https://github.com/raguramrrp/90-days-90-projects-day-12-formflow-pdf-extractor" target="_blank" rel="noopener noreferrer">
+                            <span>View Repository on GitHub &nearr;</span>
+                        </a>
+                        <a class="pill-btn" href="#architecture">Architecture &darr;</a>
+                        <a class="pill-btn" href="#showcase">Screenshots &darr;</a>
+                    </div>
+                    <div class="hero-tags"><span class="tag">Python 3.12</span><span class="tag">pypdfium2 160+ DPI</span><span class="tag">pdfplumber</span><span class="tag">Tesseract 5.4</span><span class="tag">SQLite WAL</span><span class="tag">41/41 Pytest</span></div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="image-frame">
+                        <img src="../images/projects/day-12/02_extract_review.png" alt="FormFlow Preview" data-zoomable data-caption="FormFlow Three-Pane Review Workstation — Document Queue, PDF Viewer &amp; Extracted Field Inspector">
+                    </div>
+                    <div class="floating-stat stat1">
+                        <div class="stat-small">WORKSTATION</div>
+                        <div class="stat-big green">Three-Pane Review</div>
+                    </div>
+                    <div class="floating-stat stat2">
+                        <div class="stat-small">PYTEST SUITE</div>
+                        <div class="stat-big cyan">41 / 41 Passed</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUICK METRICS BAR -->
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="stat-number">160+ DPI</div>
+                <div class="stat-label">C++ PDFium Rendering</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number"><45 Chars</div>
+                <div class="stat-label">Auto Scanned-Page OCR</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">3-Pane UI</div>
+                <div class="stat-label">Queue • Canvas • Inspector</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">41 / 41</div>
+                <div class="stat-label">Pytest Tests Passed</div>
+            </div>
+        </div>
+
+        <!-- 01 OVERVIEW -->
+        <section class="section" id="overview">
+            <div class="label">01 / Overview</div>
+            <h2 class="section-title">HUMAN-IN-THE-LOOP PDF FORM INTELLIGENCE AT ZERO CLOUD COST.</h2>
+            <p class="section-description">Cloud Document AI services charge per page and expose confidential forms externally. FormFlow runs 100% locally with coordinate provenance for every extracted value.</p>
+
+            <div class="feature-grid">
+                <div class="feature">
+                    <div class="feature-number">01</div>
+                    <h3>Three-Pane Workstation</h3>
+                    <p>Left Document Queue, Center 160+ DPI PDFium visual evidence viewer, and Right Editable Field Inspector with candidate history.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">02</div>
+                    <h3>Smart Scanned-Page Trigger</h3>
+                    <p>Inspects selectable character count per page; pages below 45 chars automatically route through Tesseract v5.4 OCR.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">03</div>
+                    <h3>Coordinate BBox Provenance</h3>
+                    <p>Preserves token bounding boxes (x0, top, x1, bottom) and alternative candidate values inside evidence metadata.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">04</div>
+                    <h3>Type-Safe Validation</h3>
+                    <p>Normalizes dates to ISO-8601, strips currency noise into clean decimals, and verifies phone/email formatting rules.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">05</div>
+                    <h3>SHA-256 + Key Collision Guard</h3>
+                    <p>Detects both exact binary PDF duplicates via SHA-256 and logical business-key duplicates across batches.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">06</div>
+                    <h3>Sanitized JSON &amp; CSV Exports</h3>
+                    <p>Guarded SQLite WAL persistence with audit logs plus formula-injection-safe JSON and CSV dataset outputs.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 02 ARCHITECTURE -->
+        <section class="section" id="architecture">
+            <div class="label">02 / Architecture</div>
+            <h2 class="section-title">HOW IT WORKS.</h2>
+            <p class="section-description">PDFium/pdfplumber extracts spatial tokens, triggers Tesseract OCR when sparse, ranks field candidates, and persists to WAL SQLite.</p>
+
+            <div class="pipeline">
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 01</div>
+                    <h3>PDF Upload</h3>
+                    <p>SHA-256 duplicate & file safety check.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 02</div>
+                    <h3>Text / Render</h3>
+                    <p>pypdfium2 160+ DPI + pdfplumber coords.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 03</div>
+                    <h3>Auto OCR</h3>
+                    <p>Tesseract 5.4 triggered if chars &lt; 45.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 04</div>
+                    <h3>Rank &amp; Validate</h3>
+                    <p>Anchor matching + ISO/decimal checks.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 05</div>
+                    <h3>3-Pane Review</h3>
+                    <p>Human edit + formula-safe JSON/CSV.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 03 SCREENSHOTS -->
+        <section class="section" id="showcase">
+            <div class="label">03 / Screenshots</div>
+            <h2 class="section-title">APPLICATION SCREENSHOTS.</h2>
+            <p class="section-description">
+                Live screens captured from the running application. Click any image to view full size, or follow setup instructions in the GitHub repository.
+            </p>
+
+            <div class="gallery-wrapper">
+                <div class="dashboard-showcase">
+                    <img id="galleryMainImg" src="../images/projects/day-12/02_extract_review.png" alt="FormFlow Three-Pane Review Workstation — Document Queue, PDF Viewer &amp; Editable Field Inspector" data-zoomable data-caption="FormFlow Three-Pane Review Workstation — Document Queue, PDF Viewer &amp; Editable Field Inspector">
+                </div>
+                <div class="gallery-bar">
+                    <span class="gallery-caption" id="galleryCaption">FormFlow Three-Pane Review Workstation — Document Queue, PDF Viewer &amp; Editable Field Inspector</span>
+                    <span class="gallery-hint">Click image to enlarge</span>
+                </div>
+                <div class="gallery-thumbs">
+                    <button type="button" class="gallery-thumb active" data-src="../images/projects/day-12/02_extract_review.png" data-caption="FormFlow Three-Pane Review Workstation — Document Queue, PDF Viewer &amp; Editable Field Inspector"><img src="../images/projects/day-12/02_extract_review.png" alt="3-Pane Review Thumbnail"><span>3-Pane Review</span></button>
+                    <button type="button" class="gallery-thumb" data-src="../images/projects/day-12/01_workspace.png" data-caption="FormFlow Workspace Dashboard — Local Document Ingestion, Status Counters &amp; Safe Samples"><img src="../images/projects/day-12/01_workspace.png" alt="Workspace Thumbnail"><span>Workspace</span></button>
+                    <button type="button" class="gallery-thumb" data-src="../images/projects/day-12/03_documents_history.png" data-caption="Documents &amp; Extraction History — Searchable Audit Archive &amp; Validation Statuses"><img src="../images/projects/day-12/03_documents_history.png" alt="Audit History Thumbnail"><span>Audit History</span></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 04 TECHNICAL SPECS -->
+        <section class="section" id="specs">
+            <div class="label">04 / Technical Details</div>
+            <h2 class="section-title">EXTRACTION &amp; SAFETY SPECIFICATIONS.</h2>
+            <p class="section-description">
+                Key modules, rules, safety checks, and automated test results documented in the repository.
+            </p>
+
+            <div class="performance-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Stage</th>
+                            <th>Engineering Rule</th>
+                            <th>Security / Accuracy Benefit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>OCR Fallback Heuristic</strong></td>
+                            <td>Page selectable char count &lt; 45 chars</td>
+                            <td class="metric-highlight">Seamless native + scanned hybrid PDFs</td>
+                        </tr>                        <tr>
+                            <td><strong>Candidate Ranking</strong></td>
+                            <td>Context label anchors + suffix heuristics</td>
+                            <td class="metric-highlight">Preserves runner-up evidence for review</td>
+                        </tr>                        <tr>
+                            <td><strong>PDF Rasterizer</strong></td>
+                            <td>Google C++ PDFium at 160+ DPI</td>
+                            <td class="metric-highlight">Crisp glyph clarity for dense tables</td>
+                        </tr>                        <tr>
+                            <td><strong>Test Verification</strong></td>
+                            <td>Parser, OCR, validator & export suite</td>
+                            <td class="metric-highlight">41 / 41 Pytest Passed</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 05 TECHNOLOGY STACK -->
+        <section class="section" id="stack">
+            <div class="label">05 / Tech Stack</div>
+            <h2 class="section-title">CORE TECHNOLOGIES.</h2>
+            <p class="section-description">Frameworks, databases, visualization tools, and testing libraries used in FormFlow.</p>
+
+            <div class="tech-grid">
+                <div class="tech">
+                    <div class="tech-type">PDF RENDERING</div>
+                    <div class="tech-name">pypdfium2 (C++ PDFium)</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">BBOX PARSING</div>
+                    <div class="tech-name">pdfplumber</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">OCR FALLBACK</div>
+                    <div class="tech-name">Tesseract OCR v5.4</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">INTERFACE</div>
+                    <div class="tech-name">Streamlit Three-Pane UI</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">PERSISTENCE</div>
+                    <div class="tech-name">SQLite 3 (WAL + FK)</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">VERIFICATION</div>
+                    <div class="tech-name">Pytest (41/41 Passed)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 06 ROADMAP -->
+        <section class="section" id="roadmap">
+            <div class="label">06 / Next Steps</div>
+            <h2 class="section-title">FUTURE ENHANCEMENTS.</h2>
+            <p class="section-description">Upcoming improvements planned for FormFlow.</p>
+
+            <div class="future-grid">
+                <div class="future">Interactive click-to-highlight overlay rectangles directly on rendered PNG pages.</div>                <div class="future">YOLO-based form zone classifier for multi-column registration templates.</div>                <div class="future">Direct DuckDB and Apache Parquet analytical export targets.</div>                <div class="future">Automated multi-language Tesseract traineddata manager.</div>                <div class="future">Batch CLI daemon watching incoming scan drop directories.</div>                <div class="future">Custom regex template builder UI for recurring enterprise forms.</div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="final">
+            <div class="final-small">OPEN-SOURCE PROJECT &bull; GITHUB.COM/RAGURAMRRP</div>
+            <h2>EXPLORE SOURCE &amp; DOCS.</h2>
+            <p>
+                View the complete codebase, sample datasets, quick-launch scripts, and automated test suites on GitHub.
+            </p>
+            <div class="final-buttons">
+                <a class="cta" href="../document-ai.html" data-nav="../document-ai.html">&larr; Back to Document AI &amp; NLP</a>
+                <a class="cta" href="../2.html" data-nav="../2.html">All Domains</a>
+                <a class="cta" href="../assets/Ragu_Ram_P_Resume.pdf" download="Ragu_Ram_P_Resume.pdf">Download Resume (PDF)</a>
+                <a class="cta" href="https://github.com/raguramrrp/90-days-90-projects-day-12-formflow-pdf-extractor" target="_blank" rel="noopener noreferrer">View Source on GitHub &nearr;</a>
+            </div>
+        </section>
+    </main>
+
+    <div class="page-transition" id="pageTransition"></div>
+    <script src="../assets/cosmic.js"></script>
+</body>
+</html>

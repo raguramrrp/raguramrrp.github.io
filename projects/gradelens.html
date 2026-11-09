@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GradeLens | Ragu Ram P</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/cosmic.css">
+    <link rel="stylesheet" href="../assets/project.css">
+</head>
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="grid"></div>
+    <div class="blob blob-one"></div>
+    <div class="blob blob-two"></div>
+    <div class="blob blob-three"></div>
+    <div class="noise"></div>
+    <div id="particles"></div>
+
+    <!-- TOP NAVIGATION -->
+    <nav class="proj-nav">
+        <a class="pill-btn pill-btn--back" href="../analytics.html" data-nav="../analytics.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"></path><path d="m11 18-6-6 6-6"></path></svg>
+            <span>Back to Data &amp; BI Analytics</span>
+        </a>
+
+        <div class="nav-status">
+            <span class="status-dot-cyan"></span>
+            <span>RAGU RAM P &bull; PROJECT 15 OF 18</span>
+        </div>
+
+        <div class="nav-actions-right">
+            <a class="pill-btn" href="../2.html" data-nav="../2.html">Domains</a>
+            <a class="pill-btn" href="../github-vault.html" data-nav="../github-vault.html">Repositories</a>
+            <a class="pill-btn" href="https://github.com/raguramrrp/90-days-90-projects-day-13-gradelens" target="_blank" rel="noopener noreferrer">GitHub Repo &nearr;</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- HERO SPLIT -->
+        <section class="hero">
+            <div class="hero-grid">
+                <div>
+                    <div class="hero-badge">
+                        <span class="status-dot-green"></span>
+                        <span>PROJECT 15 &bull; DAY 13 OF 90 &bull; ACADEMIC &amp; POWER BI ANALYTICS</span>
+                    </div>
+                    <h1 class="hero-title">GRADELENS<br>WEAKNESS BI.</h1>
+                    <p class="hero-text">Question-level academic performance intelligence turning exam scripts into actionable topic weakness diagnostics — powered by 8 PostgreSQL 18 / SQLite views, a 5-page Microsoft Power BI DAX reporting layer, Confidence Blind-Spot matrices, and revision gain tracking.</p>
+                    <div class="hero-actions">
+                        <a class="btn-primary-glow" href="https://github.com/raguramrrp/90-days-90-projects-day-13-gradelens" target="_blank" rel="noopener noreferrer">
+                            <span>View Repository on GitHub &nearr;</span>
+                        </a>
+                        <a class="pill-btn" href="#architecture">Architecture &darr;</a>
+                        <a class="pill-btn" href="#showcase">Screenshots &darr;</a>
+                    </div>
+                    <div class="hero-tags"><span class="tag">Python 3.12</span><span class="tag">PostgreSQL 18</span><span class="tag">Power BI DAX</span><span class="tag">8 SQL Views</span><span class="tag">Streamlit 1.66</span><span class="tag">33/33 Pytest</span></div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="image-frame">
+                        <img src="../images/projects/day-13/01_student_overview.png" alt="GradeLens Preview" data-zoomable data-caption="GradeLens Academic Overview — Subject Performance, Weakness Benchmark &amp; Top Weaknesses">
+                    </div>
+                    <div class="floating-stat stat1">
+                        <div class="stat-small">BI & SQL LAYER</div>
+                        <div class="stat-big green">8 Views • 5 Power BI Pages</div>
+                    </div>
+                    <div class="floating-stat stat2">
+                        <div class="stat-small">PYTEST SUITE</div>
+                        <div class="stat-big cyan">33 / 33 Passed</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUICK METRICS BAR -->
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="stat-number">7 States</div>
+                <div class="stat-label">Deterministic Weakness Rules</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">8 SQL Views</div>
+                <div class="stat-label">PostgreSQL 18 / SQLite</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">5 PBI Pages</div>
+                <div class="stat-label">Certified DAX Reporting</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">33 / 33</div>
+                <div class="stat-label">Pytest Tests Passed</div>
+            </div>
+        </div>
+
+        <!-- 01 OVERVIEW -->
+        <section class="section" id="overview">
+            <div class="label">01 / Overview</div>
+            <h2 class="section-title">FROM COARSE SEMESTER GRADES TO QUESTION-LEVEL DIAGNOSTICS.</h2>
+            <p class="section-description">Overall GPAs hide whether marks are lost to conceptual gaps, formula mix-ups, or exam time pressure. GradeLens classifies every topic transparently and measures post-revision recovery.</p>
+
+            <div class="feature-grid">
+                <div class="feature">
+                    <div class="feature-number">01</div>
+                    <h3>Question-Level Mistake Taxonomy</h3>
+                    <p>Logs difficulty, question type (MCQ/Numerical/Code), obtained marks, and error root causes (Conceptual, Formula, Calculation, Careless, Timing).</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">02</div>
+                    <h3>7-State Weakness Engine</h3>
+                    <p>Classifies topics deterministically into Repeated Weakness (<60% across >=2 exams), Weak, Monitoring, Strong (>=75%), Improving, Declining, or Insufficient Data.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">03</div>
+                    <h3>Metacognitive Blind-Spot Matrix</h3>
+                    <p>Pairs student confidence (Low/Medium/High) with answer accuracy to pinpoint dangerous high-confidence errors.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">04</div>
+                    <h3>Revision Gain Tracker</h3>
+                    <p>Directly compares topic accuracy before vs after logged revision sessions to prove study ROI.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">05</div>
+                    <h3>8 SQL Views + Power BI DAX</h3>
+                    <p>Includes powerbi/export_powerbi.py feeding a certified 5-page Microsoft Power BI cohort and faculty executive report.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">06</div>
+                    <h3>Student &amp; Faculty Portals</h3>
+                    <p>Role-based Streamlit UI with CSV/Excel bulk import validators and explainable natural-language reasoning callouts.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 02 ARCHITECTURE -->
+        <section class="section" id="architecture">
+            <div class="label">02 / Architecture</div>
+            <h2 class="section-title">HOW IT WORKS.</h2>
+            <p class="section-description">Question responses land in PostgreSQL 18 / SQLite, materialize via 8 SQL views, and feed both Streamlit engines and 5-page Power BI DAX.</p>
+
+            <div class="pipeline">
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 01</div>
+                    <h3>Ingest Scores</h3>
+                    <p>Manual entry, CSV/Excel or persona seed.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 02</div>
+                    <h3>8 SQL Views</h3>
+                    <p>PostgreSQL 18 / SQLite analytical layer.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 03</div>
+                    <h3>Weakness AI</h3>
+                    <p>7-state deterministic classification rules.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 04</div>
+                    <h3>Blind Spots</h3>
+                    <p>Confidence vs correctness calibration.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 05</div>
+                    <h3>BI &amp; Plan</h3>
+                    <p>Streamlit Student/Faculty + Power BI.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 03 SCREENSHOTS -->
+        <section class="section" id="showcase">
+            <div class="label">03 / Screenshots</div>
+            <h2 class="section-title">APPLICATION SCREENSHOTS.</h2>
+            <p class="section-description">
+                Live screens captured from the running application. Click any image to view full size, or follow setup instructions in the GitHub repository.
+            </p>
+
+            <div class="gallery-wrapper">
+                <div class="dashboard-showcase">
+                    <img id="galleryMainImg" src="../images/projects/day-13/01_student_overview.png" alt="GradeLens Academic Overview — Subject Performance vs Cohort Average &amp; Top Weaknesses" data-zoomable data-caption="GradeLens Academic Overview — Subject Performance vs Cohort Average &amp; Top Weaknesses">
+                </div>
+                <div class="gallery-bar">
+                    <span class="gallery-caption" id="galleryCaption">GradeLens Academic Overview — Subject Performance vs Cohort Average &amp; Top Weaknesses</span>
+                    <span class="gallery-hint">Click image to enlarge</span>
+                </div>
+                <div class="gallery-thumbs">
+                    <button type="button" class="gallery-thumb active" data-src="../images/projects/day-13/01_student_overview.png" data-caption="GradeLens Academic Overview — Subject Performance vs Cohort Average &amp; Top Weaknesses"><img src="../images/projects/day-13/01_student_overview.png" alt="Overview Thumbnail"><span>Overview</span></button>
+                    <button type="button" class="gallery-thumb" data-src="../images/projects/day-13/02_topic_weakness.png" data-caption="Topic Weakness &amp; Mistake Attribution — 7-State Engine &amp; Marks Lost by Root Cause"><img src="../images/projects/day-13/02_topic_weakness.png" alt="Weakness Engine Thumbnail"><span>Weakness Engine</span></button>
+                    <button type="button" class="gallery-thumb" data-src="../images/projects/day-13/03_performance_trends.png" data-caption="Performance Trend Intelligence — Exam Progression, Difficulty Accuracy &amp; Blind-Spot Matrix"><img src="../images/projects/day-13/03_performance_trends.png" alt="Trends &amp; Blind Spots Thumbnail"><span>Trends &amp; Blind Spots</span></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 04 TECHNICAL SPECS -->
+        <section class="section" id="specs">
+            <div class="label">04 / Technical Details</div>
+            <h2 class="section-title">DETERMINISTIC 7-STATE TOPIC WEAKNESS ENGINE.</h2>
+            <p class="section-description">
+                Key modules, rules, safety checks, and automated test results documented in the repository.
+            </p>
+
+            <div class="performance-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Classification State</th>
+                            <th>Exact Rule Threshold</th>
+                            <th>Diagnostic Explanation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Repeated Weakness</strong></td>
+                            <td>Accuracy &lt; 60% across &gt;= 2 exams</td>
+                            <td class="metric-highlight">Flags entrenched syllabus gaps early</td>
+                        </tr>                        <tr>
+                            <td><strong>Strong vs Monitoring</strong></td>
+                            <td>Strong &gt;= 75% | Monitoring 60%–74.9%</td>
+                            <td class="metric-highlight">Separates mastery from borderline topics</td>
+                        </tr>                        <tr>
+                            <td><strong>Improving / Declining</strong></td>
+                            <td>&gt;= +15 pts gain or -15 pts drop</td>
+                            <td class="metric-highlight">Quantifies revision momentum trends</td>
+                        </tr>                        <tr>
+                            <td><strong>QA & Power BI Sync</strong></td>
+                            <td>5-page DAX layer + parameterized SQL</td>
+                            <td class="metric-highlight">33 / 33 Pytest Passed</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 05 TECHNOLOGY STACK -->
+        <section class="section" id="stack">
+            <div class="label">05 / Tech Stack</div>
+            <h2 class="section-title">CORE TECHNOLOGIES.</h2>
+            <p class="section-description">Frameworks, databases, visualization tools, and testing libraries used in GradeLens.</p>
+
+            <div class="tech-grid">
+                <div class="tech">
+                    <div class="tech-type">RELATIONAL & SQL</div>
+                    <div class="tech-name">PostgreSQL 18 &bull; 8 SQL Views</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">BUSINESS INTELLIGENCE</div>
+                    <div class="tech-name">Power BI (5-Page DAX Layer)</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">WEB WORKSPACE</div>
+                    <div class="tech-name">Streamlit 1.66 &bull; Plotly</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">PYTHON STACK</div>
+                    <div class="tech-name">Python 3.12 &bull; SQLAlchemy 2.1</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">IMPORTS & SEEDING</div>
+                    <div class="tech-name">CSV / Excel Validation Templates</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">VERIFICATION</div>
+                    <div class="tech-name">Pytest (33/33 Passed)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 06 ROADMAP -->
+        <section class="section" id="roadmap">
+            <div class="label">06 / Next Steps</div>
+            <h2 class="section-title">FUTURE ENHANCEMENTS.</h2>
+            <p class="section-description">Upcoming improvements planned for GradeLens.</p>
+
+            <div class="future-grid">
+                <div class="future">Automated LMS / Moodle gradebook CSV connector.</div>                <div class="future">Spaced-repetition Anki / flashcard export generated from Blind-Spot topics.</div>                <div class="future">Peer-normalized percentile bands for competitive cohort exams.</div>                <div class="future">PDF faculty mid-semester early intervention advisories.</div>                <div class="future">Adaptive mock quiz generator weighted toward Repeated Weaknesses.</div>                <div class="future">Mobile study timer sync logging active topic revision minutes.</div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="final">
+            <div class="final-small">OPEN-SOURCE PROJECT &bull; GITHUB.COM/RAGURAMRRP</div>
+            <h2>EXPLORE SOURCE &amp; DOCS.</h2>
+            <p>
+                View the complete codebase, sample datasets, quick-launch scripts, and automated test suites on GitHub.
+            </p>
+            <div class="final-buttons">
+                <a class="cta" href="../analytics.html" data-nav="../analytics.html">&larr; Back to Data &amp; BI Analytics</a>
+                <a class="cta" href="../2.html" data-nav="../2.html">All Domains</a>
+                <a class="cta" href="../assets/Ragu_Ram_P_Resume.pdf" download="Ragu_Ram_P_Resume.pdf">Download Resume (PDF)</a>
+                <a class="cta" href="https://github.com/raguramrrp/90-days-90-projects-day-13-gradelens" target="_blank" rel="noopener noreferrer">View Source on GitHub &nearr;</a>
+            </div>
+        </section>
+    </main>
+
+    <div class="page-transition" id="pageTransition"></div>
+    <script src="../assets/cosmic.js"></script>
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume–Job Match Analyzer | Ragu Ram P</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/cosmic.css">
+    <link rel="stylesheet" href="../assets/project.css">
+</head>
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="grid"></div>
+    <div class="blob blob-one"></div>
+    <div class="blob blob-two"></div>
+    <div class="blob blob-three"></div>
+    <div class="noise"></div>
+    <div id="particles"></div>
+
+    <!-- TOP NAVIGATION -->
+    <nav class="proj-nav">
+        <a class="pill-btn pill-btn--back" href="../document-ai.html" data-nav="../document-ai.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"></path><path d="m11 18-6-6 6-6"></path></svg>
+            <span>Back to Document AI &amp; NLP</span>
+        </a>
+
+        <div class="nav-status">
+            <span class="status-dot-cyan"></span>
+            <span>RAGU RAM P &bull; PROJECT 06 OF 18</span>
+        </div>
+
+        <div class="nav-actions-right">
+            <a class="pill-btn" href="../2.html" data-nav="../2.html">Domains</a>
+            <a class="pill-btn" href="../github-vault.html" data-nav="../github-vault.html">Repositories</a>
+            <a class="pill-btn" href="https://github.com/raguramrrp/90-days-90-projects-day-04-resume-job-match-analyzer" target="_blank" rel="noopener noreferrer">GitHub Repo &nearr;</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- HERO SPLIT -->
+        <section class="hero">
+            <div class="hero-grid">
+                <div>
+                    <div class="hero-badge">
+                        <span class="status-dot-green"></span>
+                        <span>PROJECT 06 &bull; DAY 4 OF 90 &bull; NLP &amp; CAREERTECH</span>
+                    </div>
+                    <h1 class="hero-title">RESUME–JOB<br>MATCH ANALYZER.</h1>
+                    <p class="hero-text">A full-stack NLP and CareerTech diagnostic engine measuring resume-to-JD alignment in under 100 milliseconds via sublinear unigram+bigram TF-IDF cosine similarity, a 1,200+ canonical skills taxonomy, action-verb audits, and downloadable ATS scorecards.</p>
+                    <div class="hero-actions">
+                        <a class="btn-primary-glow" href="https://github.com/raguramrrp/90-days-90-projects-day-04-resume-job-match-analyzer" target="_blank" rel="noopener noreferrer">
+                            <span>View Repository on GitHub &nearr;</span>
+                        </a>
+                        <a class="pill-btn" href="#architecture">Architecture &darr;</a>
+                        <a class="pill-btn" href="#showcase">Screenshots &darr;</a>
+                    </div>
+                    <div class="hero-tags"><span class="tag">Python 3.12</span><span class="tag">Scikit-Learn 1.6+</span><span class="tag">TF-IDF N-Grams</span><span class="tag">1,200+ Skills</span><span class="tag">Plotly 6.0</span><span class="tag">26/26 Pytest</span></div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="image-frame">
+                        <img src="../images/projects/day-04/01_streamlit_dashboard_overview.png" alt="Resume–Job Match Analyzer Preview" data-zoomable data-caption="Resume–Job Match Analyzer — Streamlit Input &amp; Configuration Workspace">
+                    </div>
+                    <div class="floating-stat stat1">
+                        <div class="stat-small">TAXONOMY SIZE</div>
+                        <div class="stat-big green">1,200+ Skills / 8 Domains</div>
+                    </div>
+                    <div class="floating-stat stat2">
+                        <div class="stat-small">LATENCY & QA</div>
+                        <div class="stat-big cyan">&lt;100ms • 26/26 Tests</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUICK METRICS BAR -->
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="stat-number"><100 ms</div>
+                <div class="stat-label">Real-Time Match Latency</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">1,200+ Skills</div>
+                <div class="stat-label">Alias-Resolved Taxonomy</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">100+ Verbs</div>
+                <div class="stat-label">Power vs Weak Phrasing</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">26 / 26</div>
+                <div class="stat-label">Pytest Tests Passed</div>
+            </div>
+        </div>
+
+        <!-- 01 OVERVIEW -->
+        <section class="section" id="overview">
+            <div class="label">01 / Overview</div>
+            <h2 class="section-title">TRANSPARENT ATS SCORING BEFORE YOU HIT SUBMIT.</h2>
+            <p class="section-description">Applicants are frequently screened out by keyword mismatch or weak phrasing. This analyzer breaks compatibility down into semantic similarity, prioritized missing skills, and structural compliance.</p>
+
+            <div class="feature-grid">
+                <div class="feature">
+                    <div class="feature-number">01</div>
+                    <h3>PDF / DOCX / TXT Parser</h3>
+                    <p>Extracts text cleanly across formats using pypdf, python-docx, and multi-encoding UTF-8/Latin-1/CP1252 fallbacks.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">02</div>
+                    <h3>1,200+ Skills Taxonomy</h3>
+                    <p>Maps competencies across 8 domains with alias resolution (e.g., k8s -> Kubernetes, react.js -> React).</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">03</div>
+                    <h3>TF-IDF Cosine Scoring</h3>
+                    <p>Computes sublinear term-frequency unigram + bigram vectorization for nuanced semantic similarity against target JDs.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">04</div>
+                    <h3>Prioritized Gap Matrix</h3>
+                    <p>Segments missing keywords into High Priority (core repeated JD requirements), Medium Priority, and Nice to Have.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">05</div>
+                    <h3>Power Verb &amp; Metric Audit</h3>
+                    <p>Evaluates 100+ strong action verbs vs 14 passive weak phrases and scans for quantified %, currency, and scale indicators.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">06</div>
+                    <h3>HTML &amp; JSON Scorecards</h3>
+                    <p>Renders Plotly radial gauges and domain radar charts alongside standalone downloadable HTML and JSON reports.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 02 ARCHITECTURE -->
+        <section class="section" id="architecture">
+            <div class="label">02 / Architecture</div>
+            <h2 class="section-title">HOW IT WORKS.</h2>
+            <p class="section-description">Uploaded resume and target JD pass through normalization, TF-IDF vectorization, alias matching, and ATS heuristics.</p>
+
+            <div class="pipeline">
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 01</div>
+                    <h3>Parse Docs</h3>
+                    <p>PDF, DOCX, TXT with encoding fallback.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 02</div>
+                    <h3>TF-IDF Vector</h3>
+                    <p>Sublinear 1-2 gram cosine similarity.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 03</div>
+                    <h3>Skill Extractor</h3>
+                    <p>Boundary regex + 1,200+ alias map.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 04</div>
+                    <h3>ATS Audit</h3>
+                    <p>Header, sections, 100+ verbs, metrics.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 05</div>
+                    <h3>Scorecards</h3>
+                    <p>Plotly radar + standalone HTML/JSON.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 03 SCREENSHOTS -->
+        <section class="section" id="showcase">
+            <div class="label">03 / Screenshots</div>
+            <h2 class="section-title">APPLICATION SCREENSHOTS.</h2>
+            <p class="section-description">
+                Live screens captured from the running application. Click any image to view full size, or follow setup instructions in the GitHub repository.
+            </p>
+
+            <div class="gallery-wrapper">
+                <div class="dashboard-showcase">
+                    <img id="galleryMainImg" src="../images/projects/day-04/01_streamlit_dashboard_overview.png" alt="Analyzer Overview — Resume Upload, Target JD Entry &amp; Domain Mode" data-zoomable data-caption="Analyzer Overview — Resume Upload, Target JD Entry &amp; Domain Mode">
+                </div>
+                <div class="gallery-bar">
+                    <span class="gallery-caption" id="galleryCaption">Analyzer Overview — Resume Upload, Target JD Entry &amp; Domain Mode</span>
+                    <span class="gallery-hint">Click image to enlarge</span>
+                </div>
+                <div class="gallery-thumbs">
+                    <button type="button" class="gallery-thumb active" data-src="../images/projects/day-04/01_streamlit_dashboard_overview.png" data-caption="Analyzer Overview — Resume Upload, Target JD Entry &amp; Domain Mode"><img src="../images/projects/day-04/01_streamlit_dashboard_overview.png" alt="Dashboard Input Thumbnail"><span>Dashboard Input</span></button>
+                    <button type="button" class="gallery-thumb" data-src="../images/projects/day-04/03_results_dashboard_view.png" data-caption="Results View — Compatibility Gauge, Missing Skills Matrix &amp; Radar Chart"><img src="../images/projects/day-04/03_results_dashboard_view.png" alt="Match Results Thumbnail"><span>Match Results</span></button>
+                    <button type="button" class="gallery-thumb" data-src="../images/projects/day-04/02_ats_scorecard_report.png" data-caption="Standalone HTML ATS Scorecard — Exportable Breakdown &amp; Optimization Checklist"><img src="../images/projects/day-04/02_ats_scorecard_report.png" alt="ATS Scorecard Thumbnail"><span>ATS Scorecard</span></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 04 TECHNICAL SPECS -->
+        <section class="section" id="specs">
+            <div class="label">04 / Technical Details</div>
+            <h2 class="section-title">NLP SCORING &amp; STRUCTURAL AUDIT BENCHMARKS.</h2>
+            <p class="section-description">
+                Key modules, rules, safety checks, and automated test results documented in the repository.
+            </p>
+
+            <div class="performance-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Analyzer Dimension</th>
+                            <th>Method / Taxonomy</th>
+                            <th>Output Artifact</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Semantic Matching</strong></td>
+                            <td>Sublinear TfidfVectorizer (1–2 n-grams)</td>
+                            <td class="metric-highlight">Calibrated 0–100% Cosine Alignment</td>
+                        </tr>                        <tr>
+                            <td><strong>Alias Resolution</strong></td>
+                            <td>8-domain curated 1,200+ technical skills</td>
+                            <td class="metric-highlight">Matched, Value-Add & Missing Matrix</td>
+                        </tr>                        <tr>
+                            <td><strong>Structural Health</strong></td>
+                            <td>6 standard section + header + 14 weak phrases</td>
+                            <td class="metric-highlight">Prioritized rewrite checklist</td>
+                        </tr>                        <tr>
+                            <td><strong>Test Suite</strong></td>
+                            <td>Parser, NLP, extractor & report tests</td>
+                            <td class="metric-highlight">26 / 26 Pytest Passed</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 05 TECHNOLOGY STACK -->
+        <section class="section" id="stack">
+            <div class="label">05 / Tech Stack</div>
+            <h2 class="section-title">CORE TECHNOLOGIES.</h2>
+            <p class="section-description">Frameworks, databases, visualization tools, and testing libraries used in Resume–Job Match Analyzer.</p>
+
+            <div class="tech-grid">
+                <div class="tech">
+                    <div class="tech-type">NLP & SIMILARITY</div>
+                    <div class="tech-name">Scikit-Learn 1.6+ (TF-IDF)</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">DOC EXTRACTION</div>
+                    <div class="tech-name">pypdf 6.0 &bull; python-docx 1.2</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">DASHBOARD UI</div>
+                    <div class="tech-name">Streamlit 1.42+</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">CHARTS & GAUGES</div>
+                    <div class="tech-name">Plotly 6.0+</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">SCORECARDS</div>
+                    <div class="tech-name">HTML5 / CSS3 &bull; ReportLab 5.0+</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">TESTING</div>
+                    <div class="tech-name">Pytest 9.0 (26/26 Passed)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 06 ROADMAP -->
+        <section class="section" id="roadmap">
+            <div class="label">06 / Next Steps</div>
+            <h2 class="section-title">FUTURE ENHANCEMENTS.</h2>
+            <p class="section-description">Upcoming improvements planned for Resume–Job Match Analyzer.</p>
+
+            <div class="future-grid">
+                <div class="future">Dense transformer embeddings (all-MiniLM-L6-v2) for deeper conceptual similarity.</div>                <div class="future">Multilingual resume support across German, French, and Spanish taxonomies.</div>                <div class="future">Recruiter batch ZIP mode to rank 100+ candidate CVs against a requisition.</div>                <div class="future">XYZ-formula bullet point rewrite suggestions integrating missing keywords.</div>                <div class="future">Chrome sidebar integration for live job board comparisons.</div>                <div class="future">Custom domain taxonomy editor for niche research fellowships.</div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="final">
+            <div class="final-small">OPEN-SOURCE PROJECT &bull; GITHUB.COM/RAGURAMRRP</div>
+            <h2>EXPLORE SOURCE &amp; DOCS.</h2>
+            <p>
+                View the complete codebase, sample datasets, quick-launch scripts, and automated test suites on GitHub.
+            </p>
+            <div class="final-buttons">
+                <a class="cta" href="../document-ai.html" data-nav="../document-ai.html">&larr; Back to Document AI &amp; NLP</a>
+                <a class="cta" href="../2.html" data-nav="../2.html">All Domains</a>
+                <a class="cta" href="../assets/Ragu_Ram_P_Resume.pdf" download="Ragu_Ram_P_Resume.pdf">Download Resume (PDF)</a>
+                <a class="cta" href="https://github.com/raguramrrp/90-days-90-projects-day-04-resume-job-match-analyzer" target="_blank" rel="noopener noreferrer">View Source on GitHub &nearr;</a>
+            </div>
+        </section>
+    </main>
+
+    <div class="page-transition" id="pageTransition"></div>
+    <script src="../assets/cosmic.js"></script>
+</body>
+</html>

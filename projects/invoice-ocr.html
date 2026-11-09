@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Intelligence | Ragu Ram P</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/cosmic.css">
+    <link rel="stylesheet" href="../assets/project.css">
+</head>
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="grid"></div>
+    <div class="blob blob-one"></div>
+    <div class="blob blob-two"></div>
+    <div class="blob blob-three"></div>
+    <div class="noise"></div>
+    <div id="particles"></div>
+
+    <!-- TOP NAVIGATION -->
+    <nav class="proj-nav">
+        <a class="pill-btn pill-btn--back" href="../document-ai.html" data-nav="../document-ai.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"></path><path d="m11 18-6-6 6-6"></path></svg>
+            <span>Back to Document AI &amp; NLP</span>
+        </a>
+
+        <div class="nav-status">
+            <span class="status-dot-cyan"></span>
+            <span>RAGU RAM P &bull; PROJECT 04 OF 18</span>
+        </div>
+
+        <div class="nav-actions-right">
+            <a class="pill-btn" href="../2.html" data-nav="../2.html">Domains</a>
+            <a class="pill-btn" href="../github-vault.html" data-nav="../github-vault.html">Repositories</a>
+            <a class="pill-btn" href="https://github.com/raguramrrp/90-days-90-projects-day-06-invoice-ocr-extractor" target="_blank" rel="noopener noreferrer">GitHub Repo &nearr;</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- HERO SPLIT -->
+        <section class="hero">
+            <div class="hero-grid">
+                <div>
+                    <div class="hero-badge">
+                        <span class="status-dot-green"></span>
+                        <span>PROJECT 04 &bull; DAY 6 OF 90 &bull; DOCUMENT AI</span>
+                    </div>
+                    <h1 class="hero-title">INVOICE<br>INTELLIGENCE.</h1>
+                    <p class="hero-text">An 8-stage financial document intelligence and Accounts Payable workstation combining OpenCV affine deskewing, Tesseract 5.4 bounding-box OCR, reverse-token table extraction, mathematical line-item reconciliation, and audited Excel/JSON exports.</p>
+                    <div class="hero-actions">
+                        <a class="btn-primary-glow" href="https://github.com/raguramrrp/90-days-90-projects-day-06-invoice-ocr-extractor" target="_blank" rel="noopener noreferrer">
+                            <span>View Repository on GitHub &nearr;</span>
+                        </a>
+                        <a class="pill-btn" href="#architecture">Architecture &darr;</a>
+                        <a class="pill-btn" href="#showcase">Screenshots &darr;</a>
+                    </div>
+                    <div class="hero-tags"><span class="tag">Python 3.12</span><span class="tag">OpenCV</span><span class="tag">Tesseract 5.4</span><span class="tag">Streamlit</span><span class="tag">SQLite3</span><span class="tag">44/44 Pytest</span></div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="image-frame">
+                        <img src="../images/projects/day-06/01_overview.png" alt="Invoice Intelligence Preview" data-zoomable data-caption="Invoice Intelligence Operations Desk — 5 OCR-Extracted Invoices &amp; 6-Stage AP Pipeline">
+                    </div>
+                    <div class="floating-stat stat1">
+                        <div class="stat-small">AP WORKFLOW</div>
+                        <div class="stat-big green">8 Stages • 13 Views</div>
+                    </div>
+                    <div class="floating-stat stat2">
+                        <div class="stat-small">PYTEST SUITE</div>
+                        <div class="stat-big cyan">44 / 44 Passed</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUICK METRICS BAR -->
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="stat-number">8 Stages</div>
+                <div class="stat-label">Capture to Audit Lifecycle</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">13 Workspaces</div>
+                <div class="stat-label">AP Operations Console</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">3 Conf Tiers</div>
+                <div class="stat-label">Green / Amber / Red BBoxes</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">44 / 44</div>
+                <div class="stat-label">Pytest Tests Passed</div>
+            </div>
+        </div>
+
+        <!-- 01 OVERVIEW -->
+        <section class="section" id="overview">
+            <div class="label">01 / Overview</div>
+            <h2 class="section-title">BRIDGING UNSTRUCTURED INVOICES AND AUDITED LEDGERS.</h2>
+            <p class="section-description">Manual invoice entry suffers from transcription errors and duplicate disbursements. Invoice Intelligence enforces mathematical verification and human-in-the-loop confidence inspection.</p>
+
+            <div class="feature-grid">
+                <div class="feature">
+                    <div class="feature-number">01</div>
+                    <h3>OpenCV Image Pipeline</h3>
+                    <p>Performs MinAreaRect affine deskewing, bilateral edge-preserving denoising, 1.5x bicubic upscaling, and Otsu binarization.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">02</div>
+                    <h3>Tesseract 5.4 BBox Overlay</h3>
+                    <p>Extracts spatially anchored tokens under PSM 4 and highlights fields Green (>=80%), Amber (50–79%), or Red (<50%).</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">03</div>
+                    <h3>Reverse-Token Table Parser</h3>
+                    <p>Scans invoice line items right-to-left to robustly separate quantities, unit rates, taxes, and amounts even in wrapped descriptions.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">04</div>
+                    <h3>Math Reconciliation Gate</h3>
+                    <p>Validates sum(line_items) + tax against extracted invoice grand totals, routing discrepancies directly into My Work Queue.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">05</div>
+                    <h3>Currency-Segregated AP Desk</h3>
+                    <p>Separates INR, USD, EUR, and GBP analytics totals accurately without mixing FX denominations.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">06</div>
+                    <h3>Formula-Safe Excel Export</h3>
+                    <p>Neutralizes spreadsheet CSV/Excel formula injection payloads while emitting audit logs and normalized vendor summaries.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 02 ARCHITECTURE -->
+        <section class="section" id="architecture">
+            <div class="label">02 / Architecture</div>
+            <h2 class="section-title">HOW IT WORKS.</h2>
+            <p class="section-description">Documents flow from raw upload through CV enhancement, regex/reverse-token parsing, math checks, and AP ledger approval.</p>
+
+            <div class="pipeline">
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 01</div>
+                    <h3>Capture</h3>
+                    <p>PDF/Image upload & SHA duplicate check.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 02</div>
+                    <h3>CV + OCR</h3>
+                    <p>Deskew, Otsu & Tesseract PSM 4.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 03</div>
+                    <h3>Extract</h3>
+                    <p>Regex anchors & reverse-token lines.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 04</div>
+                    <h3>Reconcile</h3>
+                    <p>Line-sum vs subtotal/tax math check.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 05</div>
+                    <h3>Audit Export</h3>
+                    <p>Approve & sanitize .xlsx ledger.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 03 SCREENSHOTS -->
+        <section class="section" id="showcase">
+            <div class="label">03 / Screenshots</div>
+            <h2 class="section-title">APPLICATION SCREENSHOTS.</h2>
+            <p class="section-description">
+                Live screens captured from the running application. Click any image to view full size, or follow setup instructions in the GitHub repository.
+            </p>
+
+            <div class="gallery-wrapper">
+                <div class="dashboard-showcase">
+                    <img id="galleryMainImg" src="../images/projects/day-06/01_overview.png" alt="Invoice Intelligence Operations Desk — 5 Processed Invoices ($10,625.66) &amp; 6-Stage AP Funnel" data-zoomable data-caption="Invoice Intelligence Operations Desk — 5 Processed Invoices ($10,625.66) &amp; 6-Stage AP Funnel">
+                </div>
+                <div class="gallery-bar">
+                    <span class="gallery-caption" id="galleryCaption">Invoice Intelligence Operations Desk — 5 Processed Invoices ($10,625.66) &amp; 6-Stage AP Funnel</span>
+                    <span class="gallery-hint">Click image to enlarge</span>
+                </div>
+                <div class="gallery-thumbs">
+                    <button type="button" class="gallery-thumb active" data-src="../images/projects/day-06/01_overview.png" data-caption="Invoice Intelligence Operations Desk — 5 Processed Invoices ($10,625.66) &amp; 6-Stage AP Funnel"><img src="../images/projects/day-06/01_overview.png" alt="AP Operations Thumbnail"><span>AP Operations</span></button>
+                    <button type="button" class="gallery-thumb" data-src="../images/projects/day-06/03_invoice_ledger.png" data-caption="Relational Invoice Ledger — Searchable Vendor, Total, Status &amp; Duplicate-Check Catalog"><img src="../images/projects/day-06/03_invoice_ledger.png" alt="Invoice Ledger Thumbnail"><span>Invoice Ledger</span></button>
+                    <button type="button" class="gallery-thumb" data-src="../images/projects/day-06/02_analytics.png" data-caption="Financial Insights — Currency-Segregated Portfolio, Top Vendors &amp; Monthly Trend"><img src="../images/projects/day-06/02_analytics.png" alt="Spend Analytics Thumbnail"><span>Spend Analytics</span></button>
+                    <button type="button" class="gallery-thumb" data-src="../images/projects/day-06/INV-2026-001_Apex_Hardware.png" data-caption="Benchmark Invoice Sample 01 — Apex Hardware Tax &amp; Line-Item Extraction Input"><img src="../images/projects/day-06/INV-2026-001_Apex_Hardware.png" alt="Sample INV-001 Thumbnail"><span>Sample INV-001</span></button>
+                    <button type="button" class="gallery-thumb" data-src="../images/projects/day-06/INV-2026-002_CloudScale_Technologies.png" data-caption="Benchmark Invoice Sample 02 — CloudScale Technologies SaaS Billing Input"><img src="../images/projects/day-06/INV-2026-002_CloudScale_Technologies.png" alt="Sample INV-002 Thumbnail"><span>Sample INV-002</span></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 04 TECHNICAL SPECS -->
+        <section class="section" id="specs">
+            <div class="label">04 / Technical Details</div>
+            <h2 class="section-title">OCR CONFIDENCE &amp; RECONCILIATION RULES.</h2>
+            <p class="section-description">
+                Key modules, rules, safety checks, and automated test results documented in the repository.
+            </p>
+
+            <div class="performance-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Stage / Rule</th>
+                            <th>Threshold / Logic</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Confidence Tiering</strong></td>
+                            <td>Green >= 80% | Amber 50–79% | Red &lt; 50%</td>
+                            <td class="metric-highlight">Visual reviewer bbox color highlight</td>
+                        </tr>                        <tr>
+                            <td><strong>Preprocessing</strong></td>
+                            <td>MinAreaRect deskew + Otsu + 1.5x bicubic</td>
+                            <td class="metric-highlight">Maximizes scanned receipt legibility</td>
+                        </tr>                        <tr>
+                            <td><strong>Exception Queue</strong></td>
+                            <td>MISSING_INFO / VALIDATION_FAILED / DUPLICATE</td>
+                            <td class="metric-highlight">Prioritized inbox in My Work Queue</td>
+                        </tr>                        <tr>
+                            <td><strong>Export Security</strong></td>
+                            <td>Prefix-escapes =, +, -, @ cell starters</td>
+                            <td class="metric-highlight">Prevents Excel formula execution</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 05 TECHNOLOGY STACK -->
+        <section class="section" id="stack">
+            <div class="label">05 / Tech Stack</div>
+            <h2 class="section-title">CORE TECHNOLOGIES.</h2>
+            <p class="section-description">Frameworks, databases, visualization tools, and testing libraries used in Invoice Intelligence.</p>
+
+            <div class="tech-grid">
+                <div class="tech">
+                    <div class="tech-type">COMPUTER VISION</div>
+                    <div class="tech-name">OpenCV &bull; Pillow</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">OCR ENGINE</div>
+                    <div class="tech-name">Tesseract 5.4 (PSM 4)</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">PARSING LOGIC</div>
+                    <div class="tech-name">Regex &bull; Right-to-Left Table Parser</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">FRONTEND</div>
+                    <div class="tech-name">Streamlit (13 Workspaces)</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">STORAGE & EXPORT</div>
+                    <div class="tech-name">SQLite3 &bull; OpenPyXL</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">TESTING</div>
+                    <div class="tech-name">Pytest (44/44 Passed)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 06 ROADMAP -->
+        <section class="section" id="roadmap">
+            <div class="label">06 / Next Steps</div>
+            <h2 class="section-title">FUTURE ENHANCEMENTS.</h2>
+            <p class="section-description">Upcoming improvements planned for Invoice Intelligence.</p>
+
+            <div class="future-grid">
+                <div class="future">LayoutLMv3 / Donut transformer fallback for handwritten vendor receipts.</div>                <div class="future">Direct webhook connectors for ERP accounting synchronization.</div>                <div class="future">Multilingual Tesseract packs for Hindi, German, French, and Spanish bills.</div>                <div class="future">PO-to-Invoice 3-way purchase order matching module.</div>                <div class="future">Batch ZIP archival with signed PDF compliance manifests.</div>                <div class="future">Automated vendor GSTIN checksum and tax slab validation.</div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="final">
+            <div class="final-small">OPEN-SOURCE PROJECT &bull; GITHUB.COM/RAGURAMRRP</div>
+            <h2>EXPLORE SOURCE &amp; DOCS.</h2>
+            <p>
+                View the complete codebase, sample datasets, quick-launch scripts, and automated test suites on GitHub.
+            </p>
+            <div class="final-buttons">
+                <a class="cta" href="../document-ai.html" data-nav="../document-ai.html">&larr; Back to Document AI &amp; NLP</a>
+                <a class="cta" href="../2.html" data-nav="../2.html">All Domains</a>
+                <a class="cta" href="../assets/Ragu_Ram_P_Resume.pdf" download="Ragu_Ram_P_Resume.pdf">Download Resume (PDF)</a>
+                <a class="cta" href="https://github.com/raguramrrp/90-days-90-projects-day-06-invoice-ocr-extractor" target="_blank" rel="noopener noreferrer">View Source on GitHub &nearr;</a>
+            </div>
+        </section>
+    </main>
+
+    <div class="page-transition" id="pageTransition"></div>
+    <script src="../assets/cosmic.js"></script>
+</body>
+</html>

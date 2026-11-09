@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects &amp; Domains | Ragu Ram P</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/cosmic.css">
+    <link rel="stylesheet" href="assets/museum.css">
+</head>
+<body>
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="grid"></div>
+    <div class="blob blob-one"></div>
+    <div class="blob blob-two"></div>
+    <div class="blob blob-three"></div>
+    <div class="noise"></div>
+    <div id="particles"></div>
+
+    <!-- TOP NAVIGATION PILLS -->
+    <div class="museum-nav">
+        <div class="museum-nav-group">
+            <a class="pill-btn pill-btn--back" href="index.html" data-nav="index.html">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5"></path>
+                    <path d="m11 18-6-6 6-6"></path>
+                </svg>
+                <span>Back Home</span>
+            </a>
+        </div>
+        <div class="museum-nav-group">
+            <a class="pill-btn" href="experience.html" data-nav="experience.html">
+                <span>Experience &amp; Credentials</span>
+            </a>
+            <a class="pill-btn" href="assets/Ragu_Ram_P_Resume.pdf" download="Ragu_Ram_P_Resume.pdf" title="Download Resume PDF">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                <span>Resume PDF</span>
+            </a>
+            <a class="pill-btn" href="github-vault.html" data-nav="github-vault.html">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m8 9-3 3 3 3"></path>
+                    <path d="m16 9 3 3-3 3"></path>
+                    <path d="m14 5-4 14"></path>
+                </svg>
+                <span>All Repositories (18)</span>
+            </a>
+        </div>
+    </div>
+
+    <main class="museum">
+        <header class="header">
+            <div class="eyebrow">
+                <span class="eyebrow-dot"></span>
+                <span>Explore 6 Branches &bull; 18 GitHub Projects</span>
+            </div>
+            <h1 class="museum-title">PROJECT DOMAINS</h1>
+            <p class="museum-subtitle">6 Focused Engineering Branches &bull; Hover a branch to highlight</p>
+        </header>
+
+        <section class="tree-stage" id="treeStage">
+            <!-- SVG BEZIER BRANCH CONNECTIONS -->
+            <svg class="connections" viewBox="0 0 1000 700" preserveAspectRatio="none">
+                <defs>
+                    <linearGradient id="branchGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#10e89f"></stop>
+                        <stop offset="50%" stop-color="#22d3ee"></stop>
+                        <stop offset="100%" stop-color="#f5b041"></stop>
+                    </linearGradient>
+                    <filter id="glow">
+                        <feGaussianBlur stdDeviation="3" result="blur"></feGaussianBlur>
+                        <feMerge>
+                            <feMergeNode in="blur"></feMergeNode>
+                            <feMergeNode in="SourceGraphic"></feMergeNode>
+                        </feMerge>
+                    </filter>
+                    <filter id="strongGlow">
+                        <feGaussianBlur stdDeviation="7" result="blur"></feGaussianBlur>
+                        <feMerge>
+                            <feMergeNode in="blur"></feMergeNode>
+                            <feMergeNode in="SourceGraphic"></feMergeNode>
+                        </feMerge>
+                    </filter>
+                </defs>
+
+                <!-- 01 TOP: AI, ML & CV -->
+                <path class="branch-base" d="M 500 350 C 500 270, 500 180, 500 85"></path>
+                <path class="branch-glow" id="branch-ai" d="M 500 350 C 500 270, 500 180, 500 85"></path>
+
+                <!-- 02 LEFT: Document AI & NLP -->
+                <path class="branch-base" d="M 500 350 C 400 330, 280 260, 140 250"></path>
+                <path class="branch-glow" id="branch-docai" d="M 500 350 C 400 330, 280 260, 140 250"></path>
+
+                <!-- 03 RIGHT: Full-Stack Web Apps -->
+                <path class="branch-base" d="M 500 350 C 600 330, 720 260, 860 250"></path>
+                <path class="branch-glow" id="branch-webapps" d="M 500 350 C 600 330, 720 260, 860 250"></path>
+
+                <!-- 04 LOWER LEFT: Data & BI Analytics -->
+                <path class="branch-base" d="M 500 350 C 410 420, 330 500, 220 545"></path>
+                <path class="branch-glow" id="branch-analytics" d="M 500 350 C 410 420, 330 500, 220 545"></path>
+
+                <!-- 05 LOWER RIGHT: Automation & Dev Tools -->
+                <path class="branch-base" d="M 500 350 C 590 420, 670 500, 780 545"></path>
+                <path class="branch-glow" id="branch-automation" d="M 500 350 C 590 420, 670 500, 780 545"></path>
+
+                <!-- 06 BOTTOM: Experience & Credentials -->
+                <path class="branch-base" d="M 500 350 C 500 440, 500 540, 500 645"></path>
+                <path class="branch-glow" id="branch-experience" d="M 500 350 C 500 440, 500 540, 500 645"></path>
+            </svg>
+
+            <!-- CENTER CORE PORTRAIT -->
+            <div class="center-core">
+                <div class="profile-shell" id="profileShell">
+                    <div class="profile-glow"></div>
+                    <div class="profile-frame"></div>
+                    <img src="images/profile.jpg" alt="Ragu Ram P" class="profile-image">
+                </div>
+                <div class="core-label">
+                    <div class="core-label-small">AI &amp; Full-Stack</div>
+                    <div class="core-label-main">RAGU'S <span>WORK</span></div>
+                </div>
+            </div>
+
+            <!-- BRANCH 01: AI, ML & COMPUTER VISION -->
+            <article class="domain-node node-ai" data-branch="ai" data-page="ai-ml.html" tabindex="0" role="button">
+                <div class="node-number">
+                    <span class="node-index">01</span>
+                    <span class="node-count">03 Projects</span>
+                    <span class="node-dot"></span>
+                </div>
+                <h2 class="node-title">AI, ML &amp;<br>Computer Vision</h2>
+                <div class="node-explore">
+                    <span>Explore Domain</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14"></path>
+                        <path d="m13 6 6 6-6 6"></path>
+                    </svg>
+                </div>
+            </article>
+
+            <!-- BRANCH 02: DOCUMENT AI & NLP -->
+            <article class="domain-node node-docai" data-branch="docai" data-page="document-ai.html" tabindex="0" role="button">
+                <div class="node-number">
+                    <span class="node-index">02</span>
+                    <span class="node-count">03 Projects</span>
+                    <span class="node-dot"></span>
+                </div>
+                <h2 class="node-title">Document AI<br>&amp; NLP</h2>
+                <div class="node-explore">
+                    <span>Explore Domain</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14"></path>
+                        <path d="m13 6 6 6-6 6"></path>
+                    </svg>
+                </div>
+            </article>
+
+            <!-- BRANCH 03: FULL-STACK WEB APPS -->
+            <article class="domain-node node-webapps" data-branch="webapps" data-page="webapps.html" tabindex="0" role="button">
+                <div class="node-number">
+                    <span class="node-index">03</span>
+                    <span class="node-count">05 Projects</span>
+                    <span class="node-dot"></span>
+                </div>
+                <h2 class="node-title">Full-Stack<br>Web Apps</h2>
+                <div class="node-explore">
+                    <span>Explore Domain</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14"></path>
+                        <path d="m13 6 6 6-6 6"></path>
+                    </svg>
+                </div>
+            </article>
+
+            <!-- BRANCH 04: DATA & BI ANALYTICS -->
+            <article class="domain-node node-analytics" data-branch="analytics" data-page="analytics.html" tabindex="0" role="button">
+                <div class="node-number">
+                    <span class="node-index">04</span>
+                    <span class="node-count">04 Projects</span>
+                    <span class="node-dot"></span>
+                </div>
+                <h2 class="node-title">Data &amp; BI<br>Analytics</h2>
+                <div class="node-explore">
+                    <span>Explore Domain</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14"></path>
+                        <path d="m13 6 6 6-6 6"></path>
+                    </svg>
+                </div>
+            </article>
+
+            <!-- BRANCH 05: AUTOMATION & DEV TOOLS -->
+            <article class="domain-node node-automation" data-branch="automation" data-page="automation.html" tabindex="0" role="button">
+                <div class="node-number">
+                    <span class="node-index">05</span>
+                    <span class="node-count">03 Projects</span>
+                    <span class="node-dot"></span>
+                </div>
+                <h2 class="node-title">Automation &amp;<br>Dev Tools</h2>
+                <div class="node-explore">
+                    <span>Explore Domain</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14"></path>
+                        <path d="m13 6 6 6-6 6"></path>
+                    </svg>
+                </div>
+            </article>
+
+            <!-- BRANCH 06: EXPERIENCE & CREDENTIALS -->
+            <article class="domain-node node-experience" data-branch="experience" data-page="experience.html" tabindex="0" role="button">
+                <div class="node-number">
+                    <span class="node-index">06</span>
+                    <span class="node-count">Resume</span>
+                    <span class="node-dot"></span>
+                </div>
+                <h2 class="node-title">Experience &amp;<br>Credentials</h2>
+                <div class="node-explore">
+                    <span>View Profile</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14"></path>
+                        <path d="m13 6 6 6-6 6"></path>
+                    </svg>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <div class="instruction">
+        <div class="mouse-icon"></div>
+        <span>Select any branch to explore projects &amp; credentials</span>
+    </div>
+
+    <div class="page-transition" id="pageTransition"></div>
+
+    <script src="assets/cosmic.js"></script>
+    <script>
+        (function () {
+            const nodes = document.querySelectorAll(".domain-node");
+            nodes.forEach(function (node) {
+                node.addEventListener("mouseenter", function () {
+                    const branch = document.getElementById("branch-" + node.dataset.branch);
+                    if (branch) branch.classList.add("active");
+                });
+                node.addEventListener("mouseleave", function () {
+                    const branch = document.getElementById("branch-" + node.dataset.branch);
+                    if (branch) branch.classList.remove("active");
+                });
+            });
+
+            const profileShell = document.getElementById("profileShell");
+            const treeStage = document.getElementById("treeStage");
+            if (window.matchMedia("(pointer: fine)").matches) {
+                if (profileShell) {
+                    profileShell.addEventListener("mousemove", function (event) {
+                        const rect = profileShell.getBoundingClientRect();
+                        const rx = -(event.clientY - rect.top - rect.height / 2) / 28;
+                        const ry = (event.clientX - rect.left - rect.width / 2) / 28;
+                        profileShell.style.transform = "perspective(1000px) rotateX(" + rx + "deg) rotateY(" + ry + "deg) scale(1.03)";
+                    });
+                    profileShell.addEventListener("mouseleave", function () {
+                        profileShell.style.transform = "perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)";
+                    });
+                }
+
+                document.addEventListener("mousemove", function (event) {
+                    if (!treeStage || window.innerWidth <= 1100) return;
+                    const x = event.clientX / window.innerWidth - 0.5;
+                    const y = event.clientY / window.innerHeight - 0.5;
+                    treeStage.style.marginLeft = (x * 8) + "px";
+                    treeStage.style.marginTop = (y * 8) + "px";
+                });
+            }
+        })();
+    </script>
+</body>
+</html>

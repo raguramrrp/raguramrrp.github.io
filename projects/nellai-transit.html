@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nellai Transit Tracker | Ragu Ram P</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/cosmic.css">
+    <link rel="stylesheet" href="../assets/project.css">
+</head>
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="grid"></div>
+    <div class="blob blob-one"></div>
+    <div class="blob blob-two"></div>
+    <div class="blob blob-three"></div>
+    <div class="noise"></div>
+    <div id="particles"></div>
+
+    <!-- TOP NAVIGATION -->
+    <nav class="proj-nav">
+        <a class="pill-btn pill-btn--back" href="../analytics.html" data-nav="../analytics.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"></path><path d="m11 18-6-6 6-6"></path></svg>
+            <span>Back to Data &amp; BI Analytics</span>
+        </a>
+
+        <div class="nav-status">
+            <span class="status-dot-cyan"></span>
+            <span>RAGU RAM P &bull; PROJECT 14 OF 18</span>
+        </div>
+
+        <div class="nav-actions-right">
+            <a class="pill-btn" href="../2.html" data-nav="../2.html">Domains</a>
+            <a class="pill-btn" href="../github-vault.html" data-nav="../github-vault.html">Repositories</a>
+            <a class="pill-btn" href="https://github.com/raguramrrp/90-days-90-projects-day-07-public-transit-delay-dashboard" target="_blank" rel="noopener noreferrer">GitHub Repo &nearr;</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- HERO SPLIT -->
+        <section class="hero">
+            <div class="hero-grid">
+                <div>
+                    <div class="hero-badge">
+                        <span class="status-dot-green"></span>
+                        <span>PROJECT 14 &bull; DAY 7 OF 90 &bull; CIVIC MOBILITY BI</span>
+                    </div>
+                    <h1 class="hero-title">NELLAI TRANSIT<br>TRACKER.</h1>
+                    <p class="hero-text">A civic-technology public transport tracker for Tirunelveli (Nellai), Tamil Nadu — unifying TNSTC local bus corridors, 5-digit Southern Railway status checks, Haversine stop proximity maps, and an honest data-freshness policy with zero fake GPS dots.</p>
+                    <div class="hero-actions">
+                        <a class="btn-primary-glow" href="https://github.com/raguramrrp/90-days-90-projects-day-07-public-transit-delay-dashboard" target="_blank" rel="noopener noreferrer">
+                            <span>View Repository on GitHub &nearr;</span>
+                        </a>
+                        <a class="pill-btn" href="#architecture">Architecture &darr;</a>
+                        <a class="pill-btn" href="#showcase">Screenshots &darr;</a>
+                    </div>
+                    <div class="hero-tags"><span class="tag">Python 3.12</span><span class="tag">Streamlit 1.40+</span><span class="tag">Folium / Leaflet</span><span class="tag">PostgreSQL 16</span><span class="tag">SQLite Dual DB</span><span class="tag">37/37 Pytest</span></div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="image-frame">
+                        <img src="../images/projects/day-07/stitch_bus_search_telemetry.png" alt="Nellai Transit Tracker Preview" data-zoomable data-caption="Nellai Transit Tracker — Bus Search &amp; Corridor Telemetry Interface">
+                    </div>
+                    <div class="floating-stat stat1">
+                        <div class="stat-small">CIVIC NETWORK</div>
+                        <div class="stat-big green">20 Stops • 10 Trains</div>
+                    </div>
+                    <div class="floating-stat stat2">
+                        <div class="stat-small">PYTEST SUITE</div>
+                        <div class="stat-big cyan">37 / 37 Passed</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUICK METRICS BAR -->
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="stat-number">20 Stops</div>
+                <div class="stat-label">Verified TEN District Registry</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">6 Corridors</div>
+                <div class="stat-label">TNSTC Tirunelveli Routes</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">6 Status Tags</div>
+                <div class="stat-label">LIVE to UNAVAILABLE Honest Policy</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">37 / 37</div>
+                <div class="stat-label">Pytest Tests Passed</div>
+            </div>
+        </div>
+
+        <!-- 01 OVERVIEW -->
+        <section class="section" id="overview">
+            <div class="label">01 / Overview</div>
+            <h2 class="section-title">HONEST CIVIC TRANSIT DATA FOR TIRUNELVELI COMMUTERS.</h2>
+            <p class="section-description">Many apps animate synthetic buses on maps without real feeds. Nellai Transit enforces strict local-eligibility checks and surfaces verified freshness labels on every route and locomotive.</p>
+
+            <div class="feature-grid">
+                <div class="feature">
+                    <div class="feature-number">01</div>
+                    <h3>20 Verified District Stops</h3>
+                    <p>Indexes key Tirunelveli hubs (TEN Junction, VBS, PCO, TSI, Palayamkottai, Anna Univ, Nellaiyappar Temple).</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">02</div>
+                    <h3>Haversine Stop Proximity</h3>
+                    <p>Finds nearest bus stops using device coordinates, Tamil/English landmarks, or origin-destination corridor filters.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">03</div>
+                    <h3>5-Digit Train Eligibility</h3>
+                    <p>Checks Southern Railway services (e.g., 20666 Vande Bharat, 12632 Nellai Express) with platform/delay info & WAP-7 CRIS telemetry.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">04</div>
+                    <h3>Non-Local Exclusion Filter</h3>
+                    <p>Detects out-of-district trains (e.g., 12621 Tamil Nadu Express) explicitly instead of misreporting them locally.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">05</div>
+                    <h3>Strict Provenance Tags</h3>
+                    <p>Classifies every metric as LIVE, RECENT, SCHEDULED, ESTIMATED, STATIC, or UNAVAILABLE — zero fabricated GPS vehicles.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">06</div>
+                    <h3>Dual PostgreSQL + SQLite</h3>
+                    <p>SQLAlchemy ETL pipeline seeding structured corridor timetables cleanly into SQLite local or PostgreSQL 16.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 02 ARCHITECTURE -->
+        <section class="section" id="architecture">
+            <div class="label">02 / Architecture</div>
+            <h2 class="section-title">HOW IT WORKS.</h2>
+            <p class="section-description">Modular provider layer (BusStop, BusRoute, BusTracking, TrainSchedule, TrainStatus) queries SQLAlchemy Dual DB and renders Stitch civic UI.</p>
+
+            <div class="pipeline">
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 01</div>
+                    <h3>Seed &amp; ETL</h3>
+                    <p>Tirunelveli stops & TNSTC/SR timetables.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 02</div>
+                    <h3>SQLAlchemy</h3>
+                    <p>PostgreSQL 16 / SQLite dual storage.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 03</div>
+                    <h3>Providers</h3>
+                    <p>Haversine search & eligibility filters.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 04</div>
+                    <h3>Provenance</h3>
+                    <p>LIVE / SCHEDULED / ESTIMATED tagging.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 05</div>
+                    <h3>Civic UI</h3>
+                    <p>Stitch desktop + mobile Folium views.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 03 SCREENSHOTS -->
+        <section class="section" id="showcase">
+            <div class="label">03 / Screenshots</div>
+            <h2 class="section-title">APPLICATION SCREENSHOTS.</h2>
+            <p class="section-description">
+                Live screens captured from the running application. Click any image to view full size, or follow setup instructions in the GitHub repository.
+            </p>
+
+            <div class="gallery-wrapper">
+                <div class="dashboard-showcase">
+                    <img id="galleryMainImg" src="../images/projects/day-07/stitch_bus_search_telemetry.png" alt="Bus Search &amp; Live Telemetry — Corridor Stops, Arrival ETAs &amp; Provenance Badges" data-zoomable data-caption="Bus Search &amp; Live Telemetry — Corridor Stops, Arrival ETAs &amp; Provenance Badges">
+                </div>
+                <div class="gallery-bar">
+                    <span class="gallery-caption" id="galleryCaption">Bus Search &amp; Live Telemetry — Corridor Stops, Arrival ETAs &amp; Provenance Badges</span>
+                    <span class="gallery-hint">Click image to enlarge</span>
+                </div>
+                <div class="gallery-thumbs">
+                    <button type="button" class="gallery-thumb active" data-src="../images/projects/day-07/stitch_bus_search_telemetry.png" data-caption="Bus Search &amp; Live Telemetry — Corridor Stops, Arrival ETAs &amp; Provenance Badges"><img src="../images/projects/day-07/stitch_bus_search_telemetry.png" alt="Bus Telemetry Thumbnail"><span>Bus Telemetry</span></button>
+                    <button type="button" class="gallery-thumb" data-src="../images/projects/day-07/stitch_train_search_status.png" data-caption="5-Digit Train Search — Southern Railway Platform Allocation &amp; WAP-7 Status at TEN"><img src="../images/projects/day-07/stitch_train_search_status.png" alt="Train Status Thumbnail"><span>Train Status</span></button>
+                    <button type="button" class="gallery-thumb" data-src="../images/projects/day-07/stitch_station_hubs.png" data-caption="Station Hubs &amp; Interchanges — Verified Tirunelveli Junction &amp; Palayamkottai Maps"><img src="../images/projects/day-07/stitch_station_hubs.png" alt="Station Hubs Thumbnail"><span>Station Hubs</span></button>
+                    <button type="button" class="gallery-thumb" data-src="../images/projects/day-07/stitch_mobile_view.png" data-caption="Responsive Mobile Commuter UI — On-the-Go Bus &amp; Train Lookup Layout"><img src="../images/projects/day-07/stitch_mobile_view.png" alt="Mobile View Thumbnail"><span>Mobile View</span></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 04 TECHNICAL SPECS -->
+        <section class="section" id="specs">
+            <div class="label">04 / Technical Details</div>
+            <h2 class="section-title">TRANSIT DATA GOVERNANCE &amp; ELIGIBILITY RULES.</h2>
+            <p class="section-description">
+                Key modules, rules, safety checks, and automated test results documented in the repository.
+            </p>
+
+            <div class="performance-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Provider / Rule</th>
+                            <th>Coverage / Logic</th>
+                            <th>Civic Guarantee</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>BusStopProvider</strong></td>
+                            <td>20 verified stations + Tamil/landmark lookup</td>
+                            <td class="metric-highlight">Haversine distance sorting</td>
+                        </tr>                        <tr>
+                            <td><strong>TrainScheduleProvider</strong></td>
+                            <td>10 SR trains incl. 20666 & 12632</td>
+                            <td class="metric-highlight">Filters out non-TEN trains transparently</td>
+                        </tr>                        <tr>
+                            <td><strong>Freshness Provenance</strong></td>
+                            <td>6 explicit tags: LIVE .. UNAVAILABLE</td>
+                            <td class="metric-highlight">Zero synthetic moving vehicles</td>
+                        </tr>                        <tr>
+                            <td><strong>Automated Testing</strong></td>
+                            <td>tests/ analytics, ETL & Tirunelveli fixtures</td>
+                            <td class="metric-highlight">37 / 37 Passed (100%)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 05 TECHNOLOGY STACK -->
+        <section class="section" id="stack">
+            <div class="label">05 / Tech Stack</div>
+            <h2 class="section-title">CORE TECHNOLOGIES.</h2>
+            <p class="section-description">Frameworks, databases, visualization tools, and testing libraries used in Nellai Transit Tracker.</p>
+
+            <div class="tech-grid">
+                <div class="tech">
+                    <div class="tech-type">CIVIC FRONTEND</div>
+                    <div class="tech-name">Streamlit &bull; Stitch Civic UI</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">MAPS & GEOSPATIAL</div>
+                    <div class="tech-name">Folium &bull; Leaflet &bull; Haversine</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">DATABASE ENGINE</div>
+                    <div class="tech-name">PostgreSQL 16 &bull; SQLite Dual</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">ETL & ORM</div>
+                    <div class="tech-name">SQLAlchemy &bull; Python 3.12</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">DOMAIN DATA</div>
+                    <div class="tech-name">TNSTC &bull; Southern Railway CRIS</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">VERIFICATION</div>
+                    <div class="tech-name">Pytest (37/37 Passed)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 06 ROADMAP -->
+        <section class="section" id="roadmap">
+            <div class="label">06 / Next Steps</div>
+            <h2 class="section-title">FUTURE ENHANCEMENTS.</h2>
+            <p class="section-description">Upcoming improvements planned for Nellai Transit Tracker.</p>
+
+            <div class="future-grid">
+                <div class="future">Real-time GTFS-RT bus GPS ingestion once municipal TNSTC feeds open.</div>                <div class="future">Native Tamil UI localization toggle across stops and route announcements.</div>                <div class="future">Peak-hour intersection delay heatmaps across Palayamkottai corridors.</div>                <div class="future">Progressive Web App offline timetable cache for rural network zones.</div>                <div class="future">Fare calculator integrating express vs ordinary bus stages.</div>                <div class="future">Automated crowd-sourced platform change confirmation alerts.</div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="final">
+            <div class="final-small">OPEN-SOURCE PROJECT &bull; GITHUB.COM/RAGURAMRRP</div>
+            <h2>EXPLORE SOURCE &amp; DOCS.</h2>
+            <p>
+                View the complete codebase, sample datasets, quick-launch scripts, and automated test suites on GitHub.
+            </p>
+            <div class="final-buttons">
+                <a class="cta" href="../analytics.html" data-nav="../analytics.html">&larr; Back to Data &amp; BI Analytics</a>
+                <a class="cta" href="../2.html" data-nav="../2.html">All Domains</a>
+                <a class="cta" href="../assets/Ragu_Ram_P_Resume.pdf" download="Ragu_Ram_P_Resume.pdf">Download Resume (PDF)</a>
+                <a class="cta" href="https://github.com/raguramrrp/90-days-90-projects-day-07-public-transit-delay-dashboard" target="_blank" rel="noopener noreferrer">View Source on GitHub &nearr;</a>
+            </div>
+        </section>
+    </main>
+
+    <div class="page-transition" id="pageTransition"></div>
+    <script src="../assets/cosmic.js"></script>
+</body>
+</html>

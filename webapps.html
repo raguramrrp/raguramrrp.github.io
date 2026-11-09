@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full-Stack Web Apps | Ragu Ram P Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/cosmic.css">
+    <link rel="stylesheet" href="assets/domain.css">
+</head>
+<body>
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="grid"></div>
+    <div class="blob blob-one"></div>
+    <div class="blob blob-two"></div>
+    <div class="blob blob-three"></div>
+    <div class="noise"></div>
+    <div id="particles"></div>
+
+    <div class="page">
+        <nav class="top-nav">
+            <a class="pill-btn pill-btn--back" href="2.html" data-nav="2.html">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"></path><path d="m11 18-6-6 6-6"></path></svg>
+                <span>All Domains</span>
+            </a>
+
+            <div class="nav-right">
+                <div class="domain-indicator">
+                    <span class="domain-dot"></span>
+                    <span>BRANCH 03 OF 06 &bull; FULL-STACK</span>
+                </div>
+                <a class="pill-btn" href="experience.html" data-nav="experience.html">Experience &amp; Credentials</a>
+                <a class="pill-btn" href="assets/Ragu_Ram_P_Resume.pdf" download="Ragu_Ram_P_Resume.pdf" title="Download Resume PDF">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    <span>Resume PDF</span>
+                </a>
+                <a class="pill-btn" href="github-vault.html" data-nav="github-vault.html">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 9-3 3 3 3"></path><path d="m16 9 3 3-3 3"></path><path d="m14 5-4 14"></path></svg>
+                    <span>Repositories (18)</span>
+                </a>
+            </div>
+        </nav>
+
+        <main>
+            <header class="hero">
+                <div class="hero-left">
+                    <div class="eyebrow">
+                        <span class="eyebrow-line"></span>
+                        <span>BRANCH 03 &bull; DJANGO, FASTAPI &amp; REACT PLATFORMS</span>
+                    </div>
+                    <h1 class="hero-title">FULL-STACK<br>WEB APPS.</h1>
+                    <p class="hero-description">Production-minded multi-role web platforms spanning Indian retail POS &amp; BI analytics, telescopic TANGEDCO electricity slab engines, job-search CRMs, multi-retailer price monitors, and early-warning attendance portals.</p>
+                </div>
+                <div class="project-count">
+                    <div class="count-number">05</div>
+                    <div class="count-label">WEB PLATFORMS</div>
+                </div>
+            </header>
+
+            <div class="divider"></div>
+
+            <section class="projects-grid">
+            <article class="project-card" data-page="projects/cartivanta.html" tabindex="0" role="button">
+                <div class="card-spotlight"></div>
+                <div class="project-image-wrapper">
+                    <img class="project-image" src="images/projects/day-16/page_01_executive_overview.png" alt="CARTIVANTA Preview">
+                    <div class="image-overlay"></div>
+                    <span class="project-number">01</span>
+                    <span class="website-badge">FastAPI POS + BI</span>
+                </div>
+                <div class="project-content">
+                    <div class="project-type">
+                        <span class="project-type-dot"></span>
+                        <span>Retail POS &amp; BI Operating System</span>
+                    </div>
+                    <h2 class="project-name">CARTIVANTA</h2>
+                    <p class="project-description">Indian retail POS, Khata ledger & BI platform (INR) spanning 9 modules, barcode billing, GST & weighted-average cost accounting, 1.029M historical transactions, 12-week LightGBM/Holt-Winters forecasts, K-Means RFM clusters, and festive discount simulator.</p>
+                    <div class="project-meta-pills"><span class="meta-pill">FastAPI 0.162 • SQLite WAL</span><span class="meta-pill">1.029M Rows • ML/RFM</span><span class="meta-pill">20/20 Pytest (100%)</span></div>
+                    <button class="explore-project" type="button" tabindex="-1">
+                        <span>Explore Project</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+                    </button>
+                </div>
+            </article>
+            <article class="project-card" data-page="projects/amperenest.html" tabindex="0" role="button">
+                <div class="card-spotlight"></div>
+                <div class="project-image-wrapper">
+                    <img class="project-image" src="images/projects/day-15/dashboard.png" alt="AmpereNest Preview">
+                    <div class="image-overlay"></div>
+                    <span class="project-number">02</span>
+                    <span class="website-badge">Django + TANGEDCO</span>
+                </div>
+                <div class="project-content">
+                    <div class="project-type">
+                        <span class="project-type-dot"></span>
+                        <span>Smart Energy &amp; Tariff Platform</span>
+                    </div>
+                    <h2 class="project-name">AmpereNest</h2>
+                    <p class="project-description">Full-stack Django 5.1 household electricity intelligence app featuring verified Tamil Nadu TANGEDCO/TNPDCL residential LT-1A telescopic slabs, multi-meter tracking, cycle-end bill forecasting, appliance audit, What-If savings planner, and 80% budget alerts.</p>
+                    <div class="project-meta-pills"><span class="meta-pill">Django 5.1 • PostgreSQL</span><span class="meta-pill">TANGEDCO LT-1A Slabs</span><span class="meta-pill">28/28 Tests</span></div>
+                    <button class="explore-project" type="button" tabindex="-1">
+                        <span>Explore Project</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+                    </button>
+                </div>
+            </article>
+            <article class="project-card" data-page="projects/careerpilot.html" tabindex="0" role="button">
+                <div class="card-spotlight"></div>
+                <div class="project-image-wrapper">
+                    <img class="project-image" src="images/projects/day-14/01_dashboard.png" alt="CareerPilot Preview">
+                    <div class="image-overlay"></div>
+                    <span class="project-number">03</span>
+                    <span class="website-badge">Django Job CRM</span>
+                </div>
+                <div class="project-content">
+                    <div class="project-type">
+                        <span class="project-type-dot"></span>
+                        <span>Career &amp; Job Application CRM</span>
+                    </div>
+                    <h2 class="project-name">CareerPilot</h2>
+                    <p class="project-description">11-module Django 5.1 career operating system featuring a 10-stage Table + Kanban pipeline, 'My Day' daily focus center, 8-step interview prep checklists, technical question bank, 10 Chart.js analytics charts, and protected resume version downloads.</p>
+                    <div class="project-meta-pills"><span class="meta-pill">Django 5.1 • Kanban</span><span class="meta-pill">10 Chart.js • OpenPyXL</span><span class="meta-pill">34/34 Tests</span></div>
+                    <button class="explore-project" type="button" tabindex="-1">
+                        <span>Explore Project</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+                    </button>
+                </div>
+            </article>
+            <article class="project-card" data-page="projects/smartcart.html" tabindex="0" role="button">
+                <div class="card-spotlight"></div>
+                <div class="project-image-wrapper">
+                    <img class="project-image" src="images/projects/day-08/04_price_history.png" alt="SmartCart Intelligence Preview">
+                    <div class="image-overlay"></div>
+                    <span class="project-number">04</span>
+                    <span class="website-badge">React 19 + FastAPI</span>
+                </div>
+                <div class="project-content">
+                    <div class="project-type">
+                        <span class="project-type-dot"></span>
+                        <span>Multi-Retailer Price Intelligence</span>
+                    </div>
+                    <h2 class="project-name">SmartCart Intelligence</h2>
+                    <p class="project-description">11-view React 19 + TypeScript + FastAPI platform tracking Amazon India, Flipkart, Croma, Reliance Digital & Tata CLiQ — featuring an explainable 5-factor 0–100 Deal Scorer, OLS 30-day price forecasts with 95% confidence bounds, and strict data provenance badges.</p>
+                    <div class="project-meta-pills"><span class="meta-pill">React 19 • TypeScript 5.8</span><span class="meta-pill">FastAPI • APScheduler</span><span class="meta-pill">19/19 Pytest + tsc</span></div>
+                    <button class="explore-project" type="button" tabindex="-1">
+                        <span>Explore Project</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+                    </button>
+                </div>
+            </article>
+            <article class="project-card" data-page="projects/attendance-intel.html" tabindex="0" role="button">
+                <div class="card-spotlight"></div>
+                <div class="project-image-wrapper">
+                    <img class="project-image" src="images/projects/day-05/01_admin_dashboard.png" alt="Student Attendance Intelligence Preview">
+                    <div class="image-overlay"></div>
+                    <span class="project-number">05</span>
+                    <span class="website-badge">Django 4-Portal</span>
+                </div>
+                <div class="project-content">
+                    <div class="project-type">
+                        <span class="project-type-dot"></span>
+                        <span>EdTech Early Warning System</span>
+                    </div>
+                    <h2 class="project-name">Student Attendance Intelligence</h2>
+                    <p class="project-description">Full-stack Django 5.1.15 platform across 4 role portals (Admin, Faculty, Student, Parent) and 22 normalized models — combining closed-form recovery math, What-If simulator, Decision Tree risk scoring, parent alerts, and OD/dispute approvals.</p>
+                    <div class="project-meta-pills"><span class="meta-pill">Django 5.1 • 4 Portals</span><span class="meta-pill">22 Models • Decision Tree</span><span class="meta-pill">25/25 Tests</span></div>
+                    <button class="explore-project" type="button" tabindex="-1">
+                        <span>Explore Project</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+                    </button>
+                </div>
+            </article>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <span>RAGU RAM P &bull; TIRUNELVELI, INDIA</span>
+            <span>
+                <a class="repo-link" style="color:inherit;text-decoration:none;" href="2.html" data-nav="2.html">ALL DOMAINS</a>
+                &bull;
+                <a class="repo-link" style="color:inherit;text-decoration:none;" href="github-vault.html" data-nav="github-vault.html">REPOSITORIES</a>
+                &bull;
+                <a class="repo-link" style="color:inherit;text-decoration:none;" href="experience.html" data-nav="experience.html">EXPERIENCE</a>
+                &bull;
+                <a class="repo-link" style="color:inherit;text-decoration:none;" href="assets/Ragu_Ram_P_Resume.pdf" download="Ragu_Ram_P_Resume.pdf">RESUME PDF</a>
+            </span>
+        </footer>
+    </div>
+
+    <div class="page-transition" id="pageTransition"></div>
+    <script src="assets/cosmic.js"></script>
+</body>
+</html>
