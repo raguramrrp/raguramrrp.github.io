@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QueryTrellis Studio | Ragu Ram P</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/cosmic.css">
+    <link rel="stylesheet" href="../assets/project.css">
+</head>
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="grid"></div>
+    <div class="blob blob-one"></div>
+    <div class="blob blob-two"></div>
+    <div class="blob blob-three"></div>
+    <div class="noise"></div>
+    <div id="particles"></div>
+
+    <!-- TOP NAVIGATION -->
+    <nav class="proj-nav">
+        <a class="pill-btn pill-btn--back" href="../automation.html" data-nav="../automation.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"></path><path d="m11 18-6-6 6-6"></path></svg>
+            <span>Back to Automation &amp; Dev Tools</span>
+        </a>
+
+        <div class="nav-status">
+            <span class="status-dot-cyan"></span>
+            <span>RAGU RAM P &bull; PROJECT 21 OF 21</span>
+        </div>
+
+        <div class="nav-actions-right">
+            <a class="pill-btn" href="../2.html" data-nav="../2.html">Domains</a>
+            <a class="pill-btn" href="../github-vault.html" data-nav="../github-vault.html">Repositories</a>
+            <a class="pill-btn" href="https://github.com/raguramrrp/90-days-90-projects-day-17-querytrellis" target="_blank" rel="noopener noreferrer">GitHub Repo &nearr;</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- HERO SPLIT -->
+        <section class="hero">
+            <div class="hero-grid">
+                <div>
+                    <div class="hero-badge">
+                        <span class="status-dot-green"></span>
+                        <span>PROJECT 21 &bull; DAY 17 OF 90 &bull; DATABASE DEVTOOLS &amp; OPTIMIZER</span>
+                    </div>
+                    <h1 class="hero-title">QUERYTRELLIS<br>SQL WORKBENCH.</h1>
+                    <p class="hero-text">A full-stack, schema-grounded Natural Language SQL IDE, multi-dialect editor, AST debugger, query optimizer, and visual learning platform — running 100% locally with DuckDB sandboxes, Monaco editing, three-tier EXPLAIN ANALYZE performance tuning, and 21 interactive SQL Academy lessons.</p>
+                    <div class="hero-actions">
+                        <a class="btn-primary-glow" href="https://github.com/raguramrrp/90-days-90-projects-day-17-querytrellis" target="_blank" rel="noopener noreferrer">
+                            <span>View Repository on GitHub &nearr;</span>
+                        </a>
+                        <a class="pill-btn" href="#architecture">Architecture &darr;</a>
+                        <a class="pill-btn" href="#showcase">Screenshots &darr;</a>
+                    </div>
+                    <div class="hero-tags"><span class="tag">Next.js 15</span><span class="tag">React 19</span><span class="tag">FastAPI</span><span class="tag">DuckDB</span><span class="tag">SQLGlot</span><span class="tag">97/97 Pytest</span></div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="image-frame">
+                        <img src="../images/projects/day-17/studio_query_studio.png" alt="QueryTrellis Studio Preview" data-zoomable data-caption="QueryTrellis Studio — Schema-Grounded NL-to-SQL Query Studio &amp; Catalog Inspector">
+                    </div>
+                    <div class="floating-stat stat1">
+                        <div class="stat-small">SQL ACADEMY</div>
+                        <div class="stat-big green">21 Interactive Lessons</div>
+                    </div>
+                    <div class="floating-stat stat2">
+                        <div class="stat-small">PYTEST SUITE</div>
+                        <div class="stat-big cyan">97 / 97 Passed (74%)</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUICK METRICS BAR -->
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="stat-number">7 Workspaces</div>
+                <div class="stat-label">Query, IDE, Debug, Opt, Academy</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">4 Dialects</div>
+                <div class="stat-label">Postgres • MySQL • SQLite • MSSQL</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">3-Tier Opt</div>
+                <div class="stat-label">AST • Plan • EXPLAIN ANALYZE</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">97 / 97</div>
+                <div class="stat-label">Automated Pytest Passed</div>
+            </div>
+        </div>
+
+        <!-- 01 OVERVIEW -->
+        <section class="section" id="overview">
+            <div class="label">01 / Overview</div>
+            <h2 class="section-title">BRIDGING PLAIN ENGLISH AND HIGH-PERFORMANCE SQL.</h2>
+            <p class="section-description">Writing and tuning complex relational queries requires navigating syntax errors, indexing bottlenecks, and subtle dialect differences. QueryTrellis Studio unifies natural language synthesis, Monaco IDE editing, automated AST bug fixing, and execution plan benchmarks.</p>
+
+            <div class="feature-grid">
+                <div class="feature">
+                    <div class="feature-number">01</div>
+                    <h3>Schema-Grounded Query Studio</h3>
+                    <p>Translates natural language prompts against active database schemas, asks structured clarification questions for ambiguities, and blocks nonexistent table hallucinations.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">02</div>
+                    <h3>Multi-Dialect Monaco SQL IDE</h3>
+                    <p>Offline-bundled Monaco editor supporting PostgreSQL, MySQL, SQLite, and SQL Server with AST syntax validation, schema tree explorer, and CSV/JSON export.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">03</div>
+                    <h3>Automated SQL Debugger</h3>
+                    <p>Diagnoses missing tables, ambiguous columns, missing JOIN predicates, three-valued NULL bugs, and datatype mismatches, generating interactive Monaco diff patches.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">04</div>
+                    <h3>Three-Tier Query Optimizer</h3>
+                    <p>Enforces static AST suggestions + index DDL recommendations, non-executing estimated EXPLAIN plans, and opt-in measured EXPLAIN ANALYZE execution timing.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">05</div>
+                    <h3>Visual SQL Academy (21 Lessons)</h3>
+                    <p>Interactive curriculum across Beginner to Advanced tiers featuring DuckDB step-by-step execution traces, progressive hints, and a custom query tracer.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">06</div>
+                    <h3>Database Sandbox &amp; Safety Guardrails</h3>
+                    <p>Uploads .sql, .csv, and .json files into isolated DuckDB sandboxes, connects live external databases, and enforces strict read-only / HMAC-confirmed write policies.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 02 ARCHITECTURE -->
+        <section class="section" id="architecture">
+            <div class="label">02 / Architecture</div>
+            <h2 class="section-title">HOW IT WORKS.</h2>
+            <p class="section-description">Next.js 15 workbench communicates with FastAPI services executing SQLGlot AST analysis, DuckDB sandboxing, and dialect transpilation with zero external daemon dependencies.</p>
+
+            <div class="pipeline">
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 01</div>
+                    <h3>Schema Ingest</h3>
+                    <p>Inspect catalog & isolated DuckDB sandbox.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 02</div>
+                    <h3>NL Synthesis</h3>
+                    <p>Translate prompt to schema-grounded SQL.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 03</div>
+                    <h3>AST Debugger</h3>
+                    <p>Detect syntax & logic flaws with diff fixes.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 04</div>
+                    <h3>3-Tier Optimize</h3>
+                    <p>AST hints, EXPLAIN plan & A/B benchmarks.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 05</div>
+                    <h3>Monaco &amp; Academy</h3>
+                    <p>Interactive IDE & 21 visual lessons.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 03 SCREENSHOTS -->
+        <section class="section" id="showcase">
+            <div class="label">03 / Screenshots</div>
+            <h2 class="section-title">APPLICATION SCREENSHOTS.</h2>
+            <p class="section-description">
+                Live screens captured from the running application. Click any image to view full size, or follow setup instructions in the GitHub repository.
+            </p>
+
+            <div class="gallery-wrapper">
+                <div class="dashboard-showcase">
+                    <img id="galleryMainImg" src="../images/projects/day-17/studio_query_studio.png" alt="Query Studio — Schema-Grounded Natural Language to SQL with Catalog Scoping" data-zoomable data-caption="Query Studio — Schema-Grounded Natural Language to SQL with Catalog Scoping">
+                </div>
+                <div class="gallery-bar">
+                    <span class="gallery-caption" id="galleryCaption">Query Studio — Schema-Grounded Natural Language to SQL with Catalog Scoping</span>
+                    <span class="gallery-hint">Click image to enlarge</span>
+                </div>
+                <div class="gallery-thumbs">
+                    <button type="button" class="gallery-thumb active" data-src="../images/projects/day-17/studio_query_studio.png" data-caption="Query Studio — Schema-Grounded Natural Language to SQL with Catalog Scoping"><img src="../images/projects/day-17/studio_query_studio.png" alt="Query Studio Thumbnail"><span>Query Studio</span></button>
+                    <button type="button" class="gallery-thumb" data-src="../images/projects/day-17/studio_sql_ide.png" data-caption="Monaco SQL IDE — Multi-Dialect Editor, Schema Tree &amp; Query Results Explorer"><img src="../images/projects/day-17/studio_sql_ide.png" alt="SQL IDE Thumbnail"><span>SQL IDE</span></button>
+                    <button type="button" class="gallery-thumb" data-src="../images/projects/day-17/studio_optimizer.png" data-caption="Three-Tier Optimizer — Static AST Hints, Estimated Plans &amp; Index DDL Recommendations"><img src="../images/projects/day-17/studio_optimizer.png" alt="Query Optimizer Thumbnail"><span>Query Optimizer</span></button>
+                    <button type="button" class="gallery-thumb" data-src="../images/projects/day-17/studio_debugging.png" data-caption="SQL Debugger — Automated Error Forensics &amp; Interactive Monaco Candidate Diff"><img src="../images/projects/day-17/studio_debugging.png" alt="SQL Debugger Thumbnail"><span>SQL Debugger</span></button>
+                    <button type="button" class="gallery-thumb" data-src="../images/projects/day-17/studio_academy.png" data-caption="Visual SQL Academy — 21 Interactive Lessons with DuckDB Step-by-Step Traces"><img src="../images/projects/day-17/studio_academy.png" alt="SQL Academy Thumbnail"><span>SQL Academy</span></button>
+                    <button type="button" class="gallery-thumb" data-src="../images/projects/day-17/overview_dashboard.png" data-caption="Overview Dashboard — Query Performance Benchmarks, Database Metrics &amp; History"><img src="../images/projects/day-17/overview_dashboard.png" alt="Workbench Overview Thumbnail"><span>Workbench Overview</span></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 04 TECHNICAL SPECS -->
+        <section class="section" id="specs">
+            <div class="label">04 / Technical Details</div>
+            <h2 class="section-title">OPTIMIZATION TIERS &amp; AST COMPILER SPECIFICATIONS.</h2>
+            <p class="section-description">
+                Key modules, rules, safety checks, and automated test results documented in the repository.
+            </p>
+
+            <div class="performance-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Subsystem</th>
+                            <th>Engineering Implementation</th>
+                            <th>Safety & Performance Guarantee</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>NL-to-SQL Compiler</strong></td>
+                            <td>SQLGlot AST + DuckDB schema grounding</td>
+                            <td class="metric-highlight">Zero hallucinated table or column identifiers</td>
+                        </tr>                        <tr>
+                            <td><strong>Three-Tier Optimizer</strong></td>
+                            <td>AST heuristics + EXPLAIN + EXPLAIN ANALYZE</td>
+                            <td class="metric-highlight">Side-by-side A/B execution timing verification</td>
+                        </tr>                        <tr>
+                            <td><strong>Write Guardrails</strong></td>
+                            <td>Read-only enforcement + HMAC confirmation</td>
+                            <td class="metric-highlight">Blocks accidental DROP / UPDATE data loss</td>
+                        </tr>                        <tr>
+                            <td><strong>Test Verification</strong></td>
+                            <td>pytest suite across AST, parser & optimizer</td>
+                            <td class="metric-highlight">97 / 97 Passed (74% line coverage)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 05 TECHNOLOGY STACK -->
+        <section class="section" id="stack">
+            <div class="label">05 / Tech Stack</div>
+            <h2 class="section-title">CORE TECHNOLOGIES.</h2>
+            <p class="section-description">Frameworks, databases, visualization tools, and testing libraries used in QueryTrellis Studio.</p>
+
+            <div class="tech-grid">
+                <div class="tech">
+                    <div class="tech-type">FRONTEND STACK</div>
+                    <div class="tech-name">Next.js 15 &bull; React 19 &bull; Tailwind v4</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">CODE EDITOR</div>
+                    <div class="tech-name">Monaco Editor (Offline Bundled)</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">BACKEND API</div>
+                    <div class="tech-name">FastAPI &bull; Pydantic v2 &bull; Python 3.11+</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">SQL ENGINES</div>
+                    <div class="tech-name">SQLGlot &bull; DuckDB &bull; PostgreSQL</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">VISUALIZATION</div>
+                    <div class="tech-name">Lucide Icons &bull; Recharts</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">VERIFICATION</div>
+                    <div class="tech-name">97/97 Pytest Passed (74% Coverage)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 06 ROADMAP -->
+        <section class="section" id="roadmap">
+            <div class="label">06 / Next Steps</div>
+            <h2 class="section-title">FUTURE ENHANCEMENTS.</h2>
+            <p class="section-description">Upcoming improvements planned for QueryTrellis Studio.</p>
+
+            <div class="future-grid">
+                <div class="future">Query plan visual flamegraph analyzer for recursive CTE execution bottlenecks.</div>                <div class="future">Automated index creation impact simulator running on transient DuckDB clones.</div>                <div class="future">Natural language data visualization generator emitting interactive Vega-Lite charts.</div>                <div class="future">Team query catalog with shared snippet collections and execution runbooks.</div>                <div class="future">Database schema migration diff generator outputting reversible Alembic migrations.</div>                <div class="future">PostgreSQL pg_stat_statements automated slow-query audit daemon connector.</div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="final">
+            <div class="final-small">OPEN-SOURCE PROJECT &bull; GITHUB.COM/RAGURAMRRP</div>
+            <h2>EXPLORE SOURCE &amp; DOCS.</h2>
+            <p>
+                View the complete codebase, sample datasets, quick-launch scripts, and automated test suites on GitHub.
+            </p>
+            <div class="final-buttons">
+                <a class="cta" href="../automation.html" data-nav="../automation.html">&larr; Back to Automation &amp; Dev Tools</a>
+                <a class="cta" href="../2.html" data-nav="../2.html">All Domains</a>
+                <a class="cta" href="../assets/Ragu_Ram_P_Resume.pdf" download="Ragu_Ram_P_Resume.pdf">Download Resume (PDF)</a>
+                <a class="cta" href="https://github.com/raguramrrp/90-days-90-projects-day-17-querytrellis" target="_blank" rel="noopener noreferrer">View Source on GitHub &nearr;</a>
+            </div>
+        </section>
+    </main>
+
+    <div class="page-transition" id="pageTransition"></div>
+    <script src="../assets/cosmic.js"></script>
+</body>
+</html>
