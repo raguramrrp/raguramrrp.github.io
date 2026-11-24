@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SALVERA | Ragu Ram P</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/cosmic.css">
+    <link rel="stylesheet" href="../assets/project.css">
+</head>
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="grid"></div>
+    <div class="blob blob-one"></div>
+    <div class="blob blob-two"></div>
+    <div class="blob blob-three"></div>
+    <div class="noise"></div>
+    <div id="particles"></div>
+
+    <!-- TOP NAVIGATION -->
+    <nav class="proj-nav">
+        <a class="pill-btn pill-btn--back" href="../analytics.html" data-nav="../analytics.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"></path><path d="m11 18-6-6 6-6"></path></svg>
+            <span>Back to Data &amp; BI Analytics</span>
+        </a>
+
+        <div class="nav-status">
+            <span class="status-dot-cyan"></span>
+            <span>RAGU RAM P &bull; PROJECT 24 OF 32</span>
+        </div>
+
+        <div class="nav-actions-right">
+            <a class="pill-btn" href="../2.html" data-nav="../2.html">Domains</a>
+            <a class="pill-btn" href="../github-vault.html" data-nav="../github-vault.html">Repositories</a>
+            <a class="pill-btn" href="https://github.com/raguramrrp/90-days-90-projects-day-21-salvera" target="_blank" rel="noopener noreferrer">GitHub Repo &nearr;</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- HERO SPLIT -->
+        <section class="hero">
+            <div class="hero-grid">
+                <div>
+                    <div class="hero-badge">
+                        <span class="status-dot-green"></span>
+                        <span>PROJECT 24 &bull; DAY 21 OF 90 &bull; SALARY BENCHMARKING &amp; OFFER STUDIO</span>
+                    </div>
+                    <h1 class="hero-title">SALVERA<br>COMPENSATION BI.</h1>
+                    <p class="hero-text">A data-driven compensation analytics platform tailored for the Indian technology sector — modeling salary percentiles across experience tiers, decomposing base vs ESOP waterfalls, and benchmarking market value.</p>
+                    <div class="hero-actions">
+                        <a class="btn-primary-glow" href="https://github.com/raguramrrp/90-days-90-projects-day-21-salvera" target="_blank" rel="noopener noreferrer">
+                            <span>View Repository on GitHub &nearr;</span>
+                        </a>
+                        <a class="pill-btn" href="#architecture">Architecture &darr;</a>
+                        <a class="pill-btn" href="#showcase">Screenshots &darr;</a>
+                    </div>
+                    <div class="hero-tags"><span class="tag">Python 3.12</span><span class="tag">FastAPI</span><span class="tag">Scikit-Learn</span><span class="tag">React 19.3</span><span class="tag">TypeScript 5.0+</span><span class="tag">Tailwind CSS</span><span class="tag">24/24 Pytest</span></div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="image-frame">
+                        <img src="../images/projects/day-21/01_overview_workstation.png" alt="SALVERA Preview" data-zoomable data-caption="SALVERA Overview Workstation — Median Tech CTCs, Experience Percentiles &amp; Offer Comparison Hub">
+                    </div>
+                    <div class="floating-stat stat1">
+                        <div class="stat-small">COMPENSATION BI</div>
+                        <div class="stat-big green">Percentile Regression</div>
+                    </div>
+                    <div class="floating-stat stat2">
+                        <div class="stat-small">PYTEST SUITE</div>
+                        <div class="stat-big cyan">24 / 24 Passed</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUICK METRICS BAR -->
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="stat-number">Offer Studio</div>
+                <div class="stat-label">Base/Bonus/ESOP Waterfall</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">Percentile Model</div>
+                <div class="stat-label">Scikit-Learn Regression</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">Tax & In-Hand</div>
+                <div class="stat-label">Indian Tax Regime Math</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">24 / 24</div>
+                <div class="stat-label">Automated Pytest Passed</div>
+            </div>
+        </div>
+
+        <!-- 01 OVERVIEW -->
+        <section class="section" id="overview">
+            <div class="label">01 / Overview</div>
+            <h2 class="section-title">DATA-DRIVEN COMPENSATION BENCHMARKING FOR TECH TALENT.</h2>
+            <p class="section-description">Job offers in technology are notoriously opaque, mixing base pay, joining bonuses, and paper stock options. SALVERA breaks down compensation structures with mathematical precision to reveal true take-home value.</p>
+
+            <div class="feature-grid">
+                <div class="feature">
+                    <div class="feature-number">01</div>
+                    <h3>Industry CTC Overview</h3>
+                    <p>High-level market summary tracking median developer salaries, remote work premiums, and hiring velocity across Indian tech hubs.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">02</div>
+                    <h3>Salary Explorer Workstation</h3>
+                    <p>Interactive P10, P50, and P90 percentile curves plotted across experience brackets for SWE, AI/ML, and Data roles.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">03</div>
+                    <h3>Offer Negotiation Studio</h3>
+                    <p>Side-by-side compensation comparison model calculating annualized in-hand pay after deducting New/Old Tax regime slabs.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">04</div>
+                    <h3>Equity &amp; ESOP Simulator</h3>
+                    <p>Vesting schedule visualizer modeling 4-year cliffs, strike price exercise costs, and potential liquidity upside.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">05</div>
+                    <h3>Cost-of-Living Parity</h3>
+                    <p>Calculates purchasing power parity (PPP) between Bengaluru, Hyderabad, Chennai, and tier-2 tech clusters.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">06</div>
+                    <h3>Job Market Intelligence</h3>
+                    <p>Live job listing explorer with verified salary ranges, equity flags, and transparent benefits audit.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 02 ARCHITECTURE -->
+        <section class="section" id="architecture">
+            <div class="label">02 / Architecture</div>
+            <h2 class="section-title">HOW IT WORKS.</h2>
+            <p class="section-description">Statistical regression and compensation modeling engine backed by FastAPI and React 19.</p>
+
+            <div class="pipeline">
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 01</div>
+                    <h3>Data Cleansing</h3>
+                    <p>Profiles verified salary disclosures; removes skew and outliers.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 02</div>
+                    <h3>Percentile Modeling</h3>
+                    <p>Trains Scikit-Learn quantiles (P10, P25, P50, P75, P90).</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 03</div>
+                    <h3>Tax Realization</h3>
+                    <p>Calculates Section 87A, standard deductions, and cess slabs.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 04</div>
+                    <h3>Waterfall Analysis</h3>
+                    <p>Decomposes Base + Variable + ESOP into monthly cash flows.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 05</div>
+                    <h3>Offer Comparison</h3>
+                    <p>Generates side-by-side offer scorecards with leverage tips.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 03 SCREENSHOTS -->
+        <section class="section" id="showcase">
+            <div class="label">03 / Screenshots</div>
+            <h2 class="section-title">APPLICATION SCREENSHOTS.</h2>
+            <p class="section-description">
+                Live screens captured from the running application. Click any image to view full size, or follow setup instructions in the GitHub repository.
+            </p>
+
+            <div class="gallery-wrapper">
+                <div class="dashboard-showcase">
+                    <img id="galleryMainImg" src="../images/projects/day-21/01_overview_workstation.png" alt="SALVERA Overview Workstation — Industry CTC Trends, Role Benchmarks &amp; Market Summary" data-zoomable data-caption="SALVERA Overview Workstation — Industry CTC Trends, Role Benchmarks &amp; Market Summary">
+                </div>
+                <div class="gallery-bar">
+                    <span class="gallery-caption" id="galleryCaption">SALVERA Overview Workstation — Industry CTC Trends, Role Benchmarks &amp; Market Summary</span>
+                    <span class="gallery-hint">Click image to enlarge</span>
+                </div>
+                <div class="gallery-thumbs">
+                    <button type="button" class="gallery-thumb active" data-src="../images/projects/day-21/01_overview_workstation.png" data-caption="SALVERA Overview Workstation — Industry CTC Trends, Role Benchmarks &amp; Market Summary"><img src="../images/projects/day-21/01_overview_workstation.png" alt="Overview Workstation Thumbnail"><span>Overview Workstation</span></button>
+                    <button type="button" class="gallery-thumb" data-src="../images/projects/day-21/02_find_jobs_discovery.png" data-caption="SALVERA Job Discovery — Verified Salary Ranges &amp; Compensation Transparency Explorer"><img src="../images/projects/day-21/02_find_jobs_discovery.png" alt="Job Discovery Thumbnail"><span>Job Discovery</span></button>
+                    <button type="button" class="gallery-thumb" data-src="../images/projects/day-21/03_salary_explorer_distribution.png" data-caption="SALVERA Salary Explorer — P10/P50/P90 Curves Across Bengaluru, Hyderabad &amp; Chennai"><img src="../images/projects/day-21/03_salary_explorer_distribution.png" alt="Salary Explorer Thumbnail"><span>Salary Explorer</span></button>
+                    <button type="button" class="gallery-thumb" data-src="../images/projects/day-21/04_offer_studio_waterfall.png" data-caption="SALVERA Offer Studio — Multi-Offer Comparison, Equity Vesting &amp; In-Hand Realization"><img src="../images/projects/day-21/04_offer_studio_waterfall.png" alt="Offer Studio Thumbnail"><span>Offer Studio</span></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 04 TECHNICAL SPECS -->
+        <section class="section" id="specs">
+            <div class="label">04 / Technical Details</div>
+            <h2 class="section-title">ANALYTICS SPECS &amp; VERIFIED CAPABILITIES.</h2>
+            <p class="section-description">
+                Key modules, rules, safety checks, and automated test results documented in the repository.
+            </p>
+
+            <div class="performance-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Subsystem</th>
+                            <th>Technical Implementation</th>
+                            <th>Verified Capability</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Percentile Estimation</strong></td>
+                            <td>Scikit-Learn Quantile Regressor</td>
+                            <td class="metric-highlight">Continuous compensation curve fitting</td>
+                        </tr>                        <tr>
+                            <td><strong>Tax Engine</strong></td>
+                            <td>Indian FY 2024-25 New Tax Regime math</td>
+                            <td class="metric-highlight">Exact take-home calculation down to the rupee</td>
+                        </tr>                        <tr>
+                            <td><strong>Equity Modeling</strong></td>
+                            <td>Standard 4-year 25% cliff vesting formula</td>
+                            <td class="metric-highlight">Realistic net equity realization projections</td>
+                        </tr>                        <tr>
+                            <td><strong>Verification Suite</strong></td>
+                            <td>Pytest suite for compensation math</td>
+                            <td class="metric-highlight">24 / 24 automated tests passed</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 05 TECHNOLOGY STACK -->
+        <section class="section" id="stack">
+            <div class="label">05 / Tech Stack</div>
+            <h2 class="section-title">CORE TECHNOLOGIES.</h2>
+            <p class="section-description">Frameworks, databases, visualization tools, and testing libraries used in SALVERA.</p>
+
+            <div class="tech-grid">
+                <div class="tech">
+                    <div class="tech-type">BACKEND API</div>
+                    <div class="tech-name">FastAPI (Python 3.12)</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">FRONTEND UI</div>
+                    <div class="tech-name">React 19.3 &bull; TypeScript 5.0+</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">MACHINE LEARNING</div>
+                    <div class="tech-name">Scikit-Learn &bull; NumPy</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">STYLING</div>
+                    <div class="tech-name">Tailwind CSS</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">CHARTS & DATA</div>
+                    <div class="tech-name">Recharts &bull; Pandas</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">TEST SUITE</div>
+                    <div class="tech-name">Pytest (24/24 Passed)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 06 ROADMAP -->
+        <section class="section" id="roadmap">
+            <div class="label">06 / Next Steps</div>
+            <h2 class="section-title">FUTURE ENHANCEMENTS.</h2>
+            <p class="section-description">Upcoming improvements planned for SALVERA.</p>
+
+            <div class="future-grid">
+                <div class="future">Company-specific culture and work-life balance satisfaction multipliers.</div>                <div class="future">Global remote currency conversion with Section 44ADA freelance tax rules.</div>                <div class="future">Anonymous offer verification via cryptographically signed offer letters.</div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="final">
+            <div class="final-small">OPEN-SOURCE PROJECT &bull; GITHUB.COM/RAGURAMRRP</div>
+            <h2>EXPLORE SOURCE &amp; DOCS.</h2>
+            <p>
+                View the complete codebase, sample datasets, quick-launch scripts, and automated test suites on GitHub.
+            </p>
+            <div class="final-buttons">
+                <a class="cta" href="../analytics.html" data-nav="../analytics.html">&larr; Back to Data &amp; BI Analytics</a>
+                <a class="cta" href="../2.html" data-nav="../2.html">All Domains</a>
+                <a class="cta" href="../assets/Ragu_Ram_P_Resume.pdf" download="Ragu_Ram_P_Resume.pdf">Download Resume (PDF)</a>
+                <a class="cta" href="https://github.com/raguramrrp/90-days-90-projects-day-21-salvera" target="_blank" rel="noopener noreferrer">View Source on GitHub &nearr;</a>
+            </div>
+        </section>
+    </main>
+
+    <div class="page-transition" id="pageTransition"></div>
+    <script src="../assets/cosmic.js"></script>
+</body>
+</html>

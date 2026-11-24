@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KUSTODRA | Ragu Ram P</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/cosmic.css">
+    <link rel="stylesheet" href="../assets/project.css">
+</head>
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="grid"></div>
+    <div class="blob blob-one"></div>
+    <div class="blob blob-two"></div>
+    <div class="blob blob-three"></div>
+    <div class="noise"></div>
+    <div id="particles"></div>
+
+    <!-- TOP NAVIGATION -->
+    <nav class="proj-nav">
+        <a class="pill-btn pill-btn--back" href="../automation.html" data-nav="../automation.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"></path><path d="m11 18-6-6 6-6"></path></svg>
+            <span>Back to Automation &amp; Dev Tools</span>
+        </a>
+
+        <div class="nav-status">
+            <span class="status-dot-cyan"></span>
+            <span>RAGU RAM P &bull; PROJECT 32 OF 32</span>
+        </div>
+
+        <div class="nav-actions-right">
+            <a class="pill-btn" href="../2.html" data-nav="../2.html">Domains</a>
+            <a class="pill-btn" href="../github-vault.html" data-nav="../github-vault.html">Repositories</a>
+            <a class="pill-btn" href="https://github.com/raguramrrp/90-days-90-projects-day-26-kustodra" target="_blank" rel="noopener noreferrer">GitHub Repo &nearr;</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- HERO SPLIT -->
+        <section class="hero">
+            <div class="hero-grid">
+                <div>
+                    <div class="hero-badge">
+                        <span class="status-dot-green"></span>
+                        <span>PROJECT 32 &bull; DAY 26 OF 90 &bull; FORENSIC INTEGRITY &amp; CHAIN-OF-CUSTODY</span>
+                    </div>
+                    <h1 class="hero-title">KUSTODRA<br>FORENSIC CUSTODY.</h1>
+                    <p class="hero-text">A digital forensic evidence management system and chain-of-custody laboratory — calculating dual-hash SHA-256 and Blake3 digests, logging cryptographic custody transitions, and generating automated legal compliance reports.</p>
+                    <div class="hero-actions">
+                        <a class="btn-primary-glow" href="https://github.com/raguramrrp/90-days-90-projects-day-26-kustodra" target="_blank" rel="noopener noreferrer">
+                            <span>View Repository on GitHub &nearr;</span>
+                        </a>
+                        <a class="pill-btn" href="#architecture">Architecture &darr;</a>
+                        <a class="pill-btn" href="#showcase">Screenshots &darr;</a>
+                    </div>
+                    <div class="hero-tags"><span class="tag">Python 3.11+</span><span class="tag">Streamlit</span><span class="tag">SQLite WAL</span><span class="tag">ReportLab PDF</span><span class="tag">SHA-256 &amp; Blake3</span><span class="tag">23/23 Pytest</span></div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="image-frame">
+                        <img src="../images/projects/day-26/01-evidence-repository.png" alt="KUSTODRA Preview" data-zoomable data-caption="KUSTODRA Evidence Repository — Digital Evidence Artifacts, Integrity Status Chips &amp; Custody Logs">
+                    </div>
+                    <div class="floating-stat stat1">
+                        <div class="stat-small">CRYPTOGRAPHY</div>
+                        <div class="stat-big green">SHA-256 & Blake3</div>
+                    </div>
+                    <div class="floating-stat stat2">
+                        <div class="stat-small">PYTEST SUITE</div>
+                        <div class="stat-big cyan">23 / 23 Passed</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUICK METRICS BAR -->
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="stat-number">Dual Hash</div>
+                <div class="stat-label">SHA-256 & Blake3 Digests</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">Chain of Custody</div>
+                <div class="stat-label">Immutable Handover Ledger</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">Court Dossiers</div>
+                <div class="stat-label">ReportLab PDF Generator</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">23 / 23</div>
+                <div class="stat-label">Automated Pytest Passed</div>
+            </div>
+        </div>
+
+        <!-- 01 OVERVIEW -->
+        <section class="section" id="overview">
+            <div class="label">01 / Overview</div>
+            <h2 class="section-title">TAMPER-EVIDENT FORENSIC EVIDENCE INTEGRITY &amp; AUDIT TRAILS.</h2>
+            <p class="section-description">Digital evidence in forensic investigations requires unassailable proof of authenticity. KUSTODRA guarantees artifact integrity through cryptographic dual-hashing, strict custody logging, and audit report generation.</p>
+
+            <div class="feature-grid">
+                <div class="feature">
+                    <div class="feature-number">01</div>
+                    <h3>Evidence Repository Vault</h3>
+                    <p>Centralized digital evidence locker tracking file size, original upload timestamp, case ID bindings, and custodian officer details.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">02</div>
+                    <h3>Dual-Hash Integrity Lab</h3>
+                    <p>Computes SHA-256 and Blake3 cryptographic checksums simultaneously to guard against hash collisions and bit-flip degradation.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">03</div>
+                    <h3>Chain-of-Custody Ledger</h3>
+                    <p>Chronological audit ledger logging every transfer of evidence custody between forensic examiners, law enforcement, and court archives.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">04</div>
+                    <h3>Integrity Tamper Verification</h3>
+                    <p>Re-computes file checksums on demand to immediately flag any file corruption or unauthorized modification.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">05</div>
+                    <h3>Court-Admissible PDF Export</h3>
+                    <p>Compiles comprehensive ReportLab PDF forensic certificates complete with verification stamps, timestamps, and officer credentials.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">06</div>
+                    <h3>Process Flow Architecture</h3>
+                    <p>Visual diagram and compliance rules adhering to ISO/IEC 27037 standards for digital evidence handling.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 02 ARCHITECTURE -->
+        <section class="section" id="architecture">
+            <div class="label">02 / Architecture</div>
+            <h2 class="section-title">HOW IT WORKS.</h2>
+            <p class="section-description">Air-gapped forensic evidence verification system powered by Python, hashlib, and Streamlit.</p>
+
+            <div class="pipeline">
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 01</div>
+                    <h3>Artifact Intake</h3>
+                    <p>Digital evidence file loaded into secure quarantine folder.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 02</div>
+                    <h3>Dual Hashing</h3>
+                    <p>Simultaneous streaming computation of SHA-256 & Blake3.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 03</div>
+                    <h3>Custody Registration</h3>
+                    <p>Case ID, examiner identity, and timestamp logged to DB.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 04</div>
+                    <h3>Periodic Audit</h3>
+                    <p>Scheduled hash re-verifications detect storage bit rot.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 05</div>
+                    <h3>Dossier Export</h3>
+                    <p>Generates legally defensible PDF certificate of authenticity.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 03 SCREENSHOTS -->
+        <section class="section" id="showcase">
+            <div class="label">03 / Screenshots</div>
+            <h2 class="section-title">APPLICATION SCREENSHOTS.</h2>
+            <p class="section-description">
+                Live screens captured from the running application. Click any image to view full size, or follow setup instructions in the GitHub repository.
+            </p>
+
+            <div class="gallery-wrapper">
+                <div class="dashboard-showcase">
+                    <img id="galleryMainImg" src="../images/projects/day-26/01-evidence-repository.png" alt="KUSTODRA Evidence Repository — Logged Artifacts, Case ID Bindings &amp; Verification Badges" data-zoomable data-caption="KUSTODRA Evidence Repository — Logged Artifacts, Case ID Bindings &amp; Verification Badges">
+                </div>
+                <div class="gallery-bar">
+                    <span class="gallery-caption" id="galleryCaption">KUSTODRA Evidence Repository — Logged Artifacts, Case ID Bindings &amp; Verification Badges</span>
+                    <span class="gallery-hint">Click image to enlarge</span>
+                </div>
+                <div class="gallery-thumbs">
+                    <button type="button" class="gallery-thumb active" data-src="../images/projects/day-26/01-evidence-repository.png" data-caption="KUSTODRA Evidence Repository — Logged Artifacts, Case ID Bindings &amp; Verification Badges"><img src="../images/projects/day-26/01-evidence-repository.png" alt="Evidence Repository Thumbnail"><span>Evidence Repository</span></button>
+                    <button type="button" class="gallery-thumb" data-src="../images/projects/day-26/02-evidence-details.png" data-caption="KUSTODRA Artifact Details — File Metadata, Forensic Properties &amp; Verified Checksums"><img src="../images/projects/day-26/02-evidence-details.png" alt="Evidence Details Thumbnail"><span>Evidence Details</span></button>
+                    <button type="button" class="gallery-thumb" data-src="../images/projects/day-26/03-integrity-lab.png" data-caption="KUSTODRA Integrity Lab — Real-Time Re-Hashing, Tamper Detection &amp; Bit-Flip Verification"><img src="../images/projects/day-26/03-integrity-lab.png" alt="Integrity Lab Thumbnail"><span>Integrity Lab</span></button>
+                    <button type="button" class="gallery-thumb" data-src="../images/projects/day-26/04-chain-of-custody.png" data-caption="KUSTODRA Chain of Custody — Chronological Transfer Ledger &amp; Officer Signature Records"><img src="../images/projects/day-26/04-chain-of-custody.png" alt="Chain of Custody Thumbnail"><span>Chain of Custody</span></button>
+                    <button type="button" class="gallery-thumb" data-src="../images/projects/day-26/06-audit-compliance-reports.png" data-caption="KUSTODRA Audit &amp; Compliance Reports — Court-Admissible PDF Export &amp; Regulatory Compliance"><img src="../images/projects/day-26/06-audit-compliance-reports.png" alt="Compliance Reports Thumbnail"><span>Compliance Reports</span></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 04 TECHNICAL SPECS -->
+        <section class="section" id="specs">
+            <div class="label">04 / Technical Details</div>
+            <h2 class="section-title">FORENSIC CAPABILITIES &amp; VERIFIED SPECS.</h2>
+            <p class="section-description">
+                Key modules, rules, safety checks, and automated test results documented in the repository.
+            </p>
+
+            <div class="performance-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Subsystem</th>
+                            <th>Technical Implementation</th>
+                            <th>Verified Capability</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Cryptographic Digests</strong></td>
+                            <td>Streaming hashlib SHA-256 + blake3</td>
+                            <td class="metric-highlight">Dual collision-resistant hash signatures</td>
+                        </tr>                        <tr>
+                            <td><strong>Custody Governance</strong></td>
+                            <td>Relational audit logs with officer IDs</td>
+                            <td class="metric-highlight">Unbroken chain-of-custody documentation</td>
+                        </tr>                        <tr>
+                            <td><strong>Legal Reporting</strong></td>
+                            <td>ReportLab PDF certification generator</td>
+                            <td class="metric-highlight">Court-admissible forensic audit dossiers</td>
+                        </tr>                        <tr>
+                            <td><strong>Test Coverage</strong></td>
+                            <td>Pytest verification of forensic pipelines</td>
+                            <td class="metric-highlight">23 / 23 automated tests passed</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 05 TECHNOLOGY STACK -->
+        <section class="section" id="stack">
+            <div class="label">05 / Tech Stack</div>
+            <h2 class="section-title">CORE TECHNOLOGIES.</h2>
+            <p class="section-description">Frameworks, databases, visualization tools, and testing libraries used in KUSTODRA.</p>
+
+            <div class="tech-grid">
+                <div class="tech">
+                    <div class="tech-type">FRONTEND UI</div>
+                    <div class="tech-name">Streamlit 1.40+</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">CRYPTOGRAPHY</div>
+                    <div class="tech-name">Python hashlib (SHA-256 &bull; Blake3)</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">DATABASE ORM</div>
+                    <div class="tech-name">SQLite WAL &bull; SQLAlchemy</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">AUDIT REPORTING</div>
+                    <div class="tech-name">ReportLab PDF Engine</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">STANDARDS</div>
+                    <div class="tech-name">ISO/IEC 27037 Evidence Guidelines</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">TEST SUITE</div>
+                    <div class="tech-name">Pytest (23/23 Passed)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 06 ROADMAP -->
+        <section class="section" id="roadmap">
+            <div class="label">06 / Next Steps</div>
+            <h2 class="section-title">FUTURE ENHANCEMENTS.</h2>
+            <p class="section-description">Upcoming improvements planned for KUSTODRA.</p>
+
+            <div class="future-grid">
+                <div class="future">Hardware Security Module (HSM) and YubiKey signing for custody transfer verification.</div>                <div class="future">Write-Once-Read-Many (WORM) storage backend integration for immutable cloud archiving.</div>                <div class="future">Automatic metadata stripping and forensic carving for damaged disk image payloads.</div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="final">
+            <div class="final-small">OPEN-SOURCE PROJECT &bull; GITHUB.COM/RAGURAMRRP</div>
+            <h2>EXPLORE SOURCE &amp; DOCS.</h2>
+            <p>
+                View the complete codebase, sample datasets, quick-launch scripts, and automated test suites on GitHub.
+            </p>
+            <div class="final-buttons">
+                <a class="cta" href="../automation.html" data-nav="../automation.html">&larr; Back to Automation &amp; Dev Tools</a>
+                <a class="cta" href="../2.html" data-nav="../2.html">All Domains</a>
+                <a class="cta" href="../assets/Ragu_Ram_P_Resume.pdf" download="Ragu_Ram_P_Resume.pdf">Download Resume (PDF)</a>
+                <a class="cta" href="https://github.com/raguramrrp/90-days-90-projects-day-26-kustodra" target="_blank" rel="noopener noreferrer">View Source on GitHub &nearr;</a>
+            </div>
+        </section>
+    </main>
+
+    <div class="page-transition" id="pageTransition"></div>
+    <script src="../assets/cosmic.js"></script>
+</body>
+</html>

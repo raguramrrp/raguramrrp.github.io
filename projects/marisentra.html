@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARISENTRA | Ragu Ram P</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/cosmic.css">
+    <link rel="stylesheet" href="../assets/project.css">
+</head>
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="grid"></div>
+    <div class="blob blob-one"></div>
+    <div class="blob blob-two"></div>
+    <div class="blob blob-three"></div>
+    <div class="noise"></div>
+    <div id="particles"></div>
+
+    <!-- TOP NAVIGATION -->
+    <nav class="proj-nav">
+        <a class="pill-btn pill-btn--back" href="../webapps.html" data-nav="../webapps.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"></path><path d="m11 18-6-6 6-6"></path></svg>
+            <span>Back to Full-Stack Web Apps</span>
+        </a>
+
+        <div class="nav-status">
+            <span class="status-dot-cyan"></span>
+            <span>RAGU RAM P &bull; PROJECT 18 OF 32</span>
+        </div>
+
+        <div class="nav-actions-right">
+            <a class="pill-btn" href="../2.html" data-nav="../2.html">Domains</a>
+            <a class="pill-btn" href="../github-vault.html" data-nav="../github-vault.html">Repositories</a>
+            <a class="pill-btn" href="https://github.com/raguramrrp/90-days-90-projects-day-27-marisentra" target="_blank" rel="noopener noreferrer">GitHub Repo &nearr;</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- HERO SPLIT -->
+        <section class="hero">
+            <div class="hero-grid">
+                <div>
+                    <div class="hero-badge">
+                        <span class="status-dot-green"></span>
+                        <span>PROJECT 18 &bull; DAY 27 OF 90 &bull; COASTAL SAFETY &amp; SAR DISPATCH</span>
+                    </div>
+                    <h1 class="hero-title">MARISENTRA<br>MARITIME SAFETY.</h1>
+                    <p class="hero-text">A dedicated maritime operations platform engineered for Tamil Nadu's coastal fishing communities — combining live Leaflet vessel tracking, IMD cyclone alerts, Tamil voice SOS triggers, and Coast Guard SAR dispatch.</p>
+                    <div class="hero-actions">
+                        <a class="btn-primary-glow" href="https://github.com/raguramrrp/90-days-90-projects-day-27-marisentra" target="_blank" rel="noopener noreferrer">
+                            <span>View Repository on GitHub &nearr;</span>
+                        </a>
+                        <a class="pill-btn" href="#architecture">Architecture &darr;</a>
+                        <a class="pill-btn" href="#showcase">Screenshots &darr;</a>
+                    </div>
+                    <div class="hero-tags"><span class="tag">Python 3.11+</span><span class="tag">FastAPI 0.115</span><span class="tag">React 19.0</span><span class="tag">TypeScript 5.7</span><span class="tag">Tailwind CSS v4.1</span><span class="tag">Leaflet 1.9</span><span class="tag">Web Speech API (Tamil)</span><span class="tag">15/15 Pytest</span></div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="image-frame">
+                        <img src="../images/projects/day-27/01-coastal-operations-centre.png" alt="MARISENTRA Preview" data-zoomable data-caption="MARISENTRA Coastal Operations Centre — Live Gulf of Mannar Vessel Radar, Weather Advisories &amp; Active Alerts">
+                    </div>
+                    <div class="floating-stat stat1">
+                        <div class="stat-small">VOICE SOS</div>
+                        <div class="stat-big green">Bilingual Tamil + English</div>
+                    </div>
+                    <div class="floating-stat stat2">
+                        <div class="stat-small">PYTEST SUITE</div>
+                        <div class="stat-big cyan">15 / 15 Passed</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUICK METRICS BAR -->
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="stat-number">SAR Dispatch</div>
+                <div class="stat-label">Real-Time Coast Guard Grid</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">Voice AI</div>
+                <div class="stat-label">Tamil Audio SOS Recognizer</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">Leaflet GIS</div>
+                <div class="stat-label">Vessel Proximity Telemetry</div>
+            </div>            <div class="stat-box">
+                <div class="stat-number">15 / 15</div>
+                <div class="stat-label">Automated Pytest Passed</div>
+            </div>
+        </div>
+
+        <!-- 01 OVERVIEW -->
+        <section class="section" id="overview">
+            <div class="label">01 / Overview</div>
+            <h2 class="section-title">MARITIME RESCUE &amp; SAFETY TELEMETRY FOR COASTAL FISHERMEN.</h2>
+            <p class="section-description">Traditional fishermen face unpredictable sea conditions, international maritime boundary disputes, and engine failures with minimal communication infrastructure. MARISENTRA provides real-time radar and automated distress beacons.</p>
+
+            <div class="feature-grid">
+                <div class="feature">
+                    <div class="feature-number">01</div>
+                    <h3>Coastal Operations Centre</h3>
+                    <p>Real-time maritime command dashboard displaying registered vessels at sea, active harbor departures, and wind speed telemetry.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">02</div>
+                    <h3>Fisherman Safety Map</h3>
+                    <p>Interactive Leaflet marine chart featuring international maritime boundary lines (IMBL), shallow reef zones, and safe harbor corridors.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">03</div>
+                    <h3>Tamil Voice Assistant</h3>
+                    <p>Hands-free speech recognition supporting native Tamil audio commands (e.g. 'ஆபத்து' / 'வானிலை') for rough-sea operation without touch screens.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">04</div>
+                    <h3>Emergency SOS Dispatch</h3>
+                    <p>One-touch distress beacon broadcasting precise GPS coordinates, vessel registration number, and crew manifest to Coast Guard SAR stations.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">05</div>
+                    <h3>SAR Incident Management</h3>
+                    <p>Coordinated search grid generator, rescue vessel assignment matrix, and survivor medical status tracking.</p>
+                </div>                <div class="feature">
+                    <div class="feature-number">06</div>
+                    <h3>Cyclone &amp; Weather Radar</h3>
+                    <p>Direct integration with regional IMD meteorological advisories, wave height alerts, and gale-force wind warnings.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 02 ARCHITECTURE -->
+        <section class="section" id="architecture">
+            <div class="label">02 / Architecture</div>
+            <h2 class="section-title">HOW IT WORKS.</h2>
+            <p class="section-description">Geospatial telemetry and emergency voice dispatch platform built with FastAPI and React 19.</p>
+
+            <div class="pipeline">
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 01</div>
+                    <h3>Vessel Telemetry</h3>
+                    <p>Vessel transponder or mobile app sends GPS fix and heading.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 02</div>
+                    <h3>Geofence Audit</h3>
+                    <p>Leaflet checks distance against IMBL boundary and hazard zones.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 03</div>
+                    <h3>Weather Correlation</h3>
+                    <p>Overlays IMD wind and wave forecasts onto active vessel paths.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 04</div>
+                    <h3>Distress Beacon</h3>
+                    <p>Voice SOS or manual button triggers Coast Guard priority alert.</p>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <div class="pipeline-node">
+                    <div class="pipeline-step">STAGE 05</div>
+                    <h3>SAR Mission Hub</h3>
+                    <p>Calculates optimal search grid and tracks dispatched rescue boats.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 03 SCREENSHOTS -->
+        <section class="section" id="showcase">
+            <div class="label">03 / Screenshots</div>
+            <h2 class="section-title">APPLICATION SCREENSHOTS.</h2>
+            <p class="section-description">
+                Live screens captured from the running application. Click any image to view full size, or follow setup instructions in the GitHub repository.
+            </p>
+
+            <div class="gallery-wrapper">
+                <div class="dashboard-showcase">
+                    <img id="galleryMainImg" src="../images/projects/day-27/01-coastal-operations-centre.png" alt="MARISENTRA Coastal Operations Centre — Live Maritime Radar &amp; Sea-State Telemetry" data-zoomable data-caption="MARISENTRA Coastal Operations Centre — Live Maritime Radar &amp; Sea-State Telemetry">
+                </div>
+                <div class="gallery-bar">
+                    <span class="gallery-caption" id="galleryCaption">MARISENTRA Coastal Operations Centre — Live Maritime Radar &amp; Sea-State Telemetry</span>
+                    <span class="gallery-hint">Click image to enlarge</span>
+                </div>
+                <div class="gallery-thumbs">
+                    <button type="button" class="gallery-thumb active" data-src="../images/projects/day-27/01-coastal-operations-centre.png" data-caption="MARISENTRA Coastal Operations Centre — Live Maritime Radar &amp; Sea-State Telemetry"><img src="../images/projects/day-27/01-coastal-operations-centre.png" alt="Operations Centre Thumbnail"><span>Operations Centre</span></button>
+                    <button type="button" class="gallery-thumb" data-src="../images/projects/day-27/02-fisherman-safety-map.png" data-caption="MARISENTRA Fisherman Safety Map — Danger Zone Geofencing &amp; Harbor Safe Corridors"><img src="../images/projects/day-27/02-fisherman-safety-map.png" alt="Safety Map Thumbnail"><span>Safety Map</span></button>
+                    <button type="button" class="gallery-thumb" data-src="../images/projects/day-27/03-tamil-voice-assistant.png" data-caption="MARISENTRA Tamil Voice Assistant — Hands-Free Voice Emergency Command &amp; Audio Feeds"><img src="../images/projects/day-27/03-tamil-voice-assistant.png" alt="Voice Assistant Thumbnail"><span>Voice Assistant</span></button>
+                    <button type="button" class="gallery-thumb" data-src="../images/projects/day-27/04-emergency-sos-dispatch.png" data-caption="MARISENTRA Emergency SOS Dispatch — Distress Signal Triage &amp; Rescue Vessel Routing"><img src="../images/projects/day-27/04-emergency-sos-dispatch.png" alt="SOS Dispatch Thumbnail"><span>SOS Dispatch</span></button>
+                    <button type="button" class="gallery-thumb" data-src="../images/projects/day-27/05-sar-incident-management.png" data-caption="MARISENTRA SAR Management — Multi-Agency Search Grid &amp; Incident Timeline"><img src="../images/projects/day-27/05-sar-incident-management.png" alt="SAR Incident Log Thumbnail"><span>SAR Incident Log</span></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 04 TECHNICAL SPECS -->
+        <section class="section" id="specs">
+            <div class="label">04 / Technical Details</div>
+            <h2 class="section-title">MARITIME SYSTEM SPECS &amp; CAPABILITIES.</h2>
+            <p class="section-description">
+                Key modules, rules, safety checks, and automated test results documented in the repository.
+            </p>
+
+            <div class="performance-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Subsystem</th>
+                            <th>Technical Implementation</th>
+                            <th>Verified Capability</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Voice Recognition</strong></td>
+                            <td>Web Speech API with ta-IN acoustic models</td>
+                            <td class="metric-highlight">Hands-free emergency voice trigger</td>
+                        </tr>                        <tr>
+                            <td><strong>Geofencing Engine</strong></td>
+                            <td>Turf.js + Leaflet marine boundary layers</td>
+                            <td class="metric-highlight">Instant IMBL crossing alert warnings</td>
+                        </tr>                        <tr>
+                            <td><strong>Distress Protocol</strong></td>
+                            <td>FastAPI async dispatcher + WebSocket feeds</td>
+                            <td class="metric-highlight">Sub-second Coast Guard notification</td>
+                        </tr>                        <tr>
+                            <td><strong>Verification Suite</strong></td>
+                            <td>Pytest automated integration test suite</td>
+                            <td class="metric-highlight">15 / 15 automated tests passed</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 05 TECHNOLOGY STACK -->
+        <section class="section" id="stack">
+            <div class="label">05 / Tech Stack</div>
+            <h2 class="section-title">CORE TECHNOLOGIES.</h2>
+            <p class="section-description">Frameworks, databases, visualization tools, and testing libraries used in MARISENTRA.</p>
+
+            <div class="tech-grid">
+                <div class="tech">
+                    <div class="tech-type">BACKEND API</div>
+                    <div class="tech-name">FastAPI (Python 3.11+)</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">FRONTEND UI</div>
+                    <div class="tech-name">React 19 &bull; TypeScript 5.7</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">MAPS & GIS</div>
+                    <div class="tech-name">Leaflet 1.9 &bull; Marine Vector Tiles</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">VOICE PROCESSING</div>
+                    <div class="tech-name">Web Speech API (Tamil &bull; ta-IN)</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">DATABASE ORM</div>
+                    <div class="tech-name">SQLite 3 &bull; SQLAlchemy</div>
+                </div>                <div class="tech">
+                    <div class="tech-type">TEST SUITE</div>
+                    <div class="tech-name">Pytest (15/15 Passed)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 06 ROADMAP -->
+        <section class="section" id="roadmap">
+            <div class="label">06 / Next Steps</div>
+            <h2 class="section-title">FUTURE ENHANCEMENTS.</h2>
+            <p class="section-description">Upcoming improvements planned for MARISENTRA.</p>
+
+            <div class="future-grid">
+                <div class="future">AIS (Automatic Identification System) hardware receiver integration for commercial ship radar.</div>                <div class="future">NavIC satellite messenger packet decoding for deep-sea out-of-range communication.</div>                <div class="future">Thermal drone search grid feeds streamed directly to the SAR command console.</div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="final">
+            <div class="final-small">OPEN-SOURCE PROJECT &bull; GITHUB.COM/RAGURAMRRP</div>
+            <h2>EXPLORE SOURCE &amp; DOCS.</h2>
+            <p>
+                View the complete codebase, sample datasets, quick-launch scripts, and automated test suites on GitHub.
+            </p>
+            <div class="final-buttons">
+                <a class="cta" href="../webapps.html" data-nav="../webapps.html">&larr; Back to Full-Stack Web Apps</a>
+                <a class="cta" href="../2.html" data-nav="../2.html">All Domains</a>
+                <a class="cta" href="../assets/Ragu_Ram_P_Resume.pdf" download="Ragu_Ram_P_Resume.pdf">Download Resume (PDF)</a>
+                <a class="cta" href="https://github.com/raguramrrp/90-days-90-projects-day-27-marisentra" target="_blank" rel="noopener noreferrer">View Source on GitHub &nearr;</a>
+            </div>
+        </section>
+    </main>
+
+    <div class="page-transition" id="pageTransition"></div>
+    <script src="../assets/cosmic.js"></script>
+</body>
+</html>
