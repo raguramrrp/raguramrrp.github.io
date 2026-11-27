@@ -97,20 +97,12 @@
                 <!-- RIGHT COLUMN: 3D HANGING ID BADGE & LANYARD -->
                 <div class="hero-right">
                     <div class="lanyard-container" id="lanyardContainer" aria-label="Ragu Ram P Verified Developer ID Card">
-                        <!-- SVG Lanyard Ribbon with Continuous Suspension from Ceiling -->
-                        <svg class="lanyard-svg" id="lanyardSvg" viewBox="0 0 340 1000" preserveAspectRatio="none">
-                            <defs>
-                                <linearGradient id="lanyardGrad" gradientUnits="userSpaceOnUse" x1="158" y1="0" x2="182" y2="0">
-                                    <stop offset="0%" stop-color="#020806" />
-                                    <stop offset="12%" stop-color="#10e89f" />
-                                    <stop offset="28%" stop-color="#162e28" />
-                                    <stop offset="50%" stop-color="#0a1614" />
-                                    <stop offset="72%" stop-color="#162e28" />
-                                    <stop offset="88%" stop-color="#10e89f" />
-                                    <stop offset="100%" stop-color="#020806" />
-                                </linearGradient>
-                            </defs>
-                            <path class="lanyard-strap" id="lanyardStrap" d="M 170 0 C 170 300, 170 650, 170 825" />
+                        <!-- SVG Lanyard Ribbon with Continuous Suspension from Ceiling (Multi-Layer Woven Aesthetic) -->
+                        <svg class="lanyard-svg" id="lanyardSvg" viewBox="0 0 900 1100" preserveAspectRatio="none">
+                            <path class="strap-layer strap-shadow" id="strapShadow" d="M 450 0 C 450 300, 450 650, 450 825" />
+                            <path class="strap-layer strap-edge" id="strapEdge" d="M 450 0 C 450 300, 450 650, 450 825" />
+                            <path class="strap-layer strap-core" id="strapCore" d="M 450 0 C 450 300, 450 650, 450 825" />
+                            <path class="strap-layer strap-stitch" id="strapStitch" d="M 450 0 C 450 300, 450 650, 450 825" />
                         </svg>
 
                         <!-- BADGE WITH CLIP -->
@@ -308,6 +300,7 @@
                                 </g>
                                 <text x="124" y="158" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="700" letter-spacing="4" fill="#6ee7b7">RAGU RAM</text>
                             </svg>
+                            <div class="lid-thumb-scoop"></div>
                             <span class="lid-open-hint">Touch to Open &uarr;</span>
                         </div>
                     </div>
@@ -440,7 +433,10 @@
             const exploreButton = document.getElementById("exploreButton");
             const idCard = document.getElementById("idCard");
             const lanyardBadge = document.getElementById("lanyardBadge");
-            const lanyardStrap = document.getElementById("lanyardStrap");
+            const strapShadow = document.getElementById("strapShadow");
+            const strapEdge = document.getElementById("strapEdge");
+            const strapCore = document.getElementById("strapCore");
+            const strapStitch = document.getElementById("strapStitch");
             const lanyardSvg = document.getElementById("lanyardSvg");
             const clipCrimp = document.querySelector(".clip-crimp");
             const cardGlare = document.getElementById("cardGlare");
@@ -464,42 +460,49 @@
             let targetRotX = 0, targetRotY = 0, targetRotZ = 0;
             let curRotX = 0, curRotY = 0, curRotZ = 0;
 
-            const stiffness = 0.030;
-            const damping = 0.935; // Natural smooth pendulum swing (swings 5-6 times)
-
-            // Top ceiling anchor in SVG viewBox (0 0 340 1000)
-            const anchorX = 170;
+            // Top ceiling anchor in SVG viewBox (0 0 900 1100)
+            const anchorX = 450;
             const anchorY = 0;
 
             function updateStrapCoordinates() {
-                if (!lanyardStrap || !lanyardSvg || !clipCrimp) return;
+                if (!lanyardSvg || !clipCrimp) return;
                 const svgRect = lanyardSvg.getBoundingClientRect();
                 const crimpRect = clipCrimp.getBoundingClientRect();
                 if (svgRect.width === 0 || svgRect.height === 0) return;
 
-                const scaleX = 340 / svgRect.width;
-                const scaleY = 1000 / svgRect.height;
+                const scaleX = 900 / svgRect.width;
+                const scaleY = 1100 / svgRect.height;
 
                 // Exact sub-pixel center of clip crimp in SVG viewBox coordinates
                 const crimpCenterX = crimpRect.left + crimpRect.width / 2;
-                const crimpCenterY = crimpRect.top + 3; // Enters 3px inside the clamp
+                const crimpCenterY = crimpRect.top + crimpRect.height / 2;
 
                 const endX = (crimpCenterX - svgRect.left) * scaleX;
                 const endY = (crimpCenterY - svgRect.top) * scaleY;
 
-                // Tensioned dynamic Bezier curve
-                const cp1X = anchorX + (endX - anchorX) * 0.12;
-                const cp1Y = anchorY + (endY - anchorY) * 0.38;
-                const cp2X = anchorX + (endX - anchorX) * 0.65;
-                const cp2Y = anchorY + (endY - anchorY) * 0.88;
+                const dx = endX - anchorX;
+                const dy = endY - anchorY;
 
-                lanyardStrap.setAttribute(
-                    "d",
-                    "M " + anchorX + " " + anchorY +
-                    " C " + cp1X.toFixed(1) + " " + cp1Y.toFixed(1) +
-                    ", " + cp2X.toFixed(1) + " " + cp2Y.toFixed(1) +
-                    ", " + endX.toFixed(1) + " " + endY.toFixed(1)
-                );
+                // Smooth catenary curve:
+                // CP1 stays near vertical at top ceiling anchor
+                const cp1X = anchorX + dx * 0.18;
+                const cp1Y = anchorY + dy * 0.38;
+
+                // CP2 enters the badge clip tangentially aligned with badge tilt (curRotZ)
+                const radZ = (curRotZ * Math.PI) / 180;
+                const tangentDist = Math.max(60, dy * 0.22);
+                const cp2X = endX + Math.sin(radZ) * tangentDist;
+                const cp2Y = endY - Math.cos(radZ) * tangentDist;
+
+                const pathD = "M " + anchorX + " " + anchorY +
+                              " C " + cp1X.toFixed(1) + " " + cp1Y.toFixed(1) +
+                              ", " + cp2X.toFixed(1) + " " + cp2Y.toFixed(1) +
+                              ", " + endX.toFixed(1) + " " + endY.toFixed(1);
+
+                if (strapShadow) strapShadow.setAttribute("d", pathD);
+                if (strapEdge) strapEdge.setAttribute("d", pathD);
+                if (strapCore) strapCore.setAttribute("d", pathD);
+                if (strapStitch) strapStitch.setAttribute("d", pathD);
             }
 
             // Mouse move tracking (3D perspective tilt)
@@ -543,9 +546,9 @@
                     if (isDragging) {
                         const rawX = e.clientX - startPointerX;
                         const rawY = e.clientY - startPointerY;
-                        // Free wide dragging bounds (over 640px range)
-                        targetX = Math.max(-320, Math.min(320, rawX));
-                        targetY = Math.max(-80, Math.min(260, rawY));
+                        // Free wide dragging bounds (over 840px range)
+                        targetX = Math.max(-420, Math.min(420, rawX));
+                        targetY = Math.max(-100, Math.min(320, rawY));
 
                         dragVelX = targetX - lastDragX;
                         dragVelY = targetY - lastDragY;
@@ -559,9 +562,9 @@
                         isDragging = false;
                         targetX = 0;
                         targetY = 0;
-                        // Transfer smooth release momentum
-                        velocityX = Math.max(-28, Math.min(28, dragVelX * 0.65));
-                        velocityY = Math.max(-18, Math.min(18, dragVelY * 0.65));
+                        // Transfer smooth release momentum freely
+                        velocityX = Math.max(-36, Math.min(36, dragVelX * 0.85));
+                        velocityY = Math.max(-24, Math.min(24, dragVelY * 0.85));
                         lanyardBadge.classList.remove("is-dragging");
                     }
                 }
@@ -570,7 +573,7 @@
                 window.addEventListener("pointercancel", endDrag);
             }
 
-            // Physics animation loop (Spring oscillation + Organic ambient float)
+            // Physics animation loop (Realistic harmonic swing + Organic ambient float)
             function animatePhysics(now) {
                 const time = now || performance.now();
 
@@ -583,22 +586,29 @@
                     curRotY += ((currentX * 0.08) - curRotY) * 0.28;
                     curRotX += ((-currentY * 0.06) - curRotX) * 0.28;
                 } else {
-                    // Damped harmonic oscillation spring
-                    const forceX = -stiffness * currentX;
-                    const forceY = -stiffness * currentY;
-                    velocityX = (velocityX + forceX) * damping;
-                    velocityY = (velocityY + forceY) * damping;
+                    // Realistic pendulum harmonic oscillation
+                    const pendulumLength = 480;
+                    const gravity = 0.016;
+                    const forceX = -gravity * currentX;
+                    const forceY = -gravity * currentY * 1.5;
+
+                    // Fluid low-friction air damping (swings freely and realistically)
+                    const swingDamping = 0.984;
+                    velocityX = (velocityX + forceX) * swingDamping;
+                    velocityY = (velocityY + forceY) * swingDamping;
+
                     currentX += velocityX;
                     currentY += velocityY;
 
                     // Dynamic pendulum sway angle during swing
-                    const dynamicTilt = (currentX * 0.16) + (velocityX * 0.35);
+                    const swingAngle = Math.atan2(currentX, pendulumLength) * (180 / Math.PI);
+                    const dynamicTilt = swingAngle + (velocityX * 0.42);
 
                     // Organic subtle ambient float
-                    const ambientZ = Math.sin(time * 0.0015) * 3.0;
-                    const ambientY = Math.cos(time * 0.0012) * 3.5;
+                    const ambientZ = Math.sin(time * 0.0015) * 2.5;
+                    const ambientY = Math.cos(time * 0.0012) * 2.8;
 
-                    curRotZ += ((dynamicTilt + ambientZ) - curRotZ) * 0.10;
+                    curRotZ += ((dynamicTilt + ambientZ) - curRotZ) * 0.12;
                     curRotY += ((targetRotY + ambientY) - curRotY) * 0.08;
                     curRotX += (targetRotX - curRotX) * 0.08;
                 }
@@ -626,7 +636,7 @@
             function setLaptopLidAngle(angle) {
                 if (!macbookLid) return;
                 macbookLid.style.transform = "rotateX(" + angle.toFixed(1) + "deg)";
-                if (angle > -30) {
+                if (angle > -45) {
                     macbookChassis.classList.add("is-open");
                 } else {
                     macbookChassis.classList.remove("is-open");
@@ -643,8 +653,8 @@
                 let progress = scrolled / (totalScrollable + windowH * 0.15);
                 progress = Math.max(0, Math.min(1, progress));
 
-                // Closed flat against keyboard base at -90deg, opens smoothly to 2deg
-                const currentAngle = -90 + (progress * 92);
+                // Closed flat over keyboard at -126deg, opens smoothly to 2deg
+                const currentAngle = -126 + (progress * 128);
                 setLaptopLidAngle(currentAngle);
             }
 
@@ -658,7 +668,7 @@
                     e.stopPropagation();
                     isLaptopManuallyClosed = !isLaptopManuallyClosed;
                     if (isLaptopManuallyClosed) {
-                        setLaptopLidAngle(-90); // Close flat
+                        setLaptopLidAngle(-126); // Close flat over keyboard
                     } else {
                         setLaptopLidAngle(2); // Open Retina view
                     }
@@ -666,30 +676,25 @@
             }
 
             // CLICK / TOUCH CLOSED LAPTOP (Opens back up)
-            if (macbookLid) {
-                macbookLid.addEventListener("click", function (e) {
-                    if (isLaptopManuallyClosed || !macbookChassis.classList.contains("is-open")) {
-                        isLaptopManuallyClosed = false;
-                        setLaptopLidAngle(2); // Open up
-                    }
-                });
+            function openLaptop() {
+                if (isLaptopManuallyClosed || !macbookChassis.classList.contains("is-open")) {
+                    isLaptopManuallyClosed = false;
+                    setLaptopLidAngle(2); // Open up smoothly
+                }
             }
 
+            if (macbookLid) macbookLid.addEventListener("click", openLaptop);
             if (macbookLidCover) {
                 macbookLidCover.addEventListener("click", function (e) {
                     e.stopPropagation();
-                    isLaptopManuallyClosed = false;
-                    setLaptopLidAngle(2); // Open up
+                    openLaptop();
                 });
             }
 
             if (macbookChassis) {
                 macbookChassis.addEventListener("click", function (e) {
-                    if (isLaptopManuallyClosed || !macbookChassis.classList.contains("is-open")) {
-                        if (e.target.closest("#laptopPowerKey")) return;
-                        isLaptopManuallyClosed = false;
-                        setLaptopLidAngle(2);
-                    }
+                    if (e.target.closest("#laptopPowerKey")) return;
+                    openLaptop();
                 });
             }
 

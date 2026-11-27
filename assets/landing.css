@@ -635,20 +635,51 @@ body {
     top: -700px;
     left: 50%;
     transform: translateX(-50%);
-    width: 340px;
-    height: 1000px;
+    width: 900px;
+    height: 1100px;
     pointer-events: none;
     overflow: visible;
     z-index: 99998;
 }
 
+.strap-layer {
+    fill: none;
+}
+
+.strap-shadow {
+    stroke: rgba(0, 0, 0, 0.75);
+    stroke-width: 18px;
+    stroke-linecap: square;
+    filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.9));
+}
+
+.strap-edge {
+    stroke: #10e89f;
+    stroke-width: 14px;
+    stroke-linecap: square;
+    opacity: 0.92;
+    filter: drop-shadow(0 0 6px rgba(16, 232, 159, 0.5));
+}
+
+.strap-core {
+    stroke: #071914;
+    stroke-width: 10px;
+    stroke-linecap: square;
+}
+
+.strap-stitch {
+    stroke: #34d399;
+    stroke-width: 1.5px;
+    stroke-linecap: round;
+    stroke-dasharray: 6 5;
+    opacity: 0.85;
+}
+
 .lanyard-strap {
     fill: none;
-    stroke: url(#lanyardGrad);
-    stroke-width: 15px;
+    stroke: #10e89f;
+    stroke-width: 14px;
     stroke-linecap: square;
-    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.75));
-    transition: d 0.04s linear;
 }
 
 .lanyard-badge-wrap {
@@ -1063,19 +1094,24 @@ body {
     height: 360px;
     transform-origin: bottom center;
     transform-style: preserve-3d;
-    transform: rotateX(-90deg);
+    transform: rotateX(-126deg);
     transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
     z-index: 30;
 }
 
 .macbook-chassis.is-open .macbook-lid {
     transform: rotateX(2deg);
+    z-index: 30;
+}
+
+.macbook-chassis:not(.is-open) .macbook-lid {
+    z-index: 60;
 }
 
 .macbook-chassis:not(.is-open) .lid-screen {
     pointer-events: none;
     opacity: 0;
-    transition: opacity 0.2s ease;
+    transition: opacity 0.25s ease;
 }
 
 .macbook-chassis.is-open .lid-screen {
@@ -1085,11 +1121,13 @@ body {
 
 .macbook-chassis:not(.is-open) .lid-cover {
     pointer-events: auto;
-    z-index: 50;
+    opacity: 1;
+    z-index: 70;
 }
 
 .macbook-chassis.is-open .lid-cover {
     pointer-events: none;
+    opacity: 0;
 }
 
 /* SCREEN DISPLAY FRONT */
@@ -1421,6 +1459,19 @@ body {
     letter-spacing: 1.2px;
     text-transform: uppercase;
     animation: bounceHint 2.2s infinite;
+}
+
+.lid-thumb-scoop {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 68px;
+    height: 7px;
+    border-radius: 6px 6px 0 0;
+    background: #0d1114;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.9);
 }
 
 @keyframes bounceHint {
