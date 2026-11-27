@@ -19,10 +19,6 @@
     <div class="noise"></div>
     <div id="particles"></div>
 
-    <!-- SIDE TEXT -->
-    <div class="side-text side-left">RAGU RAM P • PORTFOLIO</div>
-    <div class="side-text side-right">AI &amp; MACHINE LEARNING • 32 PROJECTS</div>
-
     <main class="hero">
         <div class="hero-content" id="heroContent">
             <!-- 2-COLUMN HERO GRID: INTRO (LEFT) + HANGING ID BADGE (RIGHT) -->
@@ -476,35 +472,46 @@
             const anchorX = 450;
             const anchorY = 0;
 
-            function updateStrapCoordinates() {
+            // Calibrate baseline rest coordinates of clip crimp in SVG viewBox
+            let restEndX = 450;
+            let restEndY = 830.5;
+
+            function calibrateRestCoordinates() {
                 if (!lanyardSvg || !clipCrimp) return;
                 const svgRect = lanyardSvg.getBoundingClientRect();
                 const crimpRect = clipCrimp.getBoundingClientRect();
-                if (svgRect.width === 0 || svgRect.height === 0) return;
+                if (svgRect.width > 0 && svgRect.height > 0) {
+                    const scaleX = 900 / svgRect.width;
+                    const scaleY = 1100 / svgRect.height;
+                    const crimpCenterX = crimpRect.left + crimpRect.width / 2;
+                    const crimpCenterY = crimpRect.top + crimpRect.height / 2;
+                    restEndX = (crimpCenterX - svgRect.left) * scaleX - currentX;
+                    restEndY = (crimpCenterY - svgRect.top) * scaleY - currentY;
+                }
+            }
+            calibrateRestCoordinates();
+            window.addEventListener("resize", calibrateRestCoordinates, { passive: true });
 
-                const scaleX = 900 / svgRect.width;
-                const scaleY = 1100 / svgRect.height;
+            function updateStrapCoordinates() {
+                if (!lanyardSvg) return;
 
-                // Exact sub-pixel center of clip crimp in SVG viewBox coordinates
-                const crimpCenterX = crimpRect.left + crimpRect.width / 2;
-                const crimpCenterY = crimpRect.top + crimpRect.height / 2;
-
-                const endX = (crimpCenterX - svgRect.left) * scaleX;
-                const endY = (crimpCenterY - svgRect.top) * scaleY;
+                // Sub-pixel crimp center calculated directly in physical synchronization with badge
+                const radZ = (curRotZ * Math.PI) / 180;
+                // Center of crimp clamp translates in exact lockstep with badge physics
+                const endX = restEndX + currentX;
+                const endY = restEndY + currentY;
 
                 const dx = endX - anchorX;
                 const dy = endY - anchorY;
 
-                // Smooth catenary curve:
-                // CP1 stays near vertical at top ceiling anchor
-                const cp1X = anchorX + dx * 0.18;
-                const cp1Y = anchorY + dy * 0.38;
+                // Smooth catenary ribbon curve
+                // CP1 hangs vertically from top ceiling anchor
+                const cp1X = anchorX + dx * 0.15;
+                const cp1Y = anchorY + dy * 0.45;
 
-                // CP2 enters the badge clip tangentially aligned with badge tilt (curRotZ)
-                const radZ = (curRotZ * Math.PI) / 180;
-                const tangentDist = Math.max(60, dy * 0.22);
-                const cp2X = endX + Math.sin(radZ) * tangentDist;
-                const cp2Y = endY - Math.cos(radZ) * tangentDist;
+                // CP2 enters clip naturally aligned with suspension tension and badge tilt
+                const cp2X = endX - dx * 0.12 - Math.sin(radZ) * 35;
+                const cp2Y = endY - dy * 0.22 - Math.cos(radZ) * 20;
 
                 const pathD = "M " + anchorX + " " + anchorY +
                               " C " + cp1X.toFixed(1) + " " + cp1Y.toFixed(1) +
@@ -550,7 +557,9 @@
                     velocityX = 0;
                     velocityY = 0;
                     lanyardBadge.classList.add("is-dragging");
-                    lanyardBadge.setPointerCapture(e.pointerId);
+                    try {
+                        lanyardBadge.setPointerCapture(e.pointerId);
+                    } catch (err) {}
                 });
 
                 window.addEventListener("pointermove", function (e) {

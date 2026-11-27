@@ -9,40 +9,7 @@ body {
 }
 
 .side-text {
-    position: fixed;
-    top: 50%;
-    z-index: 10;
-    font-size: 10.5px;
-    font-weight: 700;
-    letter-spacing: 6.5px;
-    text-transform: uppercase;
-    color: rgba(167, 243, 208, 0.26);
-    white-space: nowrap;
-    pointer-events: none;
-}
-
-.side-left {
-    left: 26px;
-    transform: translateY(-50%) rotate(-90deg);
-    transform-origin: center;
-}
-
-.side-right {
-    right: 26px;
-    transform: translateY(-50%) rotate(90deg);
-    transform-origin: center;
-}
-
-@media (max-width: 1360px) {
-    .side-text {
-        opacity: 0.12;
-    }
-}
-
-@media (max-width: 1220px) {
-    .side-text {
-        display: none;
-    }
+    display: none !important;
 }
 
 .hero {
@@ -772,6 +739,7 @@ body {
     align-items: center;
     user-select: none;
     perspective: 1400px;
+    overflow: visible;
     z-index: 99999;
 }
 
@@ -846,6 +814,7 @@ body {
     margin-bottom: -18px; /* Extends clasp directly through card slot! */
     z-index: 25;
     position: relative;
+    touch-action: none;
 }
 
 .clip-crimp {
@@ -940,6 +909,7 @@ body {
     -webkit-backdrop-filter: blur(16px);
     transform-style: preserve-3d;
     overflow: hidden;
+    touch-action: none;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
