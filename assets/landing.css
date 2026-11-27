@@ -234,12 +234,12 @@ body {
 }
 
 .role {
-    font-size: clamp(10.5px, 0.85vw, 14.5px);
-    font-weight: 600;
-    letter-spacing: clamp(2.5px, 0.28vw, 5px);
+    font-size: clamp(12.5px, 1.05vw, 16px);
+    font-weight: 700;
+    letter-spacing: clamp(1.8px, 0.22vw, 3.5px);
     text-transform: uppercase;
-    color: rgba(203, 213, 225, 0.62);
-    margin-bottom: clamp(16px, 2.2vh, 28px);
+    color: #6ee7b7;
+    margin-bottom: clamp(14px, 1.8vh, 22px);
     animation: fadeUp 0.9s ease 0.38s both;
 }
 
@@ -631,10 +631,11 @@ body {
 
 .lanyard-svg {
     position: absolute;
-    top: -95px;
-    left: 0;
-    width: 100%;
-    height: 275px;
+    top: -700px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 340px;
+    height: 1000px;
     pointer-events: none;
     overflow: visible;
     z-index: 12;
@@ -643,10 +644,10 @@ body {
 .lanyard-strap {
     fill: none;
     stroke: url(#lanyardGrad);
-    stroke-width: 14px;
-    stroke-linecap: round;
-    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.75));
-    transition: d 0.05s linear;
+    stroke-width: 15px;
+    stroke-linecap: square;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.75));
+    transition: d 0.04s linear;
 }
 
 .lanyard-badge-wrap {
@@ -655,28 +656,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 135px;
+    margin-top: 125px;
     transform-style: preserve-3d;
     cursor: grab;
     will-change: transform;
-    animation: lanyardSway 6.5s ease-in-out infinite;
 }
 
 .lanyard-badge-wrap:active {
     cursor: grabbing;
-}
-
-.lanyard-badge-wrap.is-dragging {
-    animation: none !important;
-}
-
-@keyframes lanyardSway {
-    0%, 100% {
-        transform: rotateZ(-2deg) rotateY(-3deg);
-    }
-    50% {
-        transform: rotateZ(2.2deg) rotateY(3.5deg);
-    }
 }
 
 /* METALLIC CLASP / CLIP */
@@ -684,37 +671,51 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: -7px;
+    margin-bottom: -10px;
     z-index: 18;
 }
 
-.clip-ring {
+.clip-crimp {
     width: 22px;
-    height: 22px;
+    height: 10px;
+    background: linear-gradient(180deg, #94a3b8 0%, #64748b 50%, #334155 100%);
+    border-radius: 2px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.7);
+    margin-bottom: -3px;
+    position: relative;
+    z-index: 19;
+}
+
+.clip-ring {
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
-    border: 3.5px solid #94a3b8;
+    border: 3.5px solid #cbd5e1;
     background: transparent;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6), inset 0 1px 2px rgba(255, 255, 255, 0.7);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6), inset 0 1px 2px rgba(255, 255, 255, 0.8);
     margin-bottom: -5px;
+    position: relative;
+    z-index: 18;
 }
 
 .clip-hook {
-    width: 15px;
-    height: 20px;
+    width: 14px;
+    height: 22px;
     background: linear-gradient(135deg, #f8fafc 0%, #cbd5e1 35%, #64748b 70%, #334155 100%);
     border-radius: 4px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7), inset 0 1px 1px rgba(255, 255, 255, 0.8);
     position: relative;
+    z-index: 22;
 }
 
 .clip-hook::after {
     content: "";
     position: absolute;
-    bottom: -3px;
+    bottom: -4px;
     left: 50%;
     transform: translateX(-50%);
-    width: 7px;
-    height: 7px;
+    width: 8px;
+    height: 8px;
     background: #0f172a;
     border: 2px solid #94a3b8;
     border-radius: 50%;
@@ -725,7 +726,7 @@ body {
     position: relative;
     width: 272px;
     border-radius: 22px;
-    padding: 16px 16px 18px;
+    padding: 14px 16px 18px;
     background: rgba(9, 17, 19, 0.94);
     border: 1.5px solid rgba(16, 232, 159, 0.35);
     box-shadow: 
@@ -756,6 +757,25 @@ body {
     z-index: 10;
     opacity: 0.75;
     transition: opacity 0.3s ease;
+}
+
+.card-slot {
+    width: 44px;
+    height: 9px;
+    border-radius: 999px;
+    background: #030708;
+    border: 1.5px solid rgba(110, 231, 183, 0.35);
+    margin: -4px auto 8px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.95);
+    position: relative;
+    z-index: 15;
+}
+
+.card-top-accent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
 }
 
 .card-slot {
@@ -1039,13 +1059,13 @@ body {
     height: 360px;
     transform-origin: bottom center;
     transform-style: preserve-3d;
-    transform: rotateX(-115deg);
+    transform: rotateX(-90deg);
     transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
     z-index: 30;
 }
 
 .macbook-chassis.is-open .macbook-lid {
-    transform: rotateX(0deg);
+    transform: rotateX(2deg);
 }
 
 /* SCREEN DISPLAY FRONT */
@@ -1064,36 +1084,78 @@ body {
     overflow: hidden;
 }
 
-.screen-camera {
+/* APPLE DYNAMIC ISLAND AT TOP OF SCREEN */
+.dynamic-island {
     position: absolute;
-    top: 4px;
-    left: 0;
-    right: 0;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 155px;
+    height: 25px;
+    background: #000000;
+    border-radius: 20px;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.14), 0 4px 12px rgba(0, 0, 0, 0.85);
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 4px;
+    justify-content: space-between;
+    padding: 0 10px;
     z-index: 35;
+    cursor: pointer;
+    transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
 }
 
-.camera-lens {
-    width: 5.5px;
-    height: 5.5px;
+.dynamic-island:hover {
+    width: 220px;
+    box-shadow: 0 0 0 1.5px rgba(16, 232, 159, 0.5), 0 6px 20px rgba(0, 0, 0, 0.95);
+}
+
+.di-camera-hole {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.di-lens {
+    width: 7.5px;
+    height: 7.5px;
     border-radius: 50%;
-    background: #020405;
+    background: radial-gradient(circle at 35% 35%, #1e1b4b 0%, #030712 75%);
     border: 1px solid #1e293b;
-    box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.9);
 }
 
-.camera-indicator {
-    width: 3px;
-    height: 3px;
+.di-led {
+    width: 4px;
+    height: 4px;
     border-radius: 50%;
     background: #10e89f;
-    box-shadow: 0 0 6px #10e89f;
-    opacity: 0.85;
+    box-shadow: 0 0 5px #10e89f;
 }
 
+.di-content {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.di-pulse-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #34d399;
+    animation: statusPulse 1.8s infinite;
+}
+
+.di-text {
+    font-size: 9.5px;
+    font-weight: 600;
+    color: rgba(248, 250, 252, 0.92);
+    letter-spacing: 0.3px;
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+}
+
+/* SCREEN GLASS & DEVELOPER CONTACT TERMINAL HUB */
 .screen-glass {
     position: relative;
     width: 100%;
@@ -1105,36 +1167,33 @@ body {
     box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.9);
 }
 
-.screen-media {
+.screen-contact-hub {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: top center;
-    display: block;
+    background: linear-gradient(165deg, #091312 0%, #040909 55%, #010404 100%);
+    display: flex;
+    flex-direction: column;
+    padding: 34px 14px 12px;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
 }
 
-.screen-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 8px 12px;
-    background: linear-gradient(180deg, rgba(6, 12, 14, 0.88) 0%, transparent 100%);
-    backdrop-filter: blur(6px);
-    z-index: 32;
-}
-
-.screen-header {
+.screen-window-bar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 10px;
+    position: relative;
+    height: 20px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding-bottom: 6px;
 }
 
 .screen-window-dots {
     display: flex;
     align-items: center;
     gap: 5px;
+    z-index: 2;
 }
 
 .screen-window-dots span {
@@ -1147,28 +1206,133 @@ body {
 .dot-yellow { background: #f59e0b; }
 .dot-green { background: #10b981; }
 
-.screen-url {
+.screen-terminal-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-    font-size: 10.5px;
-    color: rgba(236, 253, 245, 0.82);
-    letter-spacing: 0.3px;
-}
-
-.screen-action-btn {
-    padding: 4px 10px;
-    border-radius: 999px;
-    background: rgba(16, 232, 159, 0.20);
-    border: 1px solid rgba(16, 232, 159, 0.45);
-    color: #10e89f;
     font-size: 10px;
-    font-weight: 700;
-    text-decoration: none;
-    transition: all 0.2s ease;
+    color: rgba(203, 213, 225, 0.65);
+    letter-spacing: 0.3px;
+    white-space: nowrap;
 }
 
-.screen-action-btn:hover {
-    background: #10e89f;
-    color: #04090a;
+.terminal-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.terminal-cmd-row {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 11px;
+    color: rgba(236, 253, 245, 0.85);
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.term-user { color: #34d399; font-weight: 700; }
+.term-tilde { color: #f5b041; }
+.term-cmd { color: #ffffff; font-weight: 600; }
+
+.terminal-channels {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.term-channel-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 11px;
+    background: rgba(16, 232, 159, 0.05);
+    border: 1px solid rgba(16, 232, 159, 0.18);
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.term-channel-card:hover {
+    background: rgba(16, 232, 159, 0.14);
+    border-color: rgba(16, 232, 159, 0.50);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+}
+
+.term-channel-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.06);
+    flex-shrink: 0;
+}
+
+.term-channel-icon svg {
+    width: 15px;
+    height: 15px;
+}
+
+.phone-accent { color: #34d399; }
+.mail-accent { color: #f5b041; }
+.git-accent { color: #e2e8f0; }
+.linkedin-accent { color: #38bdf8; }
+
+.term-channel-details {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+    text-align: left;
+}
+
+.channel-label {
+    font-size: 7.5px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    color: rgba(148, 163, 184, 0.75);
+    margin-bottom: 1px;
+}
+
+.channel-val {
+    font-size: 10.5px;
+    font-weight: 600;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.channel-action {
+    font-size: 9.5px;
+    font-weight: 700;
+    color: #10e89f;
+    opacity: 0.85;
+    transition: transform 0.2s ease;
+}
+
+.term-channel-card:hover .channel-action {
+    transform: translateX(3px);
+}
+
+.terminal-footer-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 6px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    font-size: 9px;
+    color: rgba(148, 163, 184, 0.75);
+}
+
+.meta-status {
+    color: #10e89f;
+    font-weight: 600;
 }
 
 .screen-glare {
@@ -1176,6 +1340,7 @@ body {
     inset: 0;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, transparent 45%);
     pointer-events: none;
+    z-index: 15;
 }
 
 /* LID COVER BACK (WHEN CLOSED) */
