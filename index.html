@@ -25,133 +25,536 @@
 
     <main class="hero">
         <div class="hero-content" id="heroContent">
-            <!-- STATUS BADGE -->
-            <div class="badge">
-                <div class="status-dot-green"></div>
-                <span>AI &amp; Full-Stack Engineer • Available for Opportunities</span>
-            </div>
+            <!-- 2-COLUMN HERO GRID: INTRO (LEFT) + HANGING ID BADGE (RIGHT) -->
+            <div class="hero-grid">
+                <!-- LEFT COLUMN: INTRO & ACTIONS -->
+                <div class="hero-left">
+                    <!-- STATUS BADGE -->
+                    <div class="badge">
+                        <div class="status-dot-green"></div>
+                        <span>AI &amp; Full-Stack Engineer • Available for Opportunities</span>
+                    </div>
 
-            <!-- LARGE FRAMED PORTRAIT -->
-            <div class="profile-wrapper" id="profileWrapper">
-                <div class="profile-glow"></div>
-                <div class="orbit"></div>
-                <div class="orbit orbit-two"></div>
-                <img src="images/profile.jpg" alt="Ragu Ram P" class="profile-image">
-            </div>
+                    <!-- GIANT NAME -->
+                    <h1 class="name">RAGU RAM P</h1>
 
-            <!-- GIANT NAME -->
-            <h1 class="name">RAGU RAM P</h1>
+                    <!-- ROLE TAGS -->
+                    <p class="role">AI &amp; Data Science • Machine Learning • Document AI • Full-Stack Engineering</p>
 
-            <!-- ROLE TAGS -->
-            <p class="role">AI &amp; Data Science • Machine Learning • Document AI • Full-Stack Engineering</p>
+                    <!-- BIO SNIPPET -->
+                    <p class="hero-bio">
+                        Engineering production-grade AI platforms, intelligent document processors, and full-stack web applications with rigorous verification and clean design.
+                    </p>
 
-            <!-- PROMPT HEADLINE -->
-            <h2 class="works-title">Wanna See My <span>Works?</span></h2>
+                    <!-- PROMPT HEADLINE -->
+                    <h2 class="works-title">Wanna See My <span>Works?</span></h2>
 
-            <!-- CTA BUTTONS -->
-            <div class="cta-row">
-                <button class="explore-btn" id="exploreButton" type="button" aria-label="Explore My Projects">
-                    <span>Explore My Projects</span>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <path d="M5 12h14"></path>
-                        <path d="m13 6 6 6-6 6"></path>
-                    </svg>
-                </button>
-            </div>
+                    <!-- CTA BUTTONS -->
+                    <div class="cta-row">
+                        <button class="explore-btn" id="exploreButton" type="button" aria-label="Explore My Projects">
+                            <span>Explore My Projects</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M5 12h14"></path>
+                                <path d="m13 6 6 6-6 6"></path>
+                            </svg>
+                        </button>
+                        <a href="#workstation" class="btn-scroll-workstation">
+                            <span>Interactive Workstation &darr;</span>
+                        </a>
+                    </div>
 
-            <!-- SOCIAL & DIRECT CONTACT LINKS -->
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/raguramrrp/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn" title="LinkedIn">
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM7.119 20.452H3.555V9h3.564v11.452z"></path>
-                    </svg>
-                </a>
+                    <!-- SOCIAL & DIRECT CONTACT LINKS -->
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/raguramrrp/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn" title="LinkedIn">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM7.119 20.452H3.555V9h3.564v11.452z"></path>
+                            </svg>
+                        </a>
 
-                <a href="https://github.com/raguramrrp" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub" title="GitHub">
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M12 .7C5.73.7.65 5.78.65 12.05c0 5.02 3.25 9.28 7.76 10.78.57.1.78-.25.78-.55v-2.16c-3.16.69-3.82-1.34-3.82-1.34-.52-1.31-1.26-1.66-1.26-1.66-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.74 2.66 1.24 3.31.95.1-.73.4-1.24.72-1.52-2.52-.29-5.17-1.26-5.17-5.61 0-1.24.44-2.25 1.17-3.05-.12-.29-.51-1.45.11-3.01 0 0 .95-.31 3.12 1.16a10.86 10.86 0 0 1 5.68 0c2.17-1.47 3.12-1.16 3.12-1.16.62 1.56.23 2.72.11 3.01.73.8 1.17 1.81 1.17 3.05 0 4.36-2.66 5.31-5.19 5.6.41.35.77 1.04.77 2.1v3.12c0 .31.21.66.78.55 4.5-1.5 7.75-5.76 7.75-10.78C23.35 5.78 18.27.7 12 .7z"></path>
-                    </svg>
-                </a>
+                        <a href="https://github.com/raguramrrp" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub" title="GitHub">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 .7C5.73.7.65 5.78.65 12.05c0 5.02 3.25 9.28 7.76 10.78.57.1.78-.25.78-.55v-2.16c-3.16.69-3.82-1.34-3.82-1.34-.52-1.31-1.26-1.66-1.26-1.66-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.74 2.66 1.24 3.31.95.1-.73.4-1.24.72-1.52-2.52-.29-5.17-1.26-5.17-5.61 0-1.24.44-2.25 1.17-3.05-.12-.29-.51-1.45.11-3.01 0 0 .95-.31 3.12 1.16a10.86 10.86 0 0 1 5.68 0c2.17-1.47 3.12-1.16 3.12-1.16.62 1.56.23 2.72.11 3.01.73.8 1.17 1.81 1.17 3.05 0 4.36-2.66 5.31-5.19 5.6.41.35.77 1.04.77 2.1v3.12c0 .31.21.66.78.55 4.5-1.5 7.75-5.76 7.75-10.78C23.35 5.78 18.27.7 12 .7z"></path>
+                            </svg>
+                        </a>
 
-                <a href="tel:+919344312727" class="contact-chip" title="Call +91 9344312727">
-                    <span>+91 9344312727</span>
-                </a>
+                        <a href="tel:+919344312727" class="contact-chip" title="Call +91 9344312727">
+                            <span>+91 9344312727</span>
+                        </a>
 
-                <a href="mailto:raguramrrp@gmail.com" class="contact-chip" title="Email raguramrrp@gmail.com">
-                    <span>raguramrrp@gmail.com</span>
-                </a>
+                        <a href="mailto:raguramrrp@gmail.com" class="contact-chip" title="Email raguramrrp@gmail.com">
+                            <span>raguramrrp@gmail.com</span>
+                        </a>
 
-                <a href="experience.html" data-nav="experience.html" class="contact-chip" title="Experience &amp; Credentials">
-                    <span>Experience &amp; Credentials &rarr;</span>
-                </a>
+                        <a href="experience.html" data-nav="experience.html" class="contact-chip" title="Experience &amp; Credentials">
+                            <span>Experience &amp; Credentials &rarr;</span>
+                        </a>
 
-                <a href="assets/Ragu_Ram_P_Resume.pdf" download="Ragu_Ram_P_Resume.pdf" class="contact-chip contact-chip--accent" title="Download Resume (PDF)">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                        <polyline points="7 10 12 15 17 10"></polyline>
-                        <line x1="12" y1="15" x2="12" y2="3"></line>
-                    </svg>
-                    <span>Download Resume (PDF)</span>
-                </a>
+                        <a href="assets/Ragu_Ram_P_Resume.pdf" download="Ragu_Ram_P_Resume.pdf" class="contact-chip contact-chip--accent" title="Download Resume (PDF)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            <span>Download Resume (PDF)</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- RIGHT COLUMN: 3D HANGING ID BADGE & LANYARD -->
+                <div class="hero-right">
+                    <div class="lanyard-container" id="lanyardContainer" aria-label="Ragu Ram P Verified Developer ID Card">
+                        <!-- SVG Lanyard Ribbon with Dynamic Curvature -->
+                        <svg class="lanyard-svg" id="lanyardSvg" viewBox="0 0 340 380" preserveAspectRatio="none">
+                            <defs>
+                                <linearGradient id="lanyardGrad" gradientUnits="userSpaceOnUse" x1="158" y1="0" x2="182" y2="0">
+                                    <stop offset="0%" stop-color="#04090b" />
+                                    <stop offset="15%" stop-color="#10e89f" />
+                                    <stop offset="30%" stop-color="#162a26" />
+                                    <stop offset="50%" stop-color="#0f1d1b" />
+                                    <stop offset="70%" stop-color="#162a26" />
+                                    <stop offset="85%" stop-color="#10e89f" />
+                                    <stop offset="100%" stop-color="#04090b" />
+                                </linearGradient>
+                            </defs>
+                            <path class="lanyard-strap" id="lanyardStrap" d="M 170 0 C 170 100, 170 220, 170 318" />
+                        </svg>
+
+                        <!-- BADGE WITH CLIP -->
+                        <div class="lanyard-badge-wrap" id="lanyardBadge">
+                            <div class="badge-clip">
+                                <div class="clip-ring"></div>
+                                <div class="clip-hook"></div>
+                            </div>
+
+                            <div class="id-card" id="idCard">
+                                <div class="card-glare" id="cardGlare"></div>
+                                <div class="card-slot"></div>
+                                <div class="card-header-bar">
+                                    <span class="card-brand">DEV.SYS // VERIFIED ID</span>
+                                    <span class="card-status-dot"></span>
+                                </div>
+                                <div class="card-photo-box">
+                                    <img src="images/profile.jpg" alt="Ragu Ram P" class="card-photo">
+                                    <div class="photo-badge">ACTIVE</div>
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="card-name">RAGU RAM P</h3>
+                                    <div class="card-role">AI &amp; FULL-STACK DEVELOPER</div>
+                                    <div class="card-details">
+                                        <div class="card-col">
+                                            <span class="card-meta-label">ID CODE</span>
+                                            <span class="card-meta-val">RRP-2026-AI</span>
+                                        </div>
+                                        <div class="card-col">
+                                            <span class="card-meta-label">STATUS</span>
+                                            <span class="card-meta-val">FINAL YEAR</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer-strip">
+                                        <div class="card-chip">
+                                            <div class="chip-line"></div>
+                                            <div class="chip-line"></div>
+                                        </div>
+                                        <div class="card-barcode" aria-hidden="true">
+                                            <span></span><span></span><span></span><span></span><span></span>
+                                            <span></span><span></span><span></span><span></span><span></span>
+                                            <span></span><span></span><span></span><span></span><span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div class="bottom-text">
-            Tirunelveli, Tamil Nadu, India
+            Tirunelveli, Tamil Nadu, India &bull; Scroll for Interactive Workstation &darr;
         </div>
     </main>
+
+    <!-- INTERACTIVE WORKSTATION SECTION (3D MACBOOK SCROLL) -->
+    <section class="workstation-section" id="workstation">
+        <div class="workstation-header">
+            <span class="workstation-badge">INTERACTIVE WORKSTATION</span>
+            <h2 class="workstation-title">Scroll to Unfold The <span>Engineered Systems.</span></h2>
+            <p class="workstation-subtitle">Real production builds in AI, Document AI, Multi-Modal Systems &amp; Full-Stack Engineering.</p>
+        </div>
+
+        <!-- 3D MACBOOK CONTAINER -->
+        <div class="macbook-wrap" id="macbookWrap">
+            <!-- 3D LAPTOP STAGE -->
+            <div class="macbook-stage">
+                <!-- 3D LAPTOP CHASSIS -->
+                <div class="macbook-chassis" id="macbookChassis">
+                    <!-- SCREEN LID (ROTATES IN 3D ON SCROLL) -->
+                    <div class="macbook-lid" id="macbookLid">
+                        <!-- DISPLAY FRONT -->
+                        <div class="lid-screen">
+                            <div class="screen-camera">
+                                <span class="camera-lens"></span>
+                                <span class="camera-indicator"></span>
+                            </div>
+                            <div class="screen-glass">
+                                <img src="images/projects/datavyrn/01_overview.png" alt="DATAVYRN AI Platform" class="screen-media">
+                                <div class="screen-overlay">
+                                    <div class="screen-header">
+                                        <div class="screen-window-dots">
+                                            <span class="dot-red"></span>
+                                            <span class="dot-yellow"></span>
+                                            <span class="dot-green"></span>
+                                        </div>
+                                        <span class="screen-url">system://datavyrn.raguram.ai &bull; Multi-Modal AI Studio</span>
+                                        <a href="projects/datavyrn.html" data-nav="projects/datavyrn.html" class="screen-action-btn">Launch Exhibit &nearr;</a>
+                                    </div>
+                                </div>
+                                <div class="screen-glare"></div>
+                            </div>
+                        </div>
+
+                        <!-- LID BACK (CLOSED STATE COVER WITH APPLE GLOSS LOGO) -->
+                        <div class="lid-cover">
+                            <div class="lid-cover-sheen"></div>
+                            <svg class="apple-logo" viewBox="0 0 384 512" aria-hidden="true">
+                                <defs>
+                                    <linearGradient id="appleGloss" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#334155" />
+                                        <stop offset="50%" stop-color="#0f172a" />
+                                        <stop offset="100%" stop-color="#020617" />
+                                    </linearGradient>
+                                </defs>
+                                <path fill="url(#appleGloss)" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- HINGE -->
+                    <div class="macbook-hinge"></div>
+
+                    <!-- BASE KEYBOARD & PALM REST -->
+                    <div class="macbook-base">
+                        <!-- SPEAKER GRILL LEFT -->
+                        <div class="speaker-grill grill-left"></div>
+
+                        <!-- KEYBOARD WELL -->
+                        <div class="keyboard-well">
+                            <!-- FUNCTION ROW -->
+                            <div class="kb-row">
+                                <div class="key key-fn">esc</div>
+                                <div class="key key-fn">F1</div>
+                                <div class="key key-fn">F2</div>
+                                <div class="key key-fn">F3</div>
+                                <div class="key key-fn">F4</div>
+                                <div class="key key-fn">F5</div>
+                                <div class="key key-fn">F6</div>
+                                <div class="key key-fn">F7</div>
+                                <div class="key key-fn">F8</div>
+                                <div class="key key-fn">F9</div>
+                                <div class="key key-fn">F10</div>
+                                <div class="key key-fn">F11</div>
+                                <div class="key key-fn">F12</div>
+                                <div class="key key-power"><span class="touch-id"></span></div>
+                            </div>
+
+                            <!-- NUMBER ROW -->
+                            <div class="kb-row">
+                                <div class="key key-sm">~ `</div>
+                                <div class="key key-sm">! 1</div>
+                                <div class="key key-sm">@ 2</div>
+                                <div class="key key-sm"># 3</div>
+                                <div class="key key-sm">$ 4</div>
+                                <div class="key key-sm">% 5</div>
+                                <div class="key key-sm">^ 6</div>
+                                <div class="key key-sm">&amp; 7</div>
+                                <div class="key key-sm">* 8</div>
+                                <div class="key key-sm">( 9</div>
+                                <div class="key key-sm">) 0</div>
+                                <div class="key key-sm">_ -</div>
+                                <div class="key key-sm">+ =</div>
+                                <div class="key key-delete">delete</div>
+                            </div>
+
+                            <!-- QWERTY ROW -->
+                            <div class="kb-row">
+                                <div class="key key-tab">tab</div>
+                                <div class="key">Q</div><div class="key">W</div><div class="key">E</div>
+                                <div class="key">R</div><div class="key">T</div><div class="key">Y</div>
+                                <div class="key">U</div><div class="key">I</div><div class="key">O</div>
+                                <div class="key">P</div><div class="key">{ [</div><div class="key">} ]</div>
+                                <div class="key">| \</div>
+                            </div>
+
+                            <!-- ASDF ROW -->
+                            <div class="kb-row">
+                                <div class="key key-caps">caps lock</div>
+                                <div class="key">A</div><div class="key">S</div><div class="key">D</div>
+                                <div class="key">F</div><div class="key">G</div><div class="key">H</div>
+                                <div class="key">J</div><div class="key">K</div><div class="key">L</div>
+                                <div class="key">: ;</div><div class="key">" '</div>
+                                <div class="key key-return">return</div>
+                            </div>
+
+                            <!-- ZXCV ROW -->
+                            <div class="kb-row">
+                                <div class="key key-shift-l">shift</div>
+                                <div class="key">Z</div><div class="key">X</div><div class="key">C</div>
+                                <div class="key">V</div><div class="key">B</div><div class="key">N</div>
+                                <div class="key">M</div><div class="key">&lt; ,</div><div class="key">&gt; .</div>
+                                <div class="key">? /</div>
+                                <div class="key key-shift-r">shift</div>
+                            </div>
+
+                            <!-- BOTTOM ROW -->
+                            <div class="kb-row">
+                                <div class="key key-fn">fn</div>
+                                <div class="key key-ctrl">control</div>
+                                <div class="key key-opt">option</div>
+                                <div class="key key-cmd">command</div>
+                                <div class="key key-space"></div>
+                                <div class="key key-cmd">command</div>
+                                <div class="key key-opt">option</div>
+                                <div class="key-arrows">
+                                    <div class="arrow-up">&uarr;</div>
+                                    <div class="arrow-bottom-row">
+                                        <div class="arrow-left">&larr;</div>
+                                        <div class="arrow-down">&darr;</div>
+                                        <div class="arrow-right">&rarr;</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SPEAKER GRILL RIGHT -->
+                        <div class="speaker-grill grill-right"></div>
+
+                        <!-- TRACKPAD -->
+                        <div class="trackpad"></div>
+
+                        <!-- BASE NOTCH -->
+                        <div class="base-notch"></div>
+
+                        <!-- GITHUB DEVELOPER STICKER -->
+                        <div class="palm-sticker">
+                            <a href="https://github.com/raguramrrp" target="_blank" rel="noopener noreferrer" class="sticker-link" title="Open GitHub Profile">
+                                <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true">
+                                    <path d="M12 .7C5.73.7.65 5.78.65 12.05c0 5.02 3.25 9.28 7.76 10.78.57.1.78-.25.78-.55v-2.16c-3.16.69-3.82-1.34-3.82-1.34-.52-1.31-1.26-1.66-1.26-1.66-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.74 2.66 1.24 3.31.95.1-.73.4-1.24.72-1.52-2.52-.29-5.17-1.26-5.17-5.61 0-1.24.44-2.25 1.17-3.05-.12-.29-.51-1.45.11-3.01 0 0 .95-.31 3.12 1.16a10.86 10.86 0 0 1 5.68 0c2.17-1.47 3.12-1.16 3.12-1.16.62 1.56.23 2.72.11 3.01.73.8 1.17 1.81 1.17 3.05 0 4.36-2.66 5.31-5.19 5.6.41.35.77 1.04.77 2.1v3.12c0 .31.21.66.78.55 4.5-1.5 7.75-5.76 7.75-10.78C23.35 5.78 18.27.7 12 .7z"></path>
+                                </svg>
+                                <span>github/raguramrrp</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- QUICK ACTIONS -->
+            <div class="workstation-actions">
+                <button class="pill-btn" id="toggleLidBtn" type="button">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                    </svg>
+                    <span>Toggle Laptop View</span>
+                </button>
+                <a href="2.html" data-nav="2.html" class="pill-btn pill-btn--accent">
+                    <span>Explore All 32 Projects &rarr;</span>
+                </a>
+                <a href="github-vault.html" data-nav="github-vault.html" class="pill-btn">
+                    <span>Browse All 32 Repositories &nearr;</span>
+                </a>
+            </div>
+        </div>
+    </section>
 
     <div class="transition-overlay" id="transitionOverlay"></div>
 
     <script src="assets/cosmic.js"></script>
     <script>
         (function () {
-            const heroContent = document.getElementById("heroContent");
-            const profile = document.getElementById("profileWrapper");
             const exploreButton = document.getElementById("exploreButton");
+            const idCard = document.getElementById("idCard");
+            const lanyardBadge = document.getElementById("lanyardBadge");
+            const lanyardStrap = document.getElementById("lanyardStrap");
+            const cardGlare = document.getElementById("cardGlare");
+            const macbookWrap = document.getElementById("macbookWrap");
+            const macbookLid = document.getElementById("macbookLid");
+            const macbookChassis = document.getElementById("macbookChassis");
+            const toggleLidBtn = document.getElementById("toggleLidBtn");
+            const workstation = document.getElementById("workstation");
 
-            if (window.matchMedia("(pointer: fine)").matches) {
-                document.addEventListener("mousemove", function (event) {
-                    const x = event.clientX / window.innerWidth - 0.5;
-                    const y = event.clientY / window.innerHeight - 0.5;
-                    if (heroContent) {
-                        heroContent.style.transform = "translate(" + (x * 7) + "px, " + (y * 7) + "px)";
+            /* =========================================================
+               1. 3D HANGING ID CARD PHYSICS (TILT + DRAG & OSCILLATION)
+            ========================================================= */
+            let isDragging = false;
+            let startX = 0, startY = 0;
+            let currentX = 0, currentY = 0;
+            let targetX = 0, targetY = 0;
+            let targetRotX = 0, targetRotY = 0, targetRotZ = 0;
+            let curRotX = 0, curRotY = 0, curRotZ = 0;
+            let velocityX = 0, velocityY = 0;
+            const stiffness = 0.08;
+            const damping = 0.84;
+
+            // Anchor point in SVG viewBox coordinates
+            const anchorX = 170;
+            const anchorY = 0;
+            const restEndY = 318;
+
+            function updateStrap(endX, endY) {
+                if (!lanyardStrap) return;
+                // Cubic Bezier curve connecting top anchor to clip
+                const cp1X = anchorX + (endX - anchorX) * 0.18;
+                const cp1Y = anchorY + (endY - anchorY) * 0.45;
+                const cp2X = anchorX + (endX - anchorX) * 0.65;
+                const cp2Y = anchorY + (endY - anchorY) * 0.85;
+                lanyardStrap.setAttribute("d", "M " + anchorX + " " + anchorY + " C " + cp1X + " " + cp1Y + ", " + cp2X + " " + cp2Y + ", " + endX + " " + endY);
+            }
+
+            // Mouse move tracking (3D perspective tilt)
+            document.addEventListener("mousemove", function (e) {
+                if (!isDragging && idCard && window.matchMedia("(pointer: fine)").matches) {
+                    const rect = idCard.getBoundingClientRect();
+                    const cardCenterX = rect.left + rect.width / 2;
+                    const cardCenterY = rect.top + rect.height / 2;
+                    const dx = (e.clientX - cardCenterX) / (window.innerWidth / 2);
+                    const dy = (e.clientY - cardCenterY) / (window.innerHeight / 2);
+
+                    targetRotY = Math.max(-24, Math.min(24, dx * 24));
+                    targetRotX = Math.max(-20, Math.min(20, -dy * 20));
+                    targetRotZ = Math.max(-6, Math.min(6, dx * 6));
+
+                    // Glare position
+                    if (cardGlare) {
+                        const glareX = 50 + dx * 35;
+                        const glareY = 20 + dy * 30;
+                        cardGlare.style.background = "radial-gradient(circle at " + glareX + "% " + glareY + "%, rgba(255,255,255,0.22) 0%, transparent 60%)";
+                    }
+                }
+            });
+
+            // Pointer drag events on ID badge
+            if (lanyardBadge) {
+                lanyardBadge.addEventListener("pointerdown", function (e) {
+                    isDragging = true;
+                    startX = e.clientX - currentX;
+                    startY = e.clientY - currentY;
+                    lanyardBadge.classList.add("is-dragging");
+                    lanyardBadge.setPointerCapture(e.pointerId);
+                });
+
+                window.addEventListener("pointermove", function (e) {
+                    if (isDragging) {
+                        targetX = e.clientX - startX;
+                        targetY = e.clientY - startY;
+                        // Limit dragging bounds
+                        targetX = Math.max(-140, Math.min(140, targetX));
+                        targetY = Math.max(-40, Math.min(180, targetY));
+                        targetRotZ = targetX * 0.22;
+                        targetRotY = targetX * 0.16;
                     }
                 });
 
-                document.addEventListener("mouseleave", function () {
-                    if (heroContent) heroContent.style.transform = "translate(0,0)";
+                window.addEventListener("pointerup", function (e) {
+                    if (isDragging) {
+                        isDragging = false;
+                        targetX = 0;
+                        targetY = 0;
+                        targetRotZ = 0;
+                        lanyardBadge.classList.remove("is-dragging");
+                    }
                 });
+            }
 
-                if (profile) {
-                    profile.addEventListener("mousemove", function (event) {
-                        const rect = profile.getBoundingClientRect();
-                        const x = event.clientX - rect.left;
-                        const y = event.clientY - rect.top;
-                        const rotateY = (x - rect.width / 2) / 35;
-                        const rotateX = -(y - rect.height / 2) / 35;
-                        profile.style.transform = "perspective(1000px) rotateX(" + rotateX + "deg) rotateY(" + rotateY + "deg) scale(1.02)";
-                    });
-                    profile.addEventListener("mouseleave", function () {
-                        profile.style.transform = "perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)";
-                    });
+            // Physics animation loop (Spring oscillation + LERP tilt)
+            function animatePhysics() {
+                if (isDragging) {
+                    currentX += (targetX - currentX) * 0.35;
+                    currentY += (targetY - currentY) * 0.35;
+                    curRotX += (targetRotX - curRotX) * 0.25;
+                    curRotY += (targetRotY - curRotY) * 0.25;
+                    curRotZ += (targetRotZ - curRotZ) * 0.25;
+                } else {
+                    // Damped harmonic oscillation spring
+                    const forceX = -stiffness * currentX;
+                    const forceY = -stiffness * currentY;
+                    velocityX = (velocityX + forceX) * damping;
+                    velocityY = (velocityY + forceY) * damping;
+                    currentX += velocityX;
+                    currentY += velocityY;
+
+                    curRotX += (targetRotX - curRotX) * 0.1;
+                    curRotY += (targetRotY - curRotY) * 0.1;
+                    curRotZ += (targetRotZ - curRotZ) * 0.1;
                 }
 
-                if (exploreButton) {
-                    exploreButton.addEventListener("mousemove", function (event) {
-                        const rect = exploreButton.getBoundingClientRect();
-                        exploreButton.style.setProperty("--x", (event.clientX - rect.left) + "px");
-                        exploreButton.style.setProperty("--y", (event.clientY - rect.top) + "px");
-                        const dx = event.clientX - rect.left - rect.width / 2;
-                        const dy = event.clientY - rect.top - rect.height / 2;
-                        exploreButton.style.transform = "translate(" + (dx * 0.07) + "px, " + (dy * 0.07) + "px) translateY(-5px) scale(1.035)";
-                    });
-                    exploreButton.addEventListener("mouseleave", function () {
-                        exploreButton.style.transform = "translate(0,0)";
-                    });
+                if (lanyardBadge) {
+                    lanyardBadge.style.transform = 
+                        "translate3d(" + currentX.toFixed(1) + "px, " + currentY.toFixed(1) + "px, 0) " +
+                        "rotateX(" + curRotX.toFixed(2) + "deg) " +
+                        "rotateY(" + curRotY.toFixed(2) + "deg) " +
+                        "rotateZ(" + curRotZ.toFixed(2) + "deg)";
+                }
+
+                // Update strap connection
+                const strapEndX = anchorX + (currentX * 1.06);
+                const strapEndY = restEndY + (currentY * 1.38);
+                updateStrap(strapEndX, strapEndY);
+
+                requestAnimationFrame(animatePhysics);
+            }
+            requestAnimationFrame(animatePhysics);
+
+            /* =========================================================
+               2. 3D MACBOOK SCROLL-DRIVEN UNFOLDING
+            ========================================================= */
+            let isManualOpen = false;
+
+            function updateMacbookOnScroll() {
+                if (isManualOpen || !workstation || !macbookLid) return;
+                const rect = workstation.getBoundingClientRect();
+                const windowH = window.innerHeight;
+
+                // When workstation enters viewport, progress goes 0 -> 1
+                const totalScrollable = rect.height - windowH * 0.2;
+                const scrolled = windowH - rect.top;
+                let progress = scrolled / totalScrollable;
+                progress = Math.max(0, Math.min(1, progress));
+
+                // Closed at -115deg, unfolds to 0deg (open)
+                const currentAngle = -115 + (progress * 115);
+                macbookLid.style.transform = "rotateX(" + currentAngle.toFixed(1) + "deg)";
+
+                if (progress > 0.45) {
+                    macbookChassis.classList.add("is-open");
+                } else {
+                    macbookChassis.classList.remove("is-open");
                 }
             }
 
+            window.addEventListener("scroll", updateMacbookOnScroll, { passive: true });
+            window.addEventListener("resize", updateMacbookOnScroll, { passive: true });
+            updateMacbookOnScroll();
+
+            // Toggle button
+            if (toggleLidBtn) {
+                toggleLidBtn.addEventListener("click", function () {
+                    isManualOpen = !isManualOpen;
+                    if (isManualOpen) {
+                        macbookLid.style.transform = "rotateX(0deg)";
+                        macbookChassis.classList.add("is-open");
+                        toggleLidBtn.querySelector("span").textContent = "Close Laptop View";
+                    } else {
+                        isManualOpen = false;
+                        updateMacbookOnScroll();
+                        toggleLidBtn.querySelector("span").textContent = "Toggle Laptop View";
+                    }
+                });
+            }
+
+            /* =========================================================
+               3. EXPLORE BUTTON NAVIGATION
+            ========================================================= */
             if (exploreButton) {
                 exploreButton.addEventListener("click", function () {
                     window.navigateWithTransition("2.html");
