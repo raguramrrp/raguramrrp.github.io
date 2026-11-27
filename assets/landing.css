@@ -278,14 +278,16 @@ body {
     }
 }
 
-/* MAGNETIC CTA BUTTON */
-.cta-row {
+/* =========================================================
+   REFINED HERO ACTIONS & QUICK-CONNECT DOCK
+========================================================= */
+.hero-actions-group {
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 16px;
     flex-wrap: wrap;
-    gap: 14px;
-    animation: fadeUp 0.9s ease 0.68s both;
+    margin-bottom: clamp(16px, 2.2vh, 26px);
+    animation: fadeUp 0.9s ease 0.6s both;
 }
 
 .explore-btn {
@@ -293,20 +295,21 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
-    min-width: clamp(245px, 18vw, 330px);
-    padding: clamp(15px, 1.05vw, 19px) clamp(28px, 2vw, 42px);
-    border: 1px solid rgba(110, 231, 183, 0.35);
+    gap: 12px;
+    min-width: clamp(210px, 15vw, 270px);
+    height: 52px;
+    padding: 0 32px;
+    border: 1px solid rgba(110, 231, 183, 0.40);
     border-radius: 100px;
     background: linear-gradient(135deg, #ecfdf5, #ffffff);
     color: #05110e;
     font-family: "Inter", sans-serif;
-    font-size: clamp(13.5px, 0.92vw, 17px);
+    font-size: clamp(13.5px, 0.92vw, 16px);
     font-weight: 800;
     letter-spacing: 0.4px;
     cursor: pointer;
     overflow: hidden;
-    box-shadow: 0 14px 55px rgba(16, 232, 159, 0.22), 0 0 0 1px rgba(255, 255, 255, 0.14);
+    box-shadow: 0 14px 45px rgba(16, 232, 159, 0.28), 0 0 0 1px rgba(255, 255, 255, 0.16);
     transition: transform 0.35s cubic-bezier(.2, .8, .2, 1), box-shadow 0.35s ease, color 0.35s ease, border-color 0.35s ease;
 }
 
@@ -332,6 +335,7 @@ body {
     color: #030a08;
     border-color: rgba(245, 176, 65, 0.7);
     box-shadow: 0 20px 75px rgba(16, 232, 159, 0.42);
+    transform: translateY(-2px);
 }
 
 .explore-btn span,
@@ -341,13 +345,154 @@ body {
 }
 
 .explore-btn svg {
-    width: clamp(19px, 1.25vw, 24px);
-    height: clamp(19px, 1.25vw, 24px);
+    width: 18px;
+    height: 18px;
     transition: transform 0.35s ease;
 }
 
 .explore-btn:hover svg {
-    transform: translateX(7px);
+    transform: translateX(6px);
+}
+
+.resume-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 52px;
+    padding: 0 24px;
+    border-radius: 100px;
+    background: rgba(16, 232, 159, 0.08);
+    border: 1.5px solid rgba(16, 232, 159, 0.40);
+    color: #6ee7b7;
+    font-size: 13.5px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    backdrop-filter: blur(12px);
+    transition: all 0.3s cubic-bezier(.2, .8, .2, 1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.resume-cta-btn svg {
+    width: 17px;
+    height: 17px;
+    transition: transform 0.25s ease;
+}
+
+.resume-cta-btn:hover {
+    background: rgba(16, 232, 159, 0.22);
+    border-color: #10e89f;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(16, 232, 159, 0.30);
+}
+
+.resume-cta-btn:hover svg {
+    transform: translateY(2px);
+}
+
+/* REFINED QUICK-CONNECT DOCK */
+.hero-connect-dock {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 100px;
+    background: rgba(10, 22, 20, 0.68);
+    border: 1px solid rgba(16, 232, 159, 0.22);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    animation: fadeUp 0.9s ease 0.75s both;
+}
+
+.dock-social-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.dock-pill-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    height: 36px;
+    padding: 0 13px;
+    border-radius: 100px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: rgba(236, 253, 245, 0.88);
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    text-decoration: none;
+    transition: all 0.22s ease;
+}
+
+.dock-pill-btn svg {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+}
+
+.dock-pill-btn:hover {
+    background: rgba(16, 232, 159, 0.16);
+    border-color: rgba(16, 232, 159, 0.50);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+}
+
+.dock-divider {
+    width: 1px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.14);
+    margin: 0 2px;
+}
+
+.dock-nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    height: 36px;
+    padding: 0 14px;
+    border-radius: 100px;
+    background: rgba(16, 232, 159, 0.10);
+    border: 1px solid rgba(16, 232, 159, 0.30);
+    color: #6ee7b7;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    transition: all 0.22s ease;
+}
+
+.dock-nav-link:hover {
+    background: rgba(16, 232, 159, 0.24);
+    border-color: #10e89f;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(16, 232, 159, 0.25);
+}
+
+.dock-arrow {
+    transition: transform 0.2s ease;
+}
+
+.dock-nav-link:hover .dock-arrow {
+    transform: translateX(3px);
+}
+
+/* MAGNETIC CTA BUTTON (LEGACY FALLBACK) */
+.cta-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    animation: fadeUp 0.9s ease 0.68s both;
 }
 
 /* SOCIAL + DIRECT CONTACT BAR */
@@ -667,14 +812,6 @@ body {
     stroke-linecap: square;
 }
 
-.strap-stitch {
-    stroke: #34d399;
-    stroke-width: 1.5px;
-    stroke-linecap: round;
-    stroke-dasharray: 6 5;
-    opacity: 0.85;
-}
-
 .lanyard-strap {
     fill: none;
     stroke: #10e89f;
@@ -706,19 +843,20 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: -10px;
-    z-index: 18;
+    margin-bottom: -18px; /* Extends clasp directly through card slot! */
+    z-index: 25;
+    position: relative;
 }
 
 .clip-crimp {
-    width: 22px;
-    height: 10px;
+    width: 24px;
+    height: 11px;
     background: linear-gradient(180deg, #94a3b8 0%, #64748b 50%, #334155 100%);
     border-radius: 2px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.7);
     margin-bottom: -3px;
     position: relative;
-    z-index: 19;
+    z-index: 30;
 }
 
 .clip-ring {
@@ -730,30 +868,60 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6), inset 0 1px 2px rgba(255, 255, 255, 0.8);
     margin-bottom: -5px;
     position: relative;
-    z-index: 18;
+    z-index: 27;
 }
 
 .clip-hook {
     width: 14px;
-    height: 22px;
+    height: 20px;
     background: linear-gradient(135deg, #f8fafc 0%, #cbd5e1 35%, #64748b 70%, #334155 100%);
     border-radius: 4px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7), inset 0 1px 1px rgba(255, 255, 255, 0.8);
     position: relative;
-    z-index: 22;
+    z-index: 28;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.clip-clasp-loop {
+    width: 14px;
+    height: 17px;
+    border: 3px solid #cbd5e1;
+    border-top: none;
+    border-radius: 0 0 7px 7px;
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: transparent;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.8), inset 0 1px 1px rgba(255, 255, 255, 0.7);
+    z-index: 32;
 }
 
 .clip-hook::after {
     content: "";
     position: absolute;
-    bottom: -4px;
+    bottom: 2px;
     left: 50%;
     transform: translateX(-50%);
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
     background: #0f172a;
-    border: 2px solid #94a3b8;
+    border: 1.5px solid #94a3b8;
     border-radius: 50%;
+}
+
+.slot-hook-bar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 4px;
+    background: linear-gradient(180deg, #64748b 0%, #334155 100%);
+    border-radius: 2px;
+    opacity: 0.95;
 }
 
 /* ID CARD BODY */
@@ -804,6 +972,7 @@ body {
     box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.95);
     position: relative;
     z-index: 15;
+    overflow: hidden;
 }
 
 .card-top-accent {
@@ -1110,24 +1279,19 @@ body {
 
 .macbook-chassis:not(.is-open) .lid-screen {
     pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.25s ease;
 }
 
 .macbook-chassis.is-open .lid-screen {
     pointer-events: auto;
-    opacity: 1;
 }
 
 .macbook-chassis:not(.is-open) .lid-cover {
     pointer-events: auto;
-    opacity: 1;
     z-index: 70;
 }
 
 .macbook-chassis.is-open .lid-cover {
     pointer-events: none;
-    opacity: 0;
 }
 
 /* SCREEN DISPLAY FRONT */
@@ -1446,21 +1610,6 @@ body {
     filter: drop-shadow(0 8px 24px rgba(16, 232, 159, 0.70));
 }
 
-.lid-open-hint {
-    position: absolute;
-    bottom: 22px;
-    padding: 3.5px 12px;
-    border-radius: 999px;
-    background: rgba(16, 232, 159, 0.12);
-    border: 1px solid rgba(16, 232, 159, 0.40);
-    color: #6ee7b7;
-    font-size: 9.5px;
-    font-weight: 700;
-    letter-spacing: 1.2px;
-    text-transform: uppercase;
-    animation: bounceHint 2.2s infinite;
-}
-
 .lid-thumb-scoop {
     position: absolute;
     bottom: 0;
@@ -1472,11 +1621,6 @@ body {
     background: #0d1114;
     border-top: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.9);
-}
-
-@keyframes bounceHint {
-    0%, 100% { transform: translateY(0); opacity: 0.75; }
-    50% { transform: translateY(-4px); opacity: 1; }
 }
 
 /* HINGE BAR */
