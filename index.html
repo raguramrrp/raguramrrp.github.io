@@ -285,19 +285,30 @@
                             </div>
                         </div>
 
-                        <!-- LID BACK (CLOSED STATE COVER WITH APPLE GLOSS LOGO) -->
-                        <div class="lid-cover">
+                        <!-- LID BACK (CLOSED STATE COVER WITH CUSTOM RR MONOGRAM LOGO) -->
+                        <div class="lid-cover" id="macbookLidCover" title="Click / Touch to Open Laptop" role="button" tabindex="0">
                             <div class="lid-cover-sheen"></div>
-                            <svg class="apple-logo" viewBox="0 0 384 512" aria-hidden="true">
+                            <svg class="rr-logo" viewBox="0 0 240 180" aria-label="Ragu Ram Custom Monogram">
                                 <defs>
-                                    <linearGradient id="appleGloss" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" stop-color="#334155" />
-                                        <stop offset="50%" stop-color="#0f172a" />
-                                        <stop offset="100%" stop-color="#020617" />
+                                    <linearGradient id="rrGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#10e89f" />
+                                        <stop offset="50%" stop-color="#34d399" />
+                                        <stop offset="100%" stop-color="#f5b041" />
                                     </linearGradient>
+                                    <filter id="rrGlow" x="-20%" y="-20%" width="140%" height="140%">
+                                        <feGaussianBlur stdDeviation="5" result="blur" />
+                                        <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                                    </filter>
                                 </defs>
-                                <path fill="url(#appleGloss)" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/>
+                                <g filter="url(#rrGlow)">
+                                    <!-- Primary R -->
+                                    <path d="M 58 26 L 58 132 M 58 26 L 100 26 C 122 26, 134 40, 134 58 C 134 76, 122 90, 100 90 L 58 90 M 92 90 L 132 132" fill="none" stroke="url(#rrGrad)" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" />
+                                    <!-- Interlocking Secondary R -->
+                                    <path d="M 116 26 L 116 132 M 116 26 L 158 26 C 180 26, 192 40, 192 58 C 192 76, 180 90, 158 90 L 116 90 M 150 90 L 190 132" fill="none" stroke="#f8fafc" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" opacity="0.95" />
+                                </g>
+                                <text x="124" y="158" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="700" letter-spacing="4" fill="#6ee7b7">RAGU RAM</text>
                             </svg>
+                            <span class="lid-open-hint">Touch to Open &uarr;</span>
                         </div>
                     </div>
 
@@ -326,7 +337,7 @@
                                 <div class="key key-fn">F10</div>
                                 <div class="key key-fn">F11</div>
                                 <div class="key key-fn">F12</div>
-                                <div class="key key-power"><span class="touch-id"></span></div>
+                                <div class="key key-power" id="laptopPowerKey" title="Power / Sleep Key • Click to close or open laptop" role="button" tabindex="0"><span class="touch-id"></span></div>
                             </div>
 
                             <!-- NUMBER ROW -->
@@ -405,16 +416,6 @@
 
                         <!-- BASE NOTCH -->
                         <div class="base-notch"></div>
-
-                        <!-- GITHUB DEVELOPER STICKER -->
-                        <div class="palm-sticker">
-                            <a href="https://github.com/raguramrrp" target="_blank" rel="noopener noreferrer" class="sticker-link" title="Open GitHub Profile">
-                                <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true">
-                                    <path d="M12 .7C5.73.7.65 5.78.65 12.05c0 5.02 3.25 9.28 7.76 10.78.57.1.78-.25.78-.55v-2.16c-3.16.69-3.82-1.34-3.82-1.34-.52-1.31-1.26-1.66-1.26-1.66-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.74 2.66 1.24 3.31.95.1-.73.4-1.24.72-1.52-2.52-.29-5.17-1.26-5.17-5.61 0-1.24.44-2.25 1.17-3.05-.12-.29-.51-1.45.11-3.01 0 0 .95-.31 3.12 1.16a10.86 10.86 0 0 1 5.68 0c2.17-1.47 3.12-1.16 3.12-1.16.62 1.56.23 2.72.11 3.01.73.8 1.17 1.81 1.17 3.05 0 4.36-2.66 5.31-5.19 5.6.41.35.77 1.04.77 2.1v3.12c0 .31.21.66.78.55 4.5-1.5 7.75-5.76 7.75-10.78C23.35 5.78 18.27.7 12 .7z"></path>
-                                </svg>
-                                <span>github/raguramrrp</span>
-                            </a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -440,14 +441,18 @@
             const idCard = document.getElementById("idCard");
             const lanyardBadge = document.getElementById("lanyardBadge");
             const lanyardStrap = document.getElementById("lanyardStrap");
+            const lanyardSvg = document.getElementById("lanyardSvg");
+            const clipCrimp = document.querySelector(".clip-crimp");
             const cardGlare = document.getElementById("cardGlare");
             const macbookWrap = document.getElementById("macbookWrap");
             const macbookLid = document.getElementById("macbookLid");
+            const macbookLidCover = document.getElementById("macbookLidCover");
+            const laptopPowerKey = document.getElementById("laptopPowerKey");
             const macbookChassis = document.getElementById("macbookChassis");
             const workstation = document.getElementById("workstation");
 
             /* =========================================================
-               1. 3D HANGING ID CARD PHYSICS (TILT + DRAG & OSCILLATION)
+               1. 3D HANGING ID CARD PHYSICS (FREE MOTION + DYNAMIC STRAP)
             ========================================================= */
             let isDragging = false;
             let startPointerX = 0, startPointerY = 0;
@@ -459,21 +464,42 @@
             let targetRotX = 0, targetRotY = 0, targetRotZ = 0;
             let curRotX = 0, curRotY = 0, curRotZ = 0;
 
-            const stiffness = 0.045;
-            const damping = 0.88;
+            const stiffness = 0.030;
+            const damping = 0.935; // Natural smooth pendulum swing (swings 5-6 times)
 
-            // Anchor point in SVG viewBox (0 0 340 1000)
+            // Top ceiling anchor in SVG viewBox (0 0 340 1000)
             const anchorX = 170;
             const anchorY = 0;
-            const restEndY = 825;
 
-            function updateStrap(endX, endY) {
-                if (!lanyardStrap) return;
-                const cp1X = anchorX + (endX - anchorX) * 0.15;
-                const cp1Y = anchorY + (endY - anchorY) * 0.40;
+            function updateStrapCoordinates() {
+                if (!lanyardStrap || !lanyardSvg || !clipCrimp) return;
+                const svgRect = lanyardSvg.getBoundingClientRect();
+                const crimpRect = clipCrimp.getBoundingClientRect();
+                if (svgRect.width === 0 || svgRect.height === 0) return;
+
+                const scaleX = 340 / svgRect.width;
+                const scaleY = 1000 / svgRect.height;
+
+                // Exact sub-pixel center of clip crimp in SVG viewBox coordinates
+                const crimpCenterX = crimpRect.left + crimpRect.width / 2;
+                const crimpCenterY = crimpRect.top + 3; // Enters 3px inside the clamp
+
+                const endX = (crimpCenterX - svgRect.left) * scaleX;
+                const endY = (crimpCenterY - svgRect.top) * scaleY;
+
+                // Tensioned dynamic Bezier curve
+                const cp1X = anchorX + (endX - anchorX) * 0.12;
+                const cp1Y = anchorY + (endY - anchorY) * 0.38;
                 const cp2X = anchorX + (endX - anchorX) * 0.65;
-                const cp2Y = anchorY + (endY - anchorY) * 0.85;
-                lanyardStrap.setAttribute("d", "M " + anchorX + " " + anchorY + " C " + cp1X + " " + cp1Y + ", " + cp2X + " " + cp2Y + ", " + endX + " " + endY);
+                const cp2Y = anchorY + (endY - anchorY) * 0.88;
+
+                lanyardStrap.setAttribute(
+                    "d",
+                    "M " + anchorX + " " + anchorY +
+                    " C " + cp1X.toFixed(1) + " " + cp1Y.toFixed(1) +
+                    ", " + cp2X.toFixed(1) + " " + cp2Y.toFixed(1) +
+                    ", " + endX.toFixed(1) + " " + endY.toFixed(1)
+                );
             }
 
             // Mouse move tracking (3D perspective tilt)
@@ -485,19 +511,19 @@
                     const dx = (e.clientX - cardCenterX) / (window.innerWidth / 2);
                     const dy = (e.clientY - cardCenterY) / (window.innerHeight / 2);
 
-                    targetRotY = Math.max(-20, Math.min(20, dx * 20));
-                    targetRotX = Math.max(-16, Math.min(16, -dy * 16));
-                    targetRotZ = Math.max(-5, Math.min(5, dx * 5));
+                    targetRotY = Math.max(-24, Math.min(24, dx * 24));
+                    targetRotX = Math.max(-18, Math.min(18, -dy * 18));
+                    targetRotZ = Math.max(-8, Math.min(8, dx * 8));
 
                     if (cardGlare) {
                         const glareX = 50 + dx * 35;
                         const glareY = 20 + dy * 30;
-                        cardGlare.style.background = "radial-gradient(circle at " + glareX + "% " + glareY + "%, rgba(255,255,255,0.22) 0%, transparent 60%)";
+                        cardGlare.style.background = "radial-gradient(circle at " + glareX + "% " + glareY + "%, rgba(255,255,255,0.25) 0%, transparent 60%)";
                     }
                 }
             });
 
-            // Pointer drag events on ID badge
+            // Pointer drag events on ID badge (Wide freedom, multi-touch supported)
             if (lanyardBadge) {
                 lanyardBadge.addEventListener("pointerdown", function (e) {
                     isDragging = true;
@@ -517,8 +543,9 @@
                     if (isDragging) {
                         const rawX = e.clientX - startPointerX;
                         const rawY = e.clientY - startPointerY;
-                        targetX = Math.max(-130, Math.min(130, rawX));
-                        targetY = Math.max(-25, Math.min(160, rawY));
+                        // Free wide dragging bounds (over 640px range)
+                        targetX = Math.max(-320, Math.min(320, rawX));
+                        targetY = Math.max(-80, Math.min(260, rawY));
 
                         dragVelX = targetX - lastDragX;
                         dragVelY = targetY - lastDragY;
@@ -532,9 +559,9 @@
                         isDragging = false;
                         targetX = 0;
                         targetY = 0;
-                        // Transfer smooth release velocity
-                        velocityX = Math.max(-14, Math.min(14, dragVelX * 0.4));
-                        velocityY = Math.max(-12, Math.min(12, dragVelY * 0.4));
+                        // Transfer smooth release momentum
+                        velocityX = Math.max(-28, Math.min(28, dragVelX * 0.65));
+                        velocityY = Math.max(-18, Math.min(18, dragVelY * 0.65));
                         lanyardBadge.classList.remove("is-dragging");
                     }
                 }
@@ -548,11 +575,13 @@
                 const time = now || performance.now();
 
                 if (isDragging) {
-                    currentX += (targetX - currentX) * 0.65;
-                    currentY += (targetY - currentY) * 0.65;
-                    curRotZ += (currentX * 0.12 - curRotZ) * 0.25;
-                    curRotY += (currentX * 0.15 - curRotY) * 0.25;
-                    curRotX += (-currentY * 0.08 - curRotX) * 0.25;
+                    currentX += (targetX - currentX) * 0.70;
+                    currentY += (targetY - currentY) * 0.70;
+                    // Realistic tether pull angle
+                    const tetherAngle = Math.atan2(currentX, 480) * (180 / Math.PI);
+                    curRotZ += (tetherAngle * 0.92 - curRotZ) * 0.28;
+                    curRotY += ((currentX * 0.08) - curRotY) * 0.28;
+                    curRotX += ((-currentY * 0.06) - curRotX) * 0.28;
                 } else {
                     // Damped harmonic oscillation spring
                     const forceX = -stiffness * currentX;
@@ -562,11 +591,14 @@
                     currentX += velocityX;
                     currentY += velocityY;
 
-                    // Organic subtle ambient float
-                    const ambientZ = Math.sin(time * 0.0016) * 2.2;
-                    const ambientY = Math.cos(time * 0.0013) * 2.8;
+                    // Dynamic pendulum sway angle during swing
+                    const dynamicTilt = (currentX * 0.16) + (velocityX * 0.35);
 
-                    curRotZ += ((targetRotZ + ambientZ) - curRotZ) * 0.08;
+                    // Organic subtle ambient float
+                    const ambientZ = Math.sin(time * 0.0015) * 3.0;
+                    const ambientY = Math.cos(time * 0.0012) * 3.5;
+
+                    curRotZ += ((dynamicTilt + ambientZ) - curRotZ) * 0.10;
                     curRotY += ((targetRotY + ambientY) - curRotY) * 0.08;
                     curRotX += (targetRotX - curRotX) * 0.08;
                 }
@@ -579,24 +611,33 @@
                         "rotateZ(" + curRotZ.toFixed(2) + "deg)";
                 }
 
-                // 1:1 SVG coordinate attachment
-                const strapEndX = anchorX + currentX;
-                const strapEndY = restEndY + currentY;
-                updateStrap(strapEndX, strapEndY);
+                // Dynamic sub-pixel strap alignment
+                updateStrapCoordinates();
 
                 requestAnimationFrame(animatePhysics);
             }
             requestAnimationFrame(animatePhysics);
 
             /* =========================================================
-               2. 3D MACBOOK SCROLL-DRIVEN UNFOLDING (FROM FULL CLOSED STATE)
+               2. 3D MACBOOK SCROLL & POWER BUTTON INTERACTIVITY
             ========================================================= */
+            let isLaptopManuallyClosed = false;
+
+            function setLaptopLidAngle(angle) {
+                if (!macbookLid) return;
+                macbookLid.style.transform = "rotateX(" + angle.toFixed(1) + "deg)";
+                if (angle > -30) {
+                    macbookChassis.classList.add("is-open");
+                } else {
+                    macbookChassis.classList.remove("is-open");
+                }
+            }
+
             function updateMacbookOnScroll() {
-                if (!workstation || !macbookLid) return;
+                if (isLaptopManuallyClosed || !workstation || !macbookLid) return;
                 const rect = workstation.getBoundingClientRect();
                 const windowH = window.innerHeight;
 
-                // When workstation enters viewport, progress goes 0 -> 1
                 const totalScrollable = rect.height;
                 const scrolled = windowH - rect.top;
                 let progress = scrolled / (totalScrollable + windowH * 0.15);
@@ -604,18 +645,53 @@
 
                 // Closed flat against keyboard base at -90deg, opens smoothly to 2deg
                 const currentAngle = -90 + (progress * 92);
-                macbookLid.style.transform = "rotateX(" + currentAngle.toFixed(1) + "deg)";
-
-                if (progress > 0.35) {
-                    macbookChassis.classList.add("is-open");
-                } else {
-                    macbookChassis.classList.remove("is-open");
-                }
+                setLaptopLidAngle(currentAngle);
             }
 
             window.addEventListener("scroll", updateMacbookOnScroll, { passive: true });
             window.addEventListener("resize", updateMacbookOnScroll, { passive: true });
             updateMacbookOnScroll();
+
+            // POWER BUTTON CLICK (Closes laptop if open, opens if closed)
+            if (laptopPowerKey) {
+                laptopPowerKey.addEventListener("click", function (e) {
+                    e.stopPropagation();
+                    isLaptopManuallyClosed = !isLaptopManuallyClosed;
+                    if (isLaptopManuallyClosed) {
+                        setLaptopLidAngle(-90); // Close flat
+                    } else {
+                        setLaptopLidAngle(2); // Open Retina view
+                    }
+                });
+            }
+
+            // CLICK / TOUCH CLOSED LAPTOP (Opens back up)
+            if (macbookLid) {
+                macbookLid.addEventListener("click", function (e) {
+                    if (isLaptopManuallyClosed || !macbookChassis.classList.contains("is-open")) {
+                        isLaptopManuallyClosed = false;
+                        setLaptopLidAngle(2); // Open up
+                    }
+                });
+            }
+
+            if (macbookLidCover) {
+                macbookLidCover.addEventListener("click", function (e) {
+                    e.stopPropagation();
+                    isLaptopManuallyClosed = false;
+                    setLaptopLidAngle(2); // Open up
+                });
+            }
+
+            if (macbookChassis) {
+                macbookChassis.addEventListener("click", function (e) {
+                    if (isLaptopManuallyClosed || !macbookChassis.classList.contains("is-open")) {
+                        if (e.target.closest("#laptopPowerKey")) return;
+                        isLaptopManuallyClosed = false;
+                        setLaptopLidAngle(2);
+                    }
+                });
+            }
 
             /* =========================================================
                3. EXPLORE BUTTON NAVIGATION

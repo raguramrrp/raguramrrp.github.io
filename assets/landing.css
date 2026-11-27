@@ -589,7 +589,7 @@ body {
     align-items: flex-start;
     position: relative;
     min-height: 520px;
-    z-index: 6;
+    z-index: 99999; /* TOPPEST LAYER */
 }
 
 .btn-scroll-workstation {
@@ -626,7 +626,8 @@ body {
     flex-direction: column;
     align-items: center;
     user-select: none;
-    perspective: 1200px;
+    perspective: 1400px;
+    z-index: 99999;
 }
 
 .lanyard-svg {
@@ -638,7 +639,7 @@ body {
     height: 1000px;
     pointer-events: none;
     overflow: visible;
-    z-index: 12;
+    z-index: 99998;
 }
 
 .lanyard-strap {
@@ -652,13 +653,16 @@ body {
 
 .lanyard-badge-wrap {
     position: relative;
-    z-index: 15;
+    z-index: 100000;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 125px;
+    transform-origin: 50% 0 !important; /* PIVOT AT THE TOP CLIP! */
     transform-style: preserve-3d;
     cursor: grab;
+    user-select: none;
+    touch-action: none;
     will-change: transform;
 }
 
@@ -1068,6 +1072,26 @@ body {
     transform: rotateX(2deg);
 }
 
+.macbook-chassis:not(.is-open) .lid-screen {
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.macbook-chassis.is-open .lid-screen {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.macbook-chassis:not(.is-open) .lid-cover {
+    pointer-events: auto;
+    z-index: 50;
+}
+
+.macbook-chassis.is-open .lid-cover {
+    pointer-events: none;
+}
+
 /* SCREEN DISPLAY FRONT */
 .lid-screen {
     position: absolute;
@@ -1348,7 +1372,7 @@ body {
     position: absolute;
     inset: 0;
     border-radius: 20px;
-    background: linear-gradient(145deg, #333942 0%, #1c2228 45%, #0f1418 100%);
+    background: linear-gradient(145deg, #2b323a 0%, #171c21 45%, #0d1114 100%);
     border: 1.5px solid rgba(255, 255, 255, 0.16);
     box-shadow: 
         0 35px 90px rgba(0, 0, 0, 0.95),
@@ -1357,22 +1381,51 @@ body {
     backface-visibility: hidden;
     transform: rotateX(180deg) translateZ(2px);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    cursor: pointer;
+    user-select: none;
 }
 
 .lid-cover-sheen {
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse at 50% 15%, rgba(255, 255, 255, 0.12), transparent 65%);
+    background: radial-gradient(ellipse at 50% 20%, rgba(255, 255, 255, 0.14), transparent 65%);
     pointer-events: none;
 }
 
-.apple-logo {
-    width: 62px;
-    height: 72px;
-    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.7));
+.rr-logo {
+    width: 135px;
+    height: 105px;
+    filter: drop-shadow(0 4px 16px rgba(16, 232, 159, 0.40));
+    transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.lid-cover:hover .rr-logo {
+    transform: scale(1.06);
+    filter: drop-shadow(0 8px 24px rgba(16, 232, 159, 0.70));
+}
+
+.lid-open-hint {
+    position: absolute;
+    bottom: 22px;
+    padding: 3.5px 12px;
+    border-radius: 999px;
+    background: rgba(16, 232, 159, 0.12);
+    border: 1px solid rgba(16, 232, 159, 0.40);
+    color: #6ee7b7;
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    animation: bounceHint 2.2s infinite;
+}
+
+@keyframes bounceHint {
+    0%, 100% { transform: translateY(0); opacity: 0.75; }
+    50% { transform: translateY(-4px); opacity: 1; }
 }
 
 /* HINGE BAR */
@@ -1537,38 +1590,18 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-/* GITHUB DEVELOPER STICKER */
-.palm-sticker {
-    position: absolute;
-    bottom: 12px;
-    left: 16px;
-    z-index: 25;
+.key-power {
+    cursor: pointer;
+    transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
 }
 
-.sticker-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-    padding: 5px 12px;
-    border-radius: 999px;
-    background: rgba(6, 11, 13, 0.90);
-    border: 1px solid rgba(16, 232, 159, 0.35);
-    color: rgba(236, 253, 245, 0.88);
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-    font-size: 10px;
-    font-weight: 700;
-    text-decoration: none;
-    backdrop-filter: blur(8px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.7);
-    transition: all 0.25s ease;
+.key-power:hover {
+    background: #1e293b;
+    box-shadow: 0 0 10px rgba(16, 232, 159, 0.7);
 }
 
-.sticker-link:hover {
-    background: #10e89f;
-    border-color: #10e89f;
-    color: #040809;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 22px rgba(16, 232, 159, 0.35);
+.key-power:active {
+    transform: scale(0.90);
 }
 
 .workstation-actions {
@@ -1605,8 +1638,7 @@ body {
 
 @media (max-width: 640px) {
     .lanyard-container {
-        transform: scale(0.92);
-        height: 460px;
+        height: 480px;
     }
     .macbook-chassis {
         width: 320px;
@@ -1623,13 +1655,5 @@ body {
     }
     .trackpad {
         height: 55px;
-    }
-    .palm-sticker {
-        bottom: 6px;
-        left: 8px;
-    }
-    .sticker-link {
-        font-size: 8px;
-        padding: 3px 8px;
     }
 }
