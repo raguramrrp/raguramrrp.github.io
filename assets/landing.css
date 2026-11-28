@@ -1248,20 +1248,22 @@ body {
 }
 
 .macbook-chassis:not(.is-open) .lid-screen {
-    pointer-events: none;
+    pointer-events: none !important;
 }
 
 .macbook-chassis.is-open .lid-screen {
-    pointer-events: auto;
+    pointer-events: auto !important;
 }
 
 .macbook-chassis:not(.is-open) .lid-cover {
-    pointer-events: auto;
+    display: flex !important;
+    pointer-events: auto !important;
     z-index: 70;
 }
 
 .macbook-chassis.is-open .lid-cover {
-    pointer-events: none;
+    display: none !important;
+    pointer-events: none !important;
 }
 
 /* SCREEN DISPLAY FRONT */
@@ -1371,7 +1373,8 @@ body {
     flex-direction: column;
     padding: 34px 14px 12px;
     position: relative;
-    z-index: 10;
+    z-index: 20;
+    pointer-events: auto !important;
     overflow: hidden;
 }
 
@@ -1418,6 +1421,7 @@ body {
     flex-direction: column;
     flex: 1;
     justify-content: space-between;
+    pointer-events: auto !important;
 }
 
 .terminal-cmd-row {
@@ -1437,6 +1441,7 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 8px;
     margin-bottom: 8px;
+    pointer-events: auto !important;
 }
 
 .term-channel-card {
@@ -1444,18 +1449,27 @@ body {
     align-items: center;
     gap: 10px;
     padding: 7px 11px;
-    background: rgba(16, 232, 159, 0.05);
-    border: 1px solid rgba(16, 232, 159, 0.18);
+    background: rgba(16, 232, 159, 0.06);
+    border: 1px solid rgba(16, 232, 159, 0.22);
     border-radius: 10px;
     text-decoration: none;
-    transition: all 0.25s ease;
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    position: relative;
+    z-index: 50;
+    touch-action: manipulation;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .term-channel-card:hover {
-    background: rgba(16, 232, 159, 0.14);
-    border-color: rgba(16, 232, 159, 0.50);
+    background: rgba(16, 232, 159, 0.18);
+    border-color: #10e89f;
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7), 0 0 16px rgba(16, 232, 159, 0.28);
+}
+
+.term-channel-card:active {
+    transform: translateY(0) scale(0.98);
 }
 
 .term-channel-icon {

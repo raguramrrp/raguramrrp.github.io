@@ -652,6 +652,7 @@
                2. 3D MACBOOK SCROLL & POWER BUTTON INTERACTIVITY
             ========================================================= */
             let isLaptopManuallyClosed = false;
+            let hasLaptopInitiallyOpened = false;
 
             function setLaptopLidAngle(angle) {
                 if (!macbookLid) return;
@@ -664,14 +665,29 @@
             }
 
             function updateMacbookOnScroll() {
-                if (isLaptopManuallyClosed || !workstation || !macbookLid) return;
+                // If user manually closed via power key or laptop has already completed initial opening, do not close or alter on scroll
+                if (hasLaptopInitiallyOpened || isLaptopManuallyClosed || !workstation || !macbookLid) return;
                 const rect = workstation.getBoundingClientRect();
                 const windowH = window.innerHeight;
 
-                // When workstation enters viewport, open laptop smoothly to 2deg
-                if (rect.top < windowH * 0.75) {
+                const enterPoint = windowH * 0.95;
+                const fullOpenPoint = windowH * 0.35;
+
+                if (rect.top <= fullOpenPoint) {
                     setLaptopLidAngle(2);
-                } else if (rect.top > windowH * 0.90 && window.scrollY < 120) {
+                    hasLaptopInitiallyOpened = true; // Permanently open on scroll; ONLY power button can close
+                } else if (rect.top < enterPoint) {
+                    const progress = (enterPoint - rect.top) / (enterPoint - fullOpenPoint);
+                    const clamped = Math.max(0, Math.min(1, progress));
+                    // Smoothly open from closed position (-126deg) to open (2deg)
+                    const currentAngle = -126 + (clamped * 128);
+                    setLaptopLidAngle(currentAngle);
+                    if (clamped >= 0.96) {
+                        setLaptopLidAngle(2);
+                        hasLaptopInitiallyOpened = true;
+                    }
+                } else {
+                    // Before entry, stays closed
                     setLaptopLidAngle(-126);
                 }
             }
@@ -688,6 +704,7 @@
                     if (isLaptopManuallyClosed) {
                         setLaptopLidAngle(-126); // Close flat over keyboard
                     } else {
+                        hasLaptopInitiallyOpened = true;
                         setLaptopLidAngle(2); // Open Retina view
                     }
                 });
@@ -697,11 +714,11 @@
             function openLaptop() {
                 if (isLaptopManuallyClosed || !macbookChassis.classList.contains("is-open")) {
                     isLaptopManuallyClosed = false;
+                    hasLaptopInitiallyOpened = true;
                     setLaptopLidAngle(2); // Open up smoothly
                 }
             }
 
-            if (macbookLid) macbookLid.addEventListener("click", openLaptop);
             if (macbookLidCover) {
                 macbookLidCover.addEventListener("click", function (e) {
                     e.stopPropagation();
@@ -709,10 +726,25 @@
                 });
             }
 
+            // Ensure channel cards and terminal elements are clickable without bubbling to laptop toggles
+            const channelCards = document.querySelectorAll(".term-channel-card");
+            channelCards.forEach(function (card) {
+                card.addEventListener("click", function (e) {
+                    e.stopPropagation();
+                });
+                card.addEventListener("touchend", function (e) {
+                    e.stopPropagation();
+                });
+            });
+
             if (macbookChassis) {
                 macbookChassis.addEventListener("click", function (e) {
-                    if (e.target.closest("#laptopPowerKey")) return;
-                    openLaptop();
+                    // Ignore clicks on power key, dynamic island, or contact cards
+                    if (e.target.closest("#laptopPowerKey") || e.target.closest(".term-channel-card") || e.target.closest(".dynamic-island")) return;
+                    // Only open if currently closed; never close when clicking an open laptop
+                    if (!macbookChassis.classList.contains("is-open") || isLaptopManuallyClosed) {
+                        openLaptop();
+                    }
                 });
             }
 
