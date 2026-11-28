@@ -200,7 +200,7 @@
                             </div>
 
                             <div class="screen-glass">
-                                <!-- DEVELOPER CONTACT HUB SCREEN -->
+                                <!-- DEVELOPER WORKSTATION SCREEN (PROJECT REELS + CONTACT TERMINAL) -->
                                 <div class="screen-contact-hub">
                                     <div class="screen-window-bar">
                                         <div class="screen-window-dots">
@@ -208,10 +208,246 @@
                                             <span class="dot-yellow"></span>
                                             <span class="dot-green"></span>
                                         </div>
-                                        <span class="screen-terminal-title">raguram@macbook-pro: ~/contact &mdash; zsh</span>
+                                        <div class="screen-view-tabs" role="tablist">
+                                            <button type="button" class="screen-tab-btn is-active" id="btnTabReels" role="tab" aria-selected="true" title="View Project Reels">
+                                                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                                                <span>Project Reels</span>
+                                            </button>
+                                            <button type="button" class="screen-tab-btn" id="btnTabContact" role="tab" aria-selected="false" title="View Developer Contact Hub">
+                                                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                                                <span>Contact Hub</span>
+                                            </button>
+                                        </div>
+                                        <span class="screen-terminal-title" id="screenTitleText">system://reels &bull; 32 builds</span>
                                     </div>
 
-                                    <div class="terminal-body">
+                                    <!-- VIEW 1: CLICKABLE PROJECT REELS (DEFAULT ACTIVE) -->
+                                    <div class="screen-reels-container" id="screenReelsView">
+                                        <div class="reels-carousel" id="reelsCarousel">
+                                            <!-- REEL SLIDE 0: DATAVYRN -->
+                                            <div class="reel-slide is-active" data-index="0">
+                                                <div class="reel-media-wrap">
+                                                    <img src="images/projects/datavyrn/01_overview.png" alt="DATAVYRN AI Studio" class="reel-img" loading="eager">
+                                                    <div class="reel-media-glow"></div>
+                                                    <span class="reel-badge">FLAGSHIP &bull; MULTI-MODAL AI</span>
+                                                </div>
+                                                <div class="reel-info">
+                                                    <div class="reel-header">
+                                                        <h3 class="reel-title">DATAVYRN AI Platform</h3>
+                                                        <span class="reel-tagline">Annotation Engine &bull; Evaluation Studio &bull; Model Ops</span>
+                                                    </div>
+                                                    <div class="reel-actions">
+                                                        <a href="projects/datavyrn.html" data-nav="projects/datavyrn.html" class="reel-btn reel-btn-primary" title="Launch DATAVYRN Exhibit">
+                                                            <span>Launch Exhibit &nearr;</span>
+                                                        </a>
+                                                        <a href="https://github.com/raguramrrp" target="_blank" rel="noopener noreferrer" class="reel-btn reel-btn-subtle" title="View GitHub Code">
+                                                            <span>GitHub Repo &nearr;</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- REEL SLIDE 1: TEXTVIGIL -->
+                                            <div class="reel-slide" data-index="1">
+                                                <div class="reel-media-wrap">
+                                                    <img src="images/projects/day-18/01_home_phone_preview.png" alt="TEXTVIGIL Mobile OCR" class="reel-img" loading="lazy">
+                                                    <div class="reel-media-glow"></div>
+                                                    <span class="reel-badge">SECURITY &bull; SCREENSHOT OCR</span>
+                                                </div>
+                                                <div class="reel-info">
+                                                    <div class="reel-header">
+                                                        <h3 class="reel-title">TextVigil Scam OCR</h3>
+                                                        <span class="reel-tagline">Real-Time Threat Detection &bull; Visual OCR Analysis</span>
+                                                    </div>
+                                                    <div class="reel-actions">
+                                                        <a href="projects/textvigil.html" data-nav="projects/textvigil.html" class="reel-btn reel-btn-primary" title="Launch TextVigil Exhibit">
+                                                            <span>Launch Exhibit &nearr;</span>
+                                                        </a>
+                                                        <a href="https://github.com/raguramrrp" target="_blank" rel="noopener noreferrer" class="reel-btn reel-btn-subtle" title="View GitHub Code">
+                                                            <span>GitHub Repo &nearr;</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- REEL SLIDE 2: CROPLEDGER -->
+                                            <div class="reel-slide" data-index="2">
+                                                <div class="reel-media-wrap">
+                                                    <img src="images/projects/day-19/crop-intelligence.png" alt="CropLedger Agri-AI" class="reel-img" loading="lazy">
+                                                    <div class="reel-media-glow"></div>
+                                                    <span class="reel-badge">AGRI-FINTECH &bull; PRICE PREDICTION</span>
+                                                </div>
+                                                <div class="reel-info">
+                                                    <div class="reel-header">
+                                                        <h3 class="reel-title">CropLedger Agri-Atlas</h3>
+                                                        <span class="reel-tagline">Commodity Price Forecasting &bull; Supply Chain Ledger</span>
+                                                    </div>
+                                                    <div class="reel-actions">
+                                                        <a href="projects/cropledger.html" data-nav="projects/cropledger.html" class="reel-btn reel-btn-primary" title="Launch CropLedger Exhibit">
+                                                            <span>Launch Exhibit &nearr;</span>
+                                                        </a>
+                                                        <a href="https://github.com/raguramrrp" target="_blank" rel="noopener noreferrer" class="reel-btn reel-btn-subtle" title="View GitHub Code">
+                                                            <span>GitHub Repo &nearr;</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- REEL SLIDE 3: PAVENZA -->
+                                            <div class="reel-slide" data-index="3">
+                                                <div class="reel-media-wrap">
+                                                    <img src="images/projects/day-20/01_operations_overview.png" alt="Pavenza Road Vision" class="reel-img" loading="lazy">
+                                                    <div class="reel-media-glow"></div>
+                                                    <span class="reel-badge">COMPUTER VISION &bull; GIS HEATMAP</span>
+                                                </div>
+                                                <div class="reel-info">
+                                                    <div class="reel-header">
+                                                        <h3 class="reel-title">Pavenza Road Intelligence</h3>
+                                                        <span class="reel-tagline">AI Pothole Classifier &bull; Civic Incident Governance</span>
+                                                    </div>
+                                                    <div class="reel-actions">
+                                                        <a href="projects/pavenza.html" data-nav="projects/pavenza.html" class="reel-btn reel-btn-primary" title="Launch Pavenza Exhibit">
+                                                            <span>Launch Exhibit &nearr;</span>
+                                                        </a>
+                                                        <a href="https://github.com/raguramrrp" target="_blank" rel="noopener noreferrer" class="reel-btn reel-btn-subtle" title="View GitHub Code">
+                                                            <span>GitHub Repo &nearr;</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- REEL SLIDE 4: SALVERA -->
+                                            <div class="reel-slide" data-index="4">
+                                                <div class="reel-media-wrap">
+                                                    <img src="images/projects/day-21/01_overview_workstation.png" alt="Salvera Career AI" class="reel-img" loading="lazy">
+                                                    <div class="reel-media-glow"></div>
+                                                    <span class="reel-badge">CAREER DATA &bull; SALARY BENCHMARKS</span>
+                                                </div>
+                                                <div class="reel-info">
+                                                    <div class="reel-header">
+                                                        <h3 class="reel-title">Salvera Opportunity Engine</h3>
+                                                        <span class="reel-tagline">Compensation Distributions &bull; Offer Waterfall Simulator</span>
+                                                    </div>
+                                                    <div class="reel-actions">
+                                                        <a href="projects/salvera.html" data-nav="projects/salvera.html" class="reel-btn reel-btn-primary" title="Launch Salvera Exhibit">
+                                                            <span>Launch Exhibit &nearr;</span>
+                                                        </a>
+                                                        <a href="https://github.com/raguramrrp" target="_blank" rel="noopener noreferrer" class="reel-btn reel-btn-subtle" title="View GitHub Code">
+                                                            <span>GitHub Repo &nearr;</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- REEL SLIDE 5: VARLYTIX -->
+                                            <div class="reel-slide" data-index="5">
+                                                <div class="reel-media-wrap">
+                                                    <img src="images/projects/day-22/01_overview_workstation.png" alt="Varlytix Quantitative Engine" class="reel-img" loading="lazy">
+                                                    <div class="reel-media-glow"></div>
+                                                    <span class="reel-badge">QUANT FINTECH &bull; MONTE CARLO</span>
+                                                </div>
+                                                <div class="reel-info">
+                                                    <div class="reel-header">
+                                                        <h3 class="reel-title">Varlytix Risk Lab</h3>
+                                                        <span class="reel-tagline">Historical Replay &bull; Macro Stress Shocks &bull; Frontier</span>
+                                                    </div>
+                                                    <div class="reel-actions">
+                                                        <a href="projects/varlytix.html" data-nav="projects/varlytix.html" class="reel-btn reel-btn-primary" title="Launch Varlytix Exhibit">
+                                                            <span>Launch Exhibit &nearr;</span>
+                                                        </a>
+                                                        <a href="https://github.com/raguramrrp" target="_blank" rel="noopener noreferrer" class="reel-btn reel-btn-subtle" title="View GitHub Code">
+                                                            <span>GitHub Repo &nearr;</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- REEL SLIDE 6: ANNAPATH -->
+                                            <div class="reel-slide" data-index="6">
+                                                <div class="reel-media-wrap">
+                                                    <img src="images/projects/day-23/01-discover-food-listings.png" alt="Annapath Food Ledger" class="reel-img" loading="lazy">
+                                                    <div class="reel-media-glow"></div>
+                                                    <span class="reel-badge">FOOD LOGISTICS &bull; OTP CUSTODY</span>
+                                                </div>
+                                                <div class="reel-info">
+                                                    <div class="reel-header">
+                                                        <h3 class="reel-title">Annapath Surplus Rescue</h3>
+                                                        <span class="reel-tagline">Real-Time Geo-Routing &bull; Food Recovery Impact Ledger</span>
+                                                    </div>
+                                                    <div class="reel-actions">
+                                                        <a href="projects/annapath.html" data-nav="projects/annapath.html" class="reel-btn reel-btn-primary" title="Launch Annapath Exhibit">
+                                                            <span>Launch Exhibit &nearr;</span>
+                                                        </a>
+                                                        <a href="https://github.com/raguramrrp" target="_blank" rel="noopener noreferrer" class="reel-btn reel-btn-subtle" title="View GitHub Code">
+                                                            <span>GitHub Repo &nearr;</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- REEL SLIDE 7: KUSTODRA -->
+                                            <div class="reel-slide" data-index="7">
+                                                <div class="reel-media-wrap">
+                                                    <img src="images/projects/day-26/01-evidence-repository.png" alt="Kustodra Evidence Vault" class="reel-img" loading="lazy">
+                                                    <div class="reel-media-glow"></div>
+                                                    <span class="reel-badge">DIGITAL FORENSICS &bull; INTEGRITY</span>
+                                                </div>
+                                                <div class="reel-info">
+                                                    <div class="reel-header">
+                                                        <h3 class="reel-title">Kustodra Forensic Vault</h3>
+                                                        <span class="reel-tagline">Immutable SHA-256 Audit Records &bull; Chain-of-Custody</span>
+                                                    </div>
+                                                    <div class="reel-actions">
+                                                        <a href="projects/kustodra.html" data-nav="projects/kustodra.html" class="reel-btn reel-btn-primary" title="Launch Kustodra Exhibit">
+                                                            <span>Launch Exhibit &nearr;</span>
+                                                        </a>
+                                                        <a href="https://github.com/raguramrrp" target="_blank" rel="noopener noreferrer" class="reel-btn reel-btn-subtle" title="View GitHub Code">
+                                                            <span>GitHub Repo &nearr;</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- REEL CONTROLS (NEXT/PREV + DOTS) -->
+                                        <div class="reel-nav-bar">
+                                            <button type="button" class="reel-nav-arrow" id="reelPrevBtn" title="Previous Reel" aria-label="Previous Project Reel">&lsaquo;</button>
+                                            <div class="reel-dots" id="reelDots">
+                                                <span class="reel-dot is-active" data-slide="0"></span>
+                                                <span class="reel-dot" data-slide="1"></span>
+                                                <span class="reel-dot" data-slide="2"></span>
+                                                <span class="reel-dot" data-slide="3"></span>
+                                                <span class="reel-dot" data-slide="4"></span>
+                                                <span class="reel-dot" data-slide="5"></span>
+                                                <span class="reel-dot" data-slide="6"></span>
+                                                <span class="reel-dot" data-slide="7"></span>
+                                            </div>
+                                            <button type="button" class="reel-nav-arrow" id="reelNextBtn" title="Next Reel" aria-label="Next Project Reel">&rsaquo;</button>
+                                        </div>
+
+                                        <!-- MINI QUICK-CONTACT STRIP -->
+                                        <div class="reel-contact-strip">
+                                            <a href="tel:+919344312727" class="strip-link" title="Call or WhatsApp">
+                                                <span class="strip-icon">&phone;</span>
+                                                <span>+91 9344312727</span>
+                                            </a>
+                                            <a href="mailto:raguramrrp@gmail.com" class="strip-link" title="Email raguramrrp@gmail.com">
+                                                <span class="strip-icon">&#9993;</span>
+                                                <span>raguramrrp@gmail.com</span>
+                                            </a>
+                                            <a href="https://github.com/raguramrrp" target="_blank" rel="noopener noreferrer" class="strip-link" title="GitHub">
+                                                <span class="strip-icon">&compfn;</span>
+                                                <span>GitHub &nearr;</span>
+                                            </a>
+                                            <a href="https://www.linkedin.com/in/raguramrrp/" target="_blank" rel="noopener noreferrer" class="strip-link" title="LinkedIn">
+                                                <span class="strip-icon">in</span>
+                                                <span>LinkedIn &nearr;</span>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <!-- VIEW 2: FULL DEVELOPER TERMINAL -->
+                                    <div class="terminal-body" id="screenTerminalView" style="display: none;">
                                         <div class="terminal-cmd-row">
                                             <span class="term-user">raguram@workstation</span>:<span class="term-tilde">~</span>$&nbsp;<span class="term-cmd">./contact.sh --list-channels</span>
                                         </div>
@@ -726,21 +962,122 @@
                 });
             }
 
-            // Ensure channel cards and terminal elements are clickable without bubbling to laptop toggles
-            const channelCards = document.querySelectorAll(".term-channel-card");
-            channelCards.forEach(function (card) {
-                card.addEventListener("click", function (e) {
+            // Ensure channel cards, reel buttons, tabs and terminal elements are clickable without bubbling to laptop toggles
+            const interactiveScreenElements = document.querySelectorAll(".reel-btn, .strip-link, .reel-nav-arrow, .reel-dot, .screen-tab-btn, .term-channel-card");
+            interactiveScreenElements.forEach(function (el) {
+                el.addEventListener("click", function (e) {
                     e.stopPropagation();
                 });
-                card.addEventListener("touchend", function (e) {
+                el.addEventListener("touchend", function (e) {
                     e.stopPropagation();
                 });
             });
 
+            /* =========================================================
+               PROJECT REELS & WORKSTATION TAB SWITCHER
+            ========================================================= */
+            const btnTabReels = document.getElementById("btnTabReels");
+            const btnTabContact = document.getElementById("btnTabContact");
+            const screenReelsView = document.getElementById("screenReelsView");
+            const screenTerminalView = document.getElementById("screenTerminalView");
+            const screenTitleText = document.getElementById("screenTitleText");
+
+            if (btnTabReels && btnTabContact && screenReelsView && screenTerminalView) {
+                btnTabReels.addEventListener("click", function (e) {
+                    e.stopPropagation();
+                    btnTabReels.classList.add("is-active");
+                    btnTabReels.setAttribute("aria-selected", "true");
+                    btnTabContact.classList.remove("is-active");
+                    btnTabContact.setAttribute("aria-selected", "false");
+                    screenReelsView.style.display = "flex";
+                    screenTerminalView.style.display = "none";
+                    if (screenTitleText) screenTitleText.textContent = "system://reels \u2022 32 builds";
+                });
+
+                btnTabContact.addEventListener("click", function (e) {
+                    e.stopPropagation();
+                    btnTabContact.classList.add("is-active");
+                    btnTabContact.setAttribute("aria-selected", "true");
+                    btnTabReels.classList.remove("is-active");
+                    btnTabReels.setAttribute("aria-selected", "false");
+                    screenReelsView.style.display = "none";
+                    screenTerminalView.style.display = "flex";
+                    if (screenTitleText) screenTitleText.textContent = "raguram@macbook-pro: ~/contact \u2014 zsh";
+                });
+            }
+
+            // PROJECT REELS CAROUSEL CONTROLLER
+            const reelSlides = document.querySelectorAll(".reel-slide");
+            const reelDots = document.querySelectorAll(".reel-dot");
+            const reelPrevBtn = document.getElementById("reelPrevBtn");
+            const reelNextBtn = document.getElementById("reelNextBtn");
+            let currentReelIndex = 0;
+            let reelAutoTimer = null;
+
+            function goToReelSlide(idx) {
+                if (!reelSlides.length) return;
+                currentReelIndex = (idx + reelSlides.length) % reelSlides.length;
+                reelSlides.forEach(function (slide, i) {
+                    slide.classList.toggle("is-active", i === currentReelIndex);
+                });
+                reelDots.forEach(function (dot, i) {
+                    dot.classList.toggle("is-active", i === currentReelIndex);
+                });
+            }
+
+            function startReelAuto() {
+                clearInterval(reelAutoTimer);
+                reelAutoTimer = setInterval(function () {
+                    if (macbookChassis && macbookChassis.classList.contains("is-open") && screenReelsView && screenReelsView.style.display !== "none") {
+                        goToReelSlide(currentReelIndex + 1);
+                    }
+                }, 4200);
+            }
+
+            function stopReelAuto() {
+                clearInterval(reelAutoTimer);
+            }
+
+            if (reelPrevBtn) {
+                reelPrevBtn.addEventListener("click", function (e) {
+                    e.stopPropagation();
+                    goToReelSlide(currentReelIndex - 1);
+                    stopReelAuto();
+                    startReelAuto();
+                });
+            }
+
+            if (reelNextBtn) {
+                reelNextBtn.addEventListener("click", function (e) {
+                    e.stopPropagation();
+                    goToReelSlide(currentReelIndex + 1);
+                    stopReelAuto();
+                    startReelAuto();
+                });
+            }
+
+            reelDots.forEach(function (dot, i) {
+                dot.addEventListener("click", function (e) {
+                    e.stopPropagation();
+                    goToReelSlide(i);
+                    stopReelAuto();
+                    startReelAuto();
+                });
+            });
+
+            if (screenReelsView) {
+                screenReelsView.addEventListener("mouseenter", stopReelAuto);
+                screenReelsView.addEventListener("mouseleave", startReelAuto);
+                screenReelsView.addEventListener("touchstart", stopReelAuto, { passive: true });
+                screenReelsView.addEventListener("touchend", startReelAuto, { passive: true });
+            }
+
+            startReelAuto();
+
             if (macbookChassis) {
                 macbookChassis.addEventListener("click", function (e) {
-                    // Ignore clicks on power key, dynamic island, or contact cards
-                    if (e.target.closest("#laptopPowerKey") || e.target.closest(".term-channel-card") || e.target.closest(".dynamic-island")) return;
+                    // Ignore clicks on power key, dynamic island, or anything inside screen display
+                    if (e.target.closest("#laptopPowerKey") || e.target.closest(".screen-glass") || e.target.closest(".dynamic-island")) return;
                     // Only open if currently closed; never close when clicking an open laptop
                     if (!macbookChassis.classList.contains("is-open") || isLaptopManuallyClosed) {
                         openLaptop();
